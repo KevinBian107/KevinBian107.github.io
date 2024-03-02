@@ -2,6 +2,10 @@
 
 My name is Kaiwen (Kevin) Bian and I am a undergraduate student at UCSD double majoring in **Data Science** & **Cognitive Behavoral Neuroscience** and minoring in **Mathamatics**. I am passionate about making data science and machine learning tools an “bridge” to discovering more in every single scientific field both in academia and in the industry. My passion goes beyond Data Science into fields of Neuroscience, Biology, and Exercise Physiology. I am extremely interested in the intersection between Data Science and Neuroscience for developing systems/algorithms with better performances. I am fluent in both Chinese and English, and open- minded for new ideas and learning opportunities.
 
+**Email**: [kaiwenbian107@gmail.com](kaiwenbian107@gmail.com)
+
+-- [**Resume**](assets/Kaiwen%20Bian%20Resume%202024:2:14.pdf) -- [**CV**](assets/Kaiwen%20Bian%20CV%202024:Feb:12.pdf) -- [**Github**](https://github.com/KevinBian107) -- [**Linkedin**](https://www.linkedin.com/in/kbian107/) --
+
 # Interships
 ### Salk Institute Talmo's Lab
 _Advisor: Prof. Talmo Pereira_
