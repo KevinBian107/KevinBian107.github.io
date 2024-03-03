@@ -28,3 +28,8 @@ An Package demnonstrating fundamental algorithms that is essential to practices 
     - Kruskal's Algorithm
 3. Language Models
     - NGram Model
+
+### Essential Text-Feature Analysis
+_Currently Developing_
+
+Analyzing and training on large corpus of **recipe** data from [here](https://drive.google.com/file/d/1kIbMz6jlhleiZ9_3QthmUnifoSds_2EI/view) to analyze the "essential component" of each user's textual input (detecting user preference), which can be seen as a prior step to building a **Reconmander System**.
