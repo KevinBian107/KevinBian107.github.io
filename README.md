@@ -10,10 +10,14 @@ My name is Kaiwen (Kevin) Bian and I am a undergraduate student at UCSD double m
 ### Salk Institute
 I am currently working as a undergraduate research intern at [Talmo's Lab](https://talmolab.org/) in the Salk Institute. we are working on the the VNL project, a collaboration between Salk Institute and Harvard University aiming to create a working **Imitation Learning** and **Deep Reinforcement Learning** pipeline for creating computational models of the brain using Jax supported brax.
 
-<video width="320" height="240" controls>
+##### Self Learning (Proprioception Data Trained) Brax_ant
+
+<video width="256" height="192" controls>
   <source src="assets/ant_cross_gap.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
+
+*Brax_env shown above intergrates custom dm_control env and uses Proximal Policy Control for training*
 
 ### UCSD FMP Research Assistent
 I am currently researching on **Affordance Embodied Simulation’s presences in Multimodal models** through the UCSD Faculty Mentorship Program (started Sep 2023) under the supervision of [Sean Trott](https://seantrott.github.io/). We try to improve the reliability of machine learning models through examining the degree of models’ “understanding” of the subtle keys in human languages and how it is used to map the world we know.
