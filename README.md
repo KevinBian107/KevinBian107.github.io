@@ -11,10 +11,12 @@ My name is Kaiwen (Kevin) Bian and I am a undergraduate student at UCSD double m
 I am currently working as a undergraduate research intern at [Talmo's Lab](https://talmolab.org/) in the Salk Institute. we are working on the the VNL project, a collaboration between Salk Institute and Harvard University aiming to create a working **Imitation Learning** and **Deep Reinforcement Learning** pipeline for creating computational models of the brain using Jax supported brax.
 
 Self-learning (Proprioception Data DRL Trained) Brax_ant
-<video width="288" height="216" controls>
-  <source src="assets/ant_cross_gap.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<div style="text-align: center;">
+    <video width="288" height="216" controls>
+    <source src="assets/ant_cross_gap.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+</div>
 
 *Brax_env shown above intergrates custom dm_control env and uses **Proximal Policy Control** for training*
 
