@@ -7,7 +7,7 @@ My name is Kaiwen (Kevin) Bian and I am a undergraduate student at UCSD double m
 -- [Resume](assets/Kaiwen%20Bian%20Resume%202024:3:2.pdf) -- [CV](assets/Kaiwen%20Bian%20CV%202024:March:2.pdf) -- [Github](https://github.com/KevinBian107) -- [Linkedin](https://www.linkedin.com/in/kbian107/) --
 
 # Interships & Apprenticeships
-### Salk Institute
+## Salk Institute
 I am currently working as a undergraduate research intern at [Talmo's Lab](https://talmolab.org/) in the Salk Institute. we are working on the the VNL project, a collaboration between Salk Institute and Harvard University aiming to create a working **Imitation Learning** and **Deep Reinforcement Learning** pipeline for creating computational models of the brain using Jax supported brax.
 
 Self-learning (Proprioception Data DRL Trained) Brax_ant
@@ -20,11 +20,11 @@ Self-learning (Proprioception Data DRL Trained) Brax_ant
 
 *Brax_env shown above intergrates custom dm_control env and uses **Proximal Policy Control** for training*
 
-### UCSD FMP Research Assistent
+## UCSD FMP Research Assistent
 I am currently researching on **Affordance Embodied Simulation’s presences in Multimodal models** through the UCSD Faculty Mentorship Program (started Sep 2023) under the supervision of [Sean Trott](https://seantrott.github.io/). We try to improve the reliability of machine learning models through examining the degree of models’ “understanding” of the subtle keys in human languages and how it is used to map the world we know.
 
 # Project
-### NLP and Radnom Forest Modeling on Recipe
+## NLP and Radnom Forest Modeling on Recipe
 _Currently Developing_
 
 Training on large corpus of recipe data from [here](https://drive.google.com/file/d/1kIbMz6jlhleiZ9_3QthmUnifoSds_2EI/view) to analyze the "essential component" of each user's textual input (detecting user preference) by differnt **Natural Language Processing** preprocessing methods (feature egineering, TF-IDF, and word2vec features), then building a **Random Forest** Predictive Model to predict user preference and pushing a step furtehr to building a **Reconmander System**.
@@ -35,7 +35,7 @@ Training on large corpus of recipe data from [here](https://drive.google.com/fil
 
 *NLP Word2Vec from [source](https://arxiv.org/pdf/1301.3781.pdf)*
 
-### Essential Algorithms for Data Science
+## Essential Algorithms for Data Science
 _Currently Developing_
 
 An Package demnonstrating fundamental algorithms that is essential to practices in data science and machine learning algorithm include areas of:
