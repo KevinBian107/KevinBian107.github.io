@@ -30,7 +30,7 @@ _Currently Developing_
 Training on large corpus of recipe data from [here](https://drive.google.com/file/d/1kIbMz6jlhleiZ9_3QthmUnifoSds_2EI/view) to analyze the "essential component" of each user's textual input (detecting user preference) by differnt **Natural Language Processing** preprocessing methods (feature egineering, TF-IDF, and word2vec features), then building a **Random Forest** Predictive Model to predict user preference and pushing a step furtehr to building a **Reconmander System**.
 
 <div style="text-align: center;">
-    <img src="assets/word2vec.png" alt="NLP Word2Vec" width="300">
+    <img src="assets/word2vec.png" alt="NLP Word2Vec" width="500">
 </div>
 
 *NLP Word2Vec from [source](https://arxiv.org/pdf/1301.3781.pdf)*
