@@ -24,28 +24,18 @@ Self-learning (Proprioception Data DRL Trained) Brax_ant
 I am currently researching on **Affordance Embodied Simulation’s presences in Multimodal models** through the UCSD Faculty Mentorship Program (started Sep 2023) under the supervision of [Sean Trott](https://seantrott.github.io/). We try to improve the reliability of machine learning models through examining the degree of models’ “understanding” of the subtle keys in human languages and how it is used to map the world we know.
 
 # Project
-## NLP and Random Forest Modeling on Recipe
+## Ensemble Learning on Recipe
 _Currently Developing_
 
-Training on large corpus of recipe data from [here](https://drive.google.com/file/d/1kIbMz6jlhleiZ9_3QthmUnifoSds_2EI/view) to analyze the "essential component" of each user's textual input (detecting user preference) by differnt **Natural Language Processing** preprocessing methods (feature egineering, TF-IDF, and word2vec features), then building a **Random Forest** Predictive Model to predict user preference and pushing a step furtehr to building a **Reconmander System**.
-
-<div style="text-align: center;">
-    <img src="assets/word2vec.png" alt="NLP Word2Vec" width="500">
-</div>
-
-*NLP Word2Vec from [source](https://arxiv.org/pdf/1301.3781.pdf)*
+Training on large corpus of recipe data from [here](https://drive.google.com/file/d/1kIbMz6jlhleiZ9_3QthmUnifoSds_2EI/view) to analyze the "essential component" of each user's textual input (detecting user preference) by differnt Natural NLP methods (feature egineering, TF-IDF, and word2vec similarity), then building a **Ensemble Learning** system including Random Forest, Logistic Regression, and other models each taking trasnfromed data that fits them to predict user preference and pushing a step furtehr to building a **Reconmander System**.
 
 ## Essential Algorithms for Data Science
 _Currently Developing_
 
 An Package demnonstrating fundamental algorithms that is essential to practices in data science and machine learning algorithm include areas of:
 1. Fundamental Search ALgorithm
-    - Binary Search
-    - ...
+    - Binary Search,...
 2. Graph Search Algorithm
-    - BFS/DFS
-    - BellmanFord's Algorithm
-    - Dijkstra's Algorithm
-    - Kruskal's Algorithm
+    - BFS/DFS, BellmanFord's Algorithm, Dijkstra's Algorithm, Kruskal's Algorithm,...
 3. Language Models
-    - NGram Model
+    - NGram Model, Decision Tree, Random Forest,...
