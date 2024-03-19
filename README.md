@@ -24,8 +24,8 @@ Self-learning (Proprioception Data DRL Trained) Brax_ant
 I am currently researching on **Affordance Embodied Simulation’s presences in Multimodal models** through the UCSD Faculty Mentorship Program (started Sep 2023) under the supervision of [Sean Trott](https://seantrott.github.io/). We try to improve the reliability of machine learning models through examining the degree of models’ “understanding” of the subtle keys in human languages and how it is used to map the world we know.
 
 # Project
-## Homogenous Ensemble Learning on Highly Unbalanced Data
-_Currently Developing_
+## Homogenous Ensemble Learning on Highly Imbalanced Data
+[Website to Project](https://kevinbian107.github.io/ensemble-imbalanced-data/)
 
 Training on large corpus of recipe data from [here](https://drive.google.com/file/d/1kIbMz6jlhleiZ9_3QthmUnifoSds_2EI/view) to analyze the "essential component" of each user's textual input (detecting user preference) by differnt Natural NLP methods (feature egineering, TF-IDF, and word2vec similarity), then building a **Homogenous Ensemble Learning** system using Random Forest to predict user preference (highly unbalanced in this data set) and pushing a step furtehr to building a **Reconmander System**.
 
