@@ -12,7 +12,7 @@ I am currently working as a undergraduate research intern at [Talmo's Lab](https
 
 Self-learning (Proprioception Data DRL Trained) Brax_ant
 <div style="text-align: center;">
-    <video width="288" height="216" controls>
+    <video width="300" controls>
     <source src="assets/ant_cross_gap.mp4" type="video/mp4">
     Your browser does not support the video tag.
     </video>
@@ -27,7 +27,7 @@ I am currently researching on **Affordance Embodied Simulation’s presences in 
 ## Homogenous Ensemble Learning on Highly Imbalanced Data
 [Website to Project](https://kevinbian107.github.io/ensemble-imbalanced-data/)
 
-Training on large corpus of recipe data from [here](https://drive.google.com/file/d/1kIbMz6jlhleiZ9_3QthmUnifoSds_2EI/view) to analyze the "essential component" of each user's textual input (detecting user preference) by differnt Natural NLP methods (feature egineering, TF-IDF, and word2vec similarity), then building a **Homogenous Ensemble Learning** system using Random Forest to predict user preference (highly unbalanced in this data set) and pushing a step furtehr to building a **Reconmander System**.
+Training on large corpus of recipe data from [here](https://drive.google.com/file/d/1kIbMz6jlhleiZ9_3QthmUnifoSds_2EI/view) to analyze the "essential component" of each user's textual input (detecting user preference) by differnt Natural NLP methods (feature egineering, TF-IDF, and word2vec similarity), then building a **Homogenous Ensemble Learning** system using Random Forest to predict user preference (highly unbalanced in this data set) and pushing a step furtehr to building a reconmander system.
 
 ## Essential Algorithms for Data Science
 _Currently Developing_
