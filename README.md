@@ -27,7 +27,7 @@ I am currently researching on **Affordance Embodied Simulation’s presences in 
 ## Homogenous Ensemble Learning on Highly Imbalanced Data
 Training on large corpus of `recipe` data to analyze the "essential component" of each user's textual input (detecting user preference) by different feature egineering (i.e. TF-IDF textual analysis), then building a homogenous ensemble learning system using random forest to predict user preference (highly unbalanced in this data set).
 
-<a href="https://kevinbian107.github.io/ensemble-imbalanced-data/" style="background-color: #007bff; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-size: 16px;">Visit Project Website!</a>
+<a href="https://kevinbian107.github.io/ensemble-imbalanced-data/" style="background-color: #007bff; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-size: 10px;">Visit Project Website!</a>
 
 ## Essential Algorithms for Data Science
 _Currently Developing_
