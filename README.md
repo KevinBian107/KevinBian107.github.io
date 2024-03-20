@@ -12,7 +12,7 @@ I am currently working as a undergraduate research intern at [Talmo's Lab](https
 
 Self-learning (Proprioception Data DRL Trained) Brax_ant
 <div style="text-align: center;">
-    <video width="300" controls>
+    <video width="500" controls>
     <source src="assets/ant_cross_gap.mp4" type="video/mp4">
     Your browser does not support the video tag.
     </video>
@@ -25,17 +25,11 @@ I am currently researching on **Affordance Embodied Simulation’s presences in 
 
 # Project
 ## Homogenous Ensemble Learning on Highly Imbalanced Data
-[Website to Project](https://kevinbian107.github.io/ensemble-imbalanced-data/)
+Training on large corpus of recipe data from [here](https://drive.google.com/file/d/1kIbMz6jlhleiZ9_3QthmUnifoSds_2EI/view) to analyze the "essential component" of each user's textual input (detecting user preference) by different feature egineering (i.e. TF-IDF textual analysis), then building a homogenous ensemble learning system using random forest to predict user preference (highly unbalanced in this data set).
 
-Training on large corpus of recipe data from [here](https://drive.google.com/file/d/1kIbMz6jlhleiZ9_3QthmUnifoSds_2EI/view) to analyze the "essential component" of each user's textual input (detecting user preference) by differnt Natural NLP methods (feature egineering, TF-IDF, and word2vec similarity), then building a **Homogenous Ensemble Learning** system using Random Forest to predict user preference (highly unbalanced in this data set) and pushing a step furtehr to building a reconmander system.
+[Website to Project](https://kevinbian107.github.io/ensemble-imbalanced-data/)
 
 ## Essential Algorithms for Data Science
 _Currently Developing_
 
-An Package demnonstrating fundamental algorithms that is essential to practices in data science and machine learning algorithm include areas of:
-1. Fundamental Search ALgorithm
-    - Binary Search,...
-2. Graph Search Algorithm
-    - BFS/DFS, BellmanFord's Algorithm, Dijkstra's Algorithm, Kruskal's Algorithm,...
-3. Language Models
-    - NGram Model, Decision Tree, Random Forest,...
+An Package demnonstrating fundamental algorithms that is essential to practices in data science and machine learning algorithm include areas of fundamental search aLgorithm (binary search,...), graph search algorithm (bfs/dfs, BellmanFord's algorithm, Dijkstra's algorithm, Kruskal's algorithm,...), and language models/classifiers (ngram model, decision tree, random forest,...)
