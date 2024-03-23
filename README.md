@@ -18,6 +18,14 @@ Self-learning (Proprioception Data DRL Trained) Brax_ant
     </video>
 </div>
 
+Self-learning (Proprioception + Vision Data DRL Trained) Brax_ant
+<div style="text-align: center;">
+    <video width="500" controls>
+    <source src="assets/cross_gap_vision_0.1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+</div>
+
 *Brax_env shown above intergrates custom dm_control env and uses **Proximal Policy Control** for training*
 
 ## UCSD FMP Research Assistent
