@@ -4,7 +4,7 @@ My name is Kaiwen (Kevin) Bian and I am a undergraduate student at UCSD double m
 
 **Email**: [kaiwenbian107@gmail.com](kaiwenbian107@gmail.com)
 
--- [Resume](assets/Kaiwen%20Bian%20Resume%202024:3:2.pdf) -- [CV](assets/Kaiwen%20Bian%20CV%202024:March:31.pdf) -- [Github](https://github.com/KevinBian107) -- [Linkedin](https://www.linkedin.com/in/kbian107/) --
+-- [Resume](assets/Kaiwen%20Bian%20Resume%202024:3:31.pdf) -- [CV](assets/Kaiwen%20Bian%20CV%202024:March:31.pdf) -- [Github](https://github.com/KevinBian107) -- [Linkedin](https://www.linkedin.com/in/kbian107/) --
 
 # Interships & Apprenticeships
 ## Salk Institute
