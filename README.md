@@ -8,20 +8,12 @@ My name is Kaiwen (Kevin) Bian and I am a undergraduate student at UCSD double m
 
 # Interships & Apprenticeships
 ## Salk Institute
-I am currently working as a undergraduate research intern at [Talmo's Lab](https://talmolab.org/) in the Salk Institute. we are working on the the VNL project, a collaboration between Salk Institute and Harvard University aiming to create a working **Imitation Learning** and **Deep Reinforcement Learning** pipeline for creating computational models of the brain using Jax supported brax.
+I am currently working as a undergraduate research intern at [Talmo's Lab](https://talmolab.org/) in the Salk Institute. we are working on the the VNL project, a collaboration between Salk Institute and Harvard University aiming to create a working **Imitation Learning** (an advance deep reinforcement learning method) pipeline for creating computational models of the brain using gpu accelerated JAX & Brax
 
 Self-learning (Proprioception Data DRL Trained) Brax_ant
 <div style="text-align: center;">
     <video width="500" controls>
     <source src="assets/ant_cross_gap.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-    </video>
-</div>
-
-Self-learning (Proprioception + Vision Data DRL Trained) Brax_ant
-<div style="text-align: center;">
-    <video width="500" controls>
-    <source src="assets/cross_gap_vision_0.1.mp4" type="video/mp4">
     Your browser does not support the video tag.
     </video>
 </div>
@@ -37,7 +29,8 @@ Training on large corpus of `recipe` data to analyze the "essential component" o
 
 <a href="https://kevinbian107.github.io/ensemble-imbalanced-data/" style="background-color: #007bff; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-size: 12px;">Visit Project Website!</a>
 
-## Essential Algorithms for Data Science
+## Essential Algorithms for Data Science Practices
 _Currently Developing_
 
-An Package demnonstrating fundamental algorithms that is essential to practices in data science and machine learning algorithm include areas of fundamental search aLgorithm (binary search,...), graph search algorithm (bfs/dfs, BellmanFord's algorithm, Dijkstra's algorithm, Kruskal's algorithm,...), and language models/classifiers (ngram model, decision tree, random forest,...)
+An educational package demnonstrating fundamental algorithms that is essential to practices in data science, machine learning, and optimization, currently include:
+- Search algorithms (Depth First Search, Breadth First Search, BellmanFord's Algorithm, Dijkstra's Algorithm (Uniform Cost Search), Kruskal's Algorithm, A* Search)
