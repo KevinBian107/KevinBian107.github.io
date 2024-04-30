@@ -12,7 +12,7 @@ I am currently working as a undergraduate research intern at [Talmo's Lab](https
 
 Self-learning (Proprioception Data DRL Trained) Brax_ant
 <div style="text-align: center;">
-    <video width="500" controls>
+    <video controls>
     <source src="assets/cross_gap_vision_0.1.mp4" type="video/mp4">
     Your browser does not support the video tag.
     </video>
