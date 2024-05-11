@@ -22,7 +22,7 @@ Self-learning (Proprioception Data DRL Trained) Brax_ant
 
 <a href="https://talmolab.org/" style="background-color: #007bff; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-size: 12px;">Visit Our Lab Website</a>
 
-## UCSD FMP Research Assistent
+## UCSD FMP Research Scholar
 I am currently researching on **Affordance Embodied Simulation’s presences in Multimodal models** through the UCSD Faculty Mentorship Program (started Sep 2023) under the supervision of [Sean Trott](https://seantrott.github.io/). We try to improve the reliability of machine learning models through examining the degree of models’ “understanding” of the subtle keys in human languages and how it is used to map the world we know.
 
 <a href="https://github.com/KevinBian107/mllm_embodied_simulation" style="background-color: #007bff; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-size: 12px;">Visit Project GitHub!</a>
