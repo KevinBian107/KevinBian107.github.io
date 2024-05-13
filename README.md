@@ -18,7 +18,13 @@ Self-learning (Proprioception Data DRL Trained) Brax_ant
     </video>
 </div>
 
-*Brax_env shown above intergrates custom dm_control env and uses **Proximal Policy Control** for training*
+*Brax trained agent shown above intergrates custom dm_control env and uses **Proximal Policy Control** for training*
+
+We aim to create pipelines with architectures and learning alogorithm that is capable of generalizing and continual learning low level skills that is transferable for multiple higher level task driven goals, trying to get closer to what "real brain" is capable of doing.
+
+<center><img src=assets/Intentional_network.png width=60%></center>
+
+*Deep imitation learning illustartion using encoder/decoder structure*
 
 <a href="https://talmolab.org/" style="background-color: #007bff; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-size: 12px;">Visit Our Lab Website</a>
 
