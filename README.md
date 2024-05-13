@@ -14,10 +14,10 @@ I am currently working as a undergraduate research intern at [Talmo's Lab](https
 <a href="https://talmolab.org/" style="background-color: #007bff; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-size: 12px;">Visit Our Lab Website</a>
 
 Self-learning (Proprioception Data DRL Trained) Brax Ant
-<div style="text-align: center;">
-    <video controls>
-    <source src="assets/cross_gap_vision_0.1.mp4" type="video/mp4">
-    Your browser does not support the video tag.
+<div style="text-align: center; max-width: 100%;">
+    <video controls style="width: 100%; height: auto;">
+        <source src="assets/cross_gap_vision_0.1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
     </video>
 </div>
 
@@ -25,7 +25,10 @@ Self-learning (Proprioception Data DRL Trained) Brax Ant
 
 We aim to create pipelines with architectures and learning alogorithm that is capable of generalizing and continual learning low level skills that is transferable for multiple higher level task driven goals, trying to get closer to what "real brain" is capable of doing.
 
-<center><img src=assets/Intentional_network.png></center>
+<div style="text-align: center;">
+    <img src="assets/Intentional_network.png" alt="imitation pipeline" style="width:100%; height:auto;">
+</div>
+
 
 *Deep imitation learning illustartion using encoder/decoder structure*
 
