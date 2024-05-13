@@ -7,15 +7,16 @@ My name is Kaiwen (Kevin) Bian and I am a undergraduate student at UCSD double m
 -- [Resume](assets/Kaiwen%20Bian%20Resume%202024:3:31.pdf) -- [CV](assets/Kaiwen%20Bian%20CV%202024:March:31.pdf) -- [Github](https://github.com/KevinBian107) -- [Linkedin](https://www.linkedin.com/in/kbian107/) --
 
 # Interships & Apprenticeships
+
 ## Salk Institute
 I am currently working as a undergraduate research intern at [Talmo's Lab](https://talmolab.org/) in the Salk Institute. we are working on the the VNL project, a collaboration between Salk Institute and Harvard University aiming to use advance **Deep Reinforcement Learning** method such as **Imitation Learning** to create working piepliens for computational models of the brain using GPU accelerated JAX & Brax.
 
 <a href="https://talmolab.org/" style="background-color: #007bff; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-size: 12px;">Visit Our Lab Website</a>
 
-Self-learning (Proprioception Data DRL Trained) Brax_ant
+Self-learning (Proprioception Data DRL Trained) Brax Ant
 <div style="text-align: center;">
     <video controls>
-    <source src="assets/cross_gap_vision_0.1.mp4" type="video/mp4" width=60%>
+    <source src="assets/cross_gap_vision_0.1.mp4" type="video/mp4">
     Your browser does not support the video tag.
     </video>
 </div>
@@ -24,7 +25,7 @@ Self-learning (Proprioception Data DRL Trained) Brax_ant
 
 We aim to create pipelines with architectures and learning alogorithm that is capable of generalizing and continual learning low level skills that is transferable for multiple higher level task driven goals, trying to get closer to what "real brain" is capable of doing.
 
-<center><img src=assets/Intentional_network.png width=60%></center>
+<center><img src=assets/Intentional_network.png></center>
 
 *Deep imitation learning illustartion using encoder/decoder structure*
 
