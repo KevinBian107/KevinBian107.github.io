@@ -10,10 +10,12 @@ My name is Kaiwen (Kevin) Bian and I am a undergraduate student at UCSD double m
 ## Salk Institute
 I am currently working as a undergraduate research intern at [Talmo's Lab](https://talmolab.org/) in the Salk Institute. we are working on the the VNL project, a collaboration between Salk Institute and Harvard University aiming to use advance **Deep Reinforcement Learning** method such as **Imitation Learning** to create working piepliens for computational models of the brain using GPU accelerated JAX & Brax.
 
+<a href="https://talmolab.org/" style="background-color: #007bff; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-size: 12px;">Visit Our Lab Website</a>
+
 Self-learning (Proprioception Data DRL Trained) Brax_ant
 <div style="text-align: center;">
     <video controls>
-    <source src="assets/cross_gap_vision_0.1.mp4" type="video/mp4">
+    <source src="assets/cross_gap_vision_0.1.mp4" type="video/mp4" width=60%>
     Your browser does not support the video tag.
     </video>
 </div>
@@ -25,8 +27,6 @@ We aim to create pipelines with architectures and learning alogorithm that is ca
 <center><img src=assets/Intentional_network.png width=60%></center>
 
 *Deep imitation learning illustartion using encoder/decoder structure*
-
-<a href="https://talmolab.org/" style="background-color: #007bff; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-size: 12px;">Visit Our Lab Website</a>
 
 ## UCSD FMP Research Scholar
 I am currently researching on **Affordance Embodied Simulation’s presences in Multimodal models** through the UCSD Faculty Mentorship Program (started Sep 2023) under the supervision of [Sean Trott](https://seantrott.github.io/). We try to improve the reliability of machine learning models through examining the degree of models’ “understanding” of the subtle keys in human languages and how it is used to map the world we know.
