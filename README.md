@@ -13,7 +13,16 @@ I am currently working as a undergraduate research intern at [Talmo's Lab](https
 
 <a href="https://talmolab.org/" style="background-color: #007bff; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-size: 12px;">Visit Our Lab Website</a>
 
-Self-learning (Proprioception Data DRL Trained) Brax Ant
+We aim to create pipelines with architectures and learning alogorithm that is capable of generalizing and continual learning low level skills that is transferable for multiple higher level task driven goals, trying to get closer to what "real brain" is capable of doing.
+
+<div style="text-align: center;">
+    <img src="assets/Intentional_network.png" alt="imitation pipeline" style="width:100%; height:auto;">
+</div>
+
+*Deep imitation learning illustartion using encoder/decoder structure*
+
+For demo purposes, here is an easy version of what we do in our lab: self-learning (proprioception data DRL trained) Brax ant
+
 <div style="text-align: center; max-width: 100%;">
     <video controls style="width: 100%; height: auto;">
         <source src="assets/cross_gap_vision_0.1.mp4" type="video/mp4">
@@ -21,16 +30,8 @@ Self-learning (Proprioception Data DRL Trained) Brax Ant
     </video>
 </div>
 
-*Brax trained agent shown above intergrates custom dm_control env and uses **Proximal Policy Control** for training*
+*Using custom dm_control env and Proximal Policy Control for training*
 
-We aim to create pipelines with architectures and learning alogorithm that is capable of generalizing and continual learning low level skills that is transferable for multiple higher level task driven goals, trying to get closer to what "real brain" is capable of doing.
-
-<div style="text-align: center;">
-    <img src="assets/Intentional_network.png" alt="imitation pipeline" style="width:100%; height:auto;">
-</div>
-
-
-*Deep imitation learning illustartion using encoder/decoder structure*
 
 ## UCSD FMP Research Scholar
 I am currently researching on **Affordance Embodied Simulation’s presences in Multimodal models** through the UCSD Faculty Mentorship Program (started Sep 2023) under the supervision of [Sean Trott](https://seantrott.github.io/). We try to improve the reliability of machine learning models through examining the degree of models’ “understanding” of the subtle keys in human languages and how it is used to map the world we know.
