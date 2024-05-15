@@ -24,7 +24,7 @@ We aim to create pipelines with architectures and learning alogorithm that is ca
 Demonstartion of our goal where an agent (simulated virtual rodent) can use the intentinal network and learning algorithm to learn to take actions just as an real rodent but virtually.
 
 <div style="text-align: center;">
-    <img src="assets/vnl.png" alt="imitation pipeline" style="width:100%; height:auto;">
+    <img src="assets/vnl_1.png" alt="imitation pipeline" style="width:100%; height:auto;">
 </div>
 
 *Borrowed from Talmo's Lab VNL slides*
