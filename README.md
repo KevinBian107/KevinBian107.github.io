@@ -21,6 +21,8 @@ We aim to create pipelines with architectures and learning alogorithm that is ca
 
 *Deep imitation learning illustartion using encoder/decoder structure (borrowed from VNL Research Strategy)*
 
+Demonstartion of potential simulated virtual rodent with simulated "brain"
+
 <div style="text-align: center; max-width: 100%;">
     <video controls style="width: 100%; height: auto;">
         <source src="assets/vnl.mp4" type="video/mp4">
@@ -28,7 +30,7 @@ We aim to create pipelines with architectures and learning alogorithm that is ca
     </video>
 </div>
 
-*Borrowed from Talmo's Lab VNL slides*
+*NeuralAI + Simulated Body (borrowed from Talmo's Lab VNL slides)*
 
 For demo purposes, here is an easy version of what we do in our lab: self-learning (proprioception data DRL trained) Brax ant
 
