@@ -21,16 +21,13 @@ We aim to create pipelines with architectures and learning alogorithm that is ca
 
 *Deep imitation learning illustartion using encoder/decoder structure (borrowed from VNL Research Strategy)*
 
-Demonstartion of potential simulated virtual rodent with simulated "brain"
+Demonstartion of our goal where an agent (simulated virtual rodent) can use the intentinal network and learning algorithm to learn to take actions just as an real rodent but virtually.
 
-<div style="text-align: center; max-width: 100%;">
-    <video controls style="width: 100%; height: auto;">
-        <source src="assets/vnl.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+<div style="text-align: center;">
+    <img src="assets/vnl.png" alt="imitation pipeline" style="width:100%; height:auto;">
 </div>
 
-*NeuralAI + Simulated Body (borrowed from Talmo's Lab VNL slides)*
+*Borrowed from Talmo's Lab VNL slides*
 
 For demo purposes, here is an easy version of what we do in our lab: self-learning (proprioception data DRL trained) Brax ant
 
