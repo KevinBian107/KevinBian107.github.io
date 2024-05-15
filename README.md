@@ -19,7 +19,16 @@ We aim to create pipelines with architectures and learning alogorithm that is ca
     <img src="assets/Intentional_network.png" alt="imitation pipeline" style="width:100%; height:auto;">
 </div>
 
-*Deep imitation learning illustartion using encoder/decoder structure*
+*Deep imitation learning illustartion using encoder/decoder structure (From VNL Research Strategy)*
+
+<div style="text-align: center; max-width: 100%;">
+    <video controls style="width: 100%; height: auto;">
+        <source src="assets/vnl.mov" type="video/mov">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+*From Talmo's Lab VNL Slides*
 
 For demo purposes, here is an easy version of what we do in our lab: self-learning (proprioception data DRL trained) Brax ant
 
