@@ -11,6 +11,12 @@ My name is Kaiwen (Kevin) Bian and I am a undergraduate student at UCSD double m
 ## Salk Institute
 I am currently working as a undergraduate research intern at [Talmo's Lab](https://talmolab.org/) in the Salk Institute. we are working on the the VNL project, a collaboration between Salk Institute and Harvard University aiming to use advance **Deep Reinforcement Learning** method such as **Imitation Learning** to create working piepliens for computational models of the brain using GPU accelerated JAX & Brax.
 
+<div style="text-align: center;">
+    <img src="assets/vnl_1.png" alt="imitation pipeline" style="width:100%; height:auto;">
+</div>
+
+*Borrowed from Talmo's Lab VNL slides*
+
 <a href="https://talmolab.org/" style="background-color: #007bff; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-size: 12px;">Visit Our Lab Website</a>
 
 We aim to create pipelines with architectures and learning alogorithm that is capable of generalizing and continual learning low level skills that is transferable for multiple higher level task driven goals, trying to get closer to what "real brain" is capable of doing.
@@ -22,10 +28,6 @@ We aim to create pipelines with architectures and learning alogorithm that is ca
 *Deep imitation learning illustartion using encoder/decoder structure (borrowed from VNL Research Strategy)*
 
 Demonstartion of our goal where an agent (simulated virtual rodent) can use the intentinal network and learning algorithm to learn to take actions just as an real rodent but virtually.
-
-<div style="text-align: center;">
-    <img src="assets/vnl_1.png" alt="imitation pipeline" style="width:100%; height:auto;">
-</div>
 
 <div style="text-align: center;">
     <img src="assets/vnl_2.png" alt="imitation pipeline" style="width:100%; height:auto;">
