@@ -15,7 +15,7 @@ I am currently working as a undergraduate research intern at [Talmo's Lab](https
     <img src="assets/vnl_1.png" alt="imitation pipeline" style="width:100%; height:auto;">
 </div>
 
-*Borrowed from Talmo's Lab VNL slides*
+*Abstarct Deep Imitation Learning Idea (borrowed from Talmo's Lab VNL slides)*
 
 <a href="https://talmolab.org/" style="background-color: #007bff; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-size: 12px;">Visit Our Lab Website</a>
 
@@ -27,13 +27,13 @@ We aim to create pipelines with architectures and learning alogorithm that is ca
 
 *Deep imitation learning illustartion using encoder/decoder structure (borrowed from VNL Research Strategy)*
 
-Demonstartion of our goal where an agent (simulated virtual rodent) can use the intentinal network and learning algorithm to learn to take actions just as an real rodent but virtually.
+Demonstarting of our goal where an agent (simulated virtual rodent) can use the intentinal network learned from deep imitation learning algorithm to learn to take actions just as an real rodent but virtually (shown in the MoCap registration from real rodent).
 
 <div style="text-align: center;">
     <img src="assets/vnl_2.png" alt="imitation pipeline" style="width:100%; height:auto;">
 </div>
 
-*Borrowed from Talmo's Lab VNL slides*
+*MoCap Registration + Imitation Learning (borrowed from Talmo's Lab VNL slides)*
 
 For demo purposes, here is an easy version of what we do in our lab: self-learning (proprioception data DRL trained) Brax ant
 
