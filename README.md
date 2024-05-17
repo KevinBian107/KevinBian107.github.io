@@ -30,7 +30,7 @@ We aim to create pipelines with architectures and learning alogorithm that is ca
 Our goal is to make an agent (virtual rodent) that is able to use the intentinal network learned from deep imitation learning algorithm to learn to take actions just as an real rodent but virtually (shown in the MoCap registration from real rodent).
 
 <div style="text-align: center;">
-    <img src="assets/vnl_2.1.png" alt="imitation pipeline" style="width:70%; height:auto;">
+    <img src="assets/vnl_2.1.png" alt="imitation pipeline" style="width:100%; height:auto;">
 </div>
 
 *MoCap registration (Merel et al. (2019): Deep neuroethology, Wu et al. (2013): STAC)*
