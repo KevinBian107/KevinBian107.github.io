@@ -53,8 +53,8 @@ I am currently researching on **Affordance Embodied Simulation’s presences in 
 <a href="https://github.com/KevinBian107/mllm_embodied_simulation" style="background-color: #007bff; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-size: 12px;">Visit Project GitHub!</a>
 
 # Projects
-## Homogenous Ensemble Learning on Highly Imbalanced Data
-Training on large corpus of `recipe` data to analyze the "essential component" of each user's textual input (detecting user preference) by different feature egineering (i.e. TF-IDF textual analysis), then building a homogenous ensemble learning system using random forest to predict user preference (highly unbalanced in this data set).
+## Robust Ensemble Learning
+Recipes and ratings play a pivotal role in our everyday lives, influencing various aspects from culinary experiences to social interactions. Predicting users’ preferences is particularly crucial as it enables personalized experiences and enhances efficiency in content discovery. In our analysis, we focus on how to predict user preferences based on various numerical and textual features. Our approach involves employing advanced techniques such as TF-IDF transformation, PCA, and a homogenous ensemble learning method, specifically Random Forest, to construct a reliable multi-class classifier with more **robust** and **reliable** predictions even facing imbalanced datasets, ensuring dependable predictions in scenarios where data distribution is skewed.
 
 <a href="https://kevinbian107.github.io/ensemble-imbalanced-data/" style="background-color: #007bff; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-size: 12px;">Visit Project Website!</a>
 
