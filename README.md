@@ -32,13 +32,13 @@ We aim to create pipelines with architectures and learning alogorithm that is ca
 
 *Deep imitation learning illustartion using encoder/decoder structure (borrowed from VNL Research Strategy)*
 
-Our goal is to make an agent (virtual rodent) that is able to use the intentinal network learned from deep imitation learning algorithm to learn to take actions just as an real rodent but virtually (shown in the MoCap registration from real rodent).
+<!-- Our goal is to make an agent (virtual rodent) that is able to use the intentinal network learned from deep imitation learning algorithm to learn to take actions just as an real rodent but virtually (shown in the MoCap registration from real rodent). -->
 
-<div style="text-align: center;">
+<!-- <div style="text-align: center;">
     <img src="assets/vnl_2.1.png" alt="imitation pipeline" style="width:100%; height:auto;">
 </div>
 
-*MoCap registration (Merel et al. (2019): Deep neuroethology, Wu et al. (2013): STAC)*
+*MoCap registration (Merel et al. (2019): Deep neuroethology, Wu et al. (2013): STAC)* -->
 
 For demo purposes, here is an easy version of what we do in our lab: self-learning (proprioception data DRL trained) Brax ant
 
