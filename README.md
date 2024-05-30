@@ -2,7 +2,7 @@
 
 My name is Kaiwen (Kevin) Bian and I am a undergraduate student at UCSD double majoring in **Data Science** & **Cognitive Behavoral Neuroscience** and minoring in **Mathamatics**. I am passionate about finding bridges between Data Science and Neuroscience through forms of algorithm and machine learning to help both communities better understand the machines and ourselves. I am fluent in both Chinese and English, and open- minded for new ideas and learning opportunities.
 
-**Email**: [kaiwenbian107@gmail.com](kaiwenbian107@gmail.com)
+**Email**: [kaiwenbian107@gmail.com](kaiwenbian107@gmail.com) | [kbian@ucsd.edu](kbian@ucsd.edu)
 
 -- [Resume](assets/Kaiwen%20Bian%20Resume%202024:3:31.pdf) -- [CV](assets/Kaiwen%20Bian%20CV%202024:March:31.pdf) -- [Github](https://github.com/KevinBian107) -- [Linkedin](https://www.linkedin.com/in/kbian107/) --
 
