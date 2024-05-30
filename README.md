@@ -17,7 +17,7 @@ I am currently reseraching into the theoritical aspects of **Continual Learning*
     <img src="assets/cl_1.png" alt="Continual Learning Schematic" style="width:100%; height:auto;">
 </div>
 
-> Schematic of Continual Learning (Zhang et al. (2019))
+> Schematic of Continual Learning (Zhang et al. (2024))
 
 
 ## Salk Institute Research Intern
