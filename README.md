@@ -13,6 +13,13 @@ My name is Kaiwen (Kevin) Bian and I am a undergraduate student at UCSD double m
 
 I am currently reseraching into the theoritical aspects of **Continual Learning** with advising from professor [Sichun Gao](https://scungao.github.io/) from UCSD Computer Science & Engineering Department and professor [Talmo Pereira](https://talmopereira.com/) from Salk Institute. I try to frame the general problem of Continual Learning from the perspective of Reinforcement Learning & Cognivite Neuroscience, hoping to develope algorithms that utilize the same strategies of "how we learn" onto a artificial agent.
 
+<div style="text-align: center;">
+    <img src="assets/cl_1.png" alt="Continual Learning Schematic" style="width:100%; height:auto;">
+</div>
+
+> Schematic of Continual Learning (Zhang et al. (2019))
+
+
 ## Salk Institute Research Intern
 I am currently working as a undergraduate research intern at [Talmo's Lab](https://talmolab.org/) in the Salk Institute. we are working on the the VNL project, a collaboration between Salk Institute and Harvard University aiming to use advance **Deep Reinforcement Learning** method such as **Imitation Learning** to create working piepliens for computational models of the brain using GPU accelerated JAX & Brax.
 
