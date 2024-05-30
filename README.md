@@ -8,7 +8,7 @@ My name is Kaiwen (Kevin) Bian and I am a undergraduate student at UCSD double m
 
 # Interships & Research
 
-## UCSD CSE & Salk Institute Researcher
+## UCSD CSE & Salk Institute Student Researcher
 > The modern paradigm of machine learning puts the emphasis on the end result, rather than the learning process, and overlooks a critical characteristic of human learning: that it is robust to changing tasks and sequential experience.
 
 I am currently reseraching into the theoritical aspects of **Continual Learning** with advising from professor [Sichun Gao](https://scungao.github.io/) from UCSD Computer Science & Engineering Department and professor [Talmo Pereira](https://talmopereira.com/) from Salk Institute. I try to frame the general problem of Continual Learning from the perspective of Reinforcement Learning & Cognivite Neuroscience, hoping to develope algorithms that utilize the same strategies of "how we learn" onto a artificial agent.
@@ -21,8 +21,6 @@ I am currently working as a undergraduate research intern at [Talmo's Lab](https
 </div>
 
 *Abstarct Deep Imitation Learning Idea (borrowed from Talmo's Lab VNL slides)*
-
-<a href="https://talmolab.org/" style="background-color: #007bff; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-size: 12px;">Visit Our Lab Website</a>
 
 We aim to create pipelines with architectures and learning alogorithm that is capable of generalizing and continual learning low level skills that is transferable for multiple higher level task driven goals, trying to get closer to what "real brain" is capable of doing.
 
@@ -51,6 +49,7 @@ For demo purposes, here is an easy version of what we do in our lab: self-learni
 
 *Using custom dm_control env and Proximal Policy Control for training*
 
+<a href="https://talmolab.org/" style="background-color: #007bff; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-size: 12px;">Visit Our Lab Website</a>
 
 ## UCSD FMP Research Scholar
 I researched on Affordance Embodied Simulation’s presences in **Multimodal Models** through the UCSD Faculty Mentorship Program (Sep 2023 - Jun 2024) under the supervision of [Sean Trott](https://seantrott.github.io/). We try to improve the reliability of machine learning models through examining the degree of models’ “understanding” of the subtle keys in human languages and how it is used to map the world we know.
