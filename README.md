@@ -53,18 +53,18 @@ For demo purposes, here is an easy version of what we do in our lab: self-learni
 
 
 ## UCSD FMP Research Scholar
-I am currently researching on **Affordance Embodied Simulation’s presences in Multimodal models** through the UCSD Faculty Mentorship Program (started Sep 2023) under the supervision of [Sean Trott](https://seantrott.github.io/). We try to improve the reliability of machine learning models through examining the degree of models’ “understanding” of the subtle keys in human languages and how it is used to map the world we know.
+I researched on Affordance Embodied Simulation’s presences in **Multimodal Models** through the UCSD Faculty Mentorship Program (Sep 2023 - Jun 2024) under the supervision of [Sean Trott](https://seantrott.github.io/). We try to improve the reliability of machine learning models through examining the degree of models’ “understanding” of the subtle keys in human languages and how it is used to map the world we know.
 
 <a href="https://github.com/KevinBian107/mllm_embodied_simulation" style="background-color: #007bff; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-size: 12px;">Visit Project GitHub!</a>
 
-# Projects
+# Data Science Projects
 ## Robust Ensemble Learning
 Recipes and ratings play a pivotal role in our everyday lives, influencing various aspects from culinary experiences to social interactions. Predicting users’ preferences is particularly crucial as it enables personalized experiences and enhances efficiency in content discovery. In our analysis, we focus on how to predict user preferences based on various numerical and textual features. Our approach involves employing advanced techniques such as TF-IDF transformation, PCA, and a homogenous ensemble learning method, specifically Random Forest, to construct a reliable multi-class classifier with more **robust** and **reliable** predictions even facing imbalanced datasets, ensuring dependable predictions in scenarios where data distribution is skewed.
 
 <a href="https://kevinbian107.github.io/ensemble-imbalanced-data/" style="background-color: #007bff; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-size: 12px;">Visit Project Website!</a>
 
-## Essential Algorithms for Data Science Practices
+<!-- ## Essential Algorithms for Data Science Practices
 _Currently Developing_
 
 An educational package demnonstrating fundamental algorithms that is essential to practices in data science, machine learning, and optimization, currently include:
-- Search algorithms (Depth First Search, Breadth First Search, BellmanFord's Algorithm, Dijkstra's Algorithm (Uniform Cost Search), Kruskal's Algorithm, A* Search)
+- Search algorithms (Depth First Search, Breadth First Search, BellmanFord's Algorithm, Dijkstra's Algorithm (Uniform Cost Search), Kruskal's Algorithm, A* Search) -->
