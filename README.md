@@ -9,7 +9,7 @@ My name is Kaiwen (Kevin) Bian and I am a undergraduate student at UCSD double m
 # Interships & Research
 
 ## UCSD CSE & Salk Institute
-***The modern paradigm of machine learning puts the emphasis on the end result, rather than the learning process, and overlooks a critical characteristic of human learning: that it is robust to changing tasks and sequential experience.***
+> The modern paradigm of machine learning puts the emphasis on the end result, rather than the learning process, and overlooks a critical characteristic of human learning: that it is robust to changing tasks and sequential experience.
 
 I am currently reseraching into the theoritical aspects of **Continual Learning** with advising from professor [Sichun Gao](https://scungao.github.io/) from UCSD Computer Science & Engineering Department and professor [Talmo Pereira](https://talmopereira.com/) from Salk Institute. I try to frame the general problem of Continual Learning from the perspective of Reinforcement Learning & Cognivite Neuroscience, hoping to develope algorithms that utilize the same strategies of "how we learn" onto a artificial agent.
 
