@@ -19,6 +19,8 @@ I am currently reseraching into the theoritical aspects of **Continual Learning*
 
 > Schematic of Continual Learning (Zhang et al. (2024))
 
+<a href="https://github.com/KevinBian107/Simple_CL_Env" style="background-color: #007bff; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-size: 12px;">Prelininary Simple Environment</a>
+
 
 ## Salk Institute Research Intern
 I am currently working as a undergraduate research intern at [Talmo's Lab](https://talmolab.org/) in the Salk Institute. we are working on the the VNL project, a collaboration between Salk Institute and Harvard University aiming to use advance **Deep Reinforcement Learning** method such as **Imitation Learning** to create working piepliens for computational models of the brain using GPU accelerated JAX & Brax.
