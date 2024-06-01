@@ -19,7 +19,7 @@ I am currently reseraching into the theoritical aspects of **Continual Learning*
 
 > Schematic of Continual Learning (Zhang et al. (2024))
 
-<a href="https://github.com/KevinBian107/Simple_CL_Env" style="background-color: #007bff; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-size: 12px;">Prelininary Simple Environment</a>
+<a href="https://github.com/KevinBian107/Simple_CL_Env" style="background-color: #007bff; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-size: 12px;">Preliminary Simple Testing Environment</a>
 
 
 ## Salk Institute Research Intern
