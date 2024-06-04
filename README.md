@@ -66,6 +66,13 @@ I researched on Affordance Embodied Simulation’s presences in **Multimodal Mod
 <a href="https://github.com/KevinBian107/mllm_embodied_simulation" style="background-color: #007bff; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-size: 12px;">Visit Project GitHub!</a>
 
 # Data Science Projects
+
+## Intuitive Laplacien Eigenmap Visualization
+Dimensionality reduction technique is a crucial technique in machine learning as they are an approach in finding the "principals" in high dimensional data, which tends to be very noisy and would effect the accuracy of simple classifier significantly. However, these technique are usually very mathamatically intense and complicated for the general public to understadn without prior mathamatical background. Therefore, we developed this visualization project using D3, JavaScript to deliver an **intuitive** understanding of one of the most popular dimensionality reduction algorith (**Laplacien Eigenmap**) on the art work collections in MET, New York.
+
+<a href="https://kevinbian107.github.io/laplacian_eigenmap_vis/" style="background-color: #007bff; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-size: 12px;">Intuitive Laplacien Eigenmap</a>
+
+
 ## Robust Ensemble Learning
 Recipes and ratings play a pivotal role in our everyday lives, influencing various aspects from culinary experiences to social interactions. Predicting users’ preferences is particularly crucial as it enables personalized experiences and enhances efficiency in content discovery. In our analysis, we focus on how to predict user preferences based on various numerical and textual features. Our approach involves employing advanced techniques such as TF-IDF transformation, PCA, and a homogenous ensemble learning method, specifically Random Forest, to construct a reliable multi-class classifier with more **robust** and **reliable** predictions even facing imbalanced datasets, ensuring dependable predictions in scenarios where data distribution is skewed.
 
