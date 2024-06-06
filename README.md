@@ -5,7 +5,7 @@ My name is Kaiwen (Kevin) Bian and I am a undergraduate student at UCSD double m
 > "Searching for Needles in Haystacks"
 
 <div style="text-align: center;">
-    <img src="assets/searching.png" alt="Continual Learning Schematic" style="width:100%; height:auto;">
+    <img src="assets/searching.png" alt="Continual Learning Schematic" style="width:80%; height:auto;">
 </div>
 
 **Email**: [kaiwenbian107@gmail.com](kaiwenbian107@gmail.com) -- [kbian@ucsd.edu](kbian@ucsd.edu)
