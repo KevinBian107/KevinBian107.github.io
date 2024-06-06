@@ -2,6 +2,12 @@
 
 My name is Kaiwen (Kevin) Bian and I am a undergraduate student at UCSD double majoring in **Data Science** & **Cognitive Behavoral Neuroscience** and minoring in **Mathamatics**. I am passionate about finding bridges between Data Science and Neuroscience through forms of algorithm and machine learning to help both communities better understand the machines and ourselves. I am also trying to be a **master of puzzle solving** to use an algoritmic approach to solve np-hard problems in different domains. I am fluent in both Chinese and English, and open-minded for new ideas and learning opportunities.
 
+> "Searching for Needles in Haystacks"
+
+<div style="text-align: center;">
+    <img src="assets/searching.png" alt="Continual Learning Schematic" style="width:100%; height:auto;">
+</div>
+
 **Email**: [kaiwenbian107@gmail.com](kaiwenbian107@gmail.com) -- [kbian@ucsd.edu](kbian@ucsd.edu)
 
 -- [Resume](assets/Kaiwen%20Bian%20Resume%202024:3:31.pdf) -- [CV](assets/Kaiwen%20Bian%20CV%202024:March:31.pdf) -- [Github](https://github.com/KevinBian107) -- [Linkedin](https://www.linkedin.com/in/kbian107/) --
