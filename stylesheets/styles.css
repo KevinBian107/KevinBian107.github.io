@@ -6,6 +6,35 @@ body {
   font-weight:400;
 }
 
+.repository-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.stat img {
+  width: 20px;
+  margin-right: 10px;
+}
+
 .contact-info {
   text-align: center;
 }
