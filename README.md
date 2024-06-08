@@ -1,19 +1,3 @@
-<header>
-    <div class="container">
-        <a href="{{ site.baseurl }}/">
-            <img src="{{ site.baseurl }}/assets/profile_kaiwen_picture_2.JPG" alt="Kaiwen Bian Logo" style="height: 50px;">
-        </a>
-        <nav>
-            <ul>
-                <li><a href="{{ site.baseurl }}/">Home</a></li>
-                <li><a href="{{ site.baseurl }}/about/">About</a></li>
-                <li><a href="{{ site.baseurl }}/contact/">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-
 # Kaiwen (Kevin) Bian
 
 My name is Kaiwen (Kevin) Bian and I am a undergraduate student at UCSD double majoring in **Data Science** & **Cognitive Behavoral Neuroscience** and minoring in **Mathamatics**. I am passionate about finding bridges between Data Science and Neuroscience through forms of algorithm and machine learning to help both communities better understand the machines and ourselves. I am also trying to be a **master of puzzle solving** to use an algoritmic approach to solve np-hard problems in different domains. I am fluent in both Chinese and English, and open-minded for new ideas and learning opportunities.
