@@ -1,3 +1,9 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: #fff;
   padding:50px;
@@ -136,6 +142,7 @@ a:hover small {
 }
 
 .wrapper {
+  padding-top: 70px;
   width:860px;
   margin:0 auto;
 }
@@ -352,24 +359,41 @@ footer {
 
 /* CSS for the div-styled as nav-list */
 .nav-list {
-  text-align: left; /* Centers the content */
-  padding: 10px 0; /* Padding around the div */
+  text-align: center; /* Ensures text alignment is centered */
+  position: fixed; /* Keeps the navigation fixed at the top */
+  top: 0; /* Aligns to the top */
+  left: 0; /* Starts from the left edge */
+  right: 0; /* Ends at the right edge */
+  z-index: 1000; /* Keeps the nav above other content */
+  display: flex; /* Uses Flexbox for layout */
+  justify-content: center; /* Centers the flex items horizontally */
+  align-items: center; /* Centers the flex items vertically */
+  padding: 10px 20px; /* Padding around the content */
+  background-color: #fff; /* Background color for the nav bar */
+  border-bottom: 1px solid #ccc; /* Optional: adds a subtle bottom border */
 }
 
 .nav-link {
-  display: inline-block; /* Makes the anchor inline-block for styling */
-  margin: 10px 20px; /* Space around the anchor */
-  background-color: #34495e; /* Dark background color */
-  border-radius: 5px; /* Rounded corners */
-  padding: 10px 20px; /* Padding inside the anchor */
-  color: #ecf0f1; /* Light color for text */
-  text-decoration: none; /* Removes underline */
-  font-weight: bold; /* Makes the font bold */
-  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition for text and background color */
+  margin: 0 20px;
+  padding: 5px 10px;
+  color: #666; /* Light gray for a subtle look */
+  font-size: 16px;
+  text-decoration: none; /* No underline */
+  font-weight: 400;
+  transition: color 0.3s;
 }
 
 .nav-link:hover, .nav-link:focus {
-  color: #3498db; /* Changes text color on hover/focus */
-  background-color: #2c3e50; /* Changes background color on hover/focus */
+  color: #000; /* Dark color for visibility on hover */
 }
 
+.theme-toggle {
+  cursor: pointer; /* Suggests the icon is clickable */
+  font-size: 24px; /* Larger size for the icon */
+  color: #666; /* Matches the link color */
+  transition: color 0.3s;
+}
+
+.theme-toggle:hover {
+  color: #000; /* Dark color on hover for consistency */
+}
