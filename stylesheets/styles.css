@@ -397,3 +397,27 @@ footer {
 .theme-toggle:hover {
   color: #000; /* Dark color on hover for consistency */
 }
+
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+body {
+    top: 0px !important;
+}
+
+#google_translate_element {
+    display: none;
+}
+
+.custom-translate-button {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.custom-translate-button:hover {
+    background-color: #45a049;
+}

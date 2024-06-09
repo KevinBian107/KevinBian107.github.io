@@ -26,6 +26,33 @@
         <a href="research.html" class="nav-link">Research</a>
         <a href="projects.html" class="nav-link">Data Science Projects</a>
         <a href="repo.html" class="nav-link">View Active GitHub Repo</a>
+        
+        
+        <button onclick="showTranslateOptions()" class="custom-translate-button">Translate</button>
+        <div id="google_translate_element"></div>
+        <script type="text/javascript">
+          // Initializes the Google Translate Element
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+              pageLanguage: 'en',
+              includedLanguages: 'zh-CN', // Restrict to English and Chinese Simplified
+              layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+              autoDisplay: false  // Prevent automatic display of the dropdown
+            }, 'google_translate_element');
+          }
+          // Function to manually trigger translation to Chinese
+          function showTranslateOptions() {
+            var selectField = document.querySelector(".goog-te-combo");
+            if (selectField) {
+              selectField.value = 'zh-CN'; // Set the translation to Chinese
+              selectField.dispatchEvent(new Event('change')); // Trigger the change event
+            } else {
+              console.error('Translation widget not loaded properly.');
+            }
+          }
+          </script>          
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      
       </div>
 
       <section>
@@ -66,5 +93,7 @@
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
+    <script src="javascripts/translate.js"></script>
   </body>
 </html>
+
