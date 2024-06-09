@@ -349,3 +349,27 @@ footer {
     color:#444;
   }
 }
+
+/* CSS for the div-styled as nav-list */
+.nav-list {
+  text-align: left; /* Centers the content */
+  padding: 10px 0; /* Padding around the div */
+}
+
+.nav-link {
+  display: inline-block; /* Makes the anchor inline-block for styling */
+  margin: 10px 20px; /* Space around the anchor */
+  background-color: #34495e; /* Dark background color */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Padding inside the anchor */
+  color: #ecf0f1; /* Light color for text */
+  text-decoration: none; /* Removes underline */
+  font-weight: bold; /* Makes the font bold */
+  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition for text and background color */
+}
+
+.nav-link:hover, .nav-link:focus {
+  color: #3498db; /* Changes text color on hover/focus */
+  background-color: #2c3e50; /* Changes background color on hover/focus */
+}
+
