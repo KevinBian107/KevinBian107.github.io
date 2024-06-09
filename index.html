@@ -26,7 +26,7 @@
         <a href="research.html" class="nav-link">Research</a>
         <a href="projects.html" class="nav-link">Data Science Projects</a>
         <a href="repo.html" class="nav-link">View Active GitHub Repo</a>
-        <button onclick="showTranslateOptions()" class="custom-translate-button" id="toggleTranslate">Translate</button>
+        <!-- <button onclick="showTranslateOptions()" class="custom-translate-button" id="toggleTranslate">Translate</button> -->
       </div>
 
       <section>
@@ -39,7 +39,7 @@
               pageLanguage: 'en',
               includedLanguages: 'en,zh-CN,es,fr,de,ja,ru', // Restrict to English and Chinese Simplified
               layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-              autoDisplay: false  // Prevent automatic display of the dropdown
+              autoDisplay: true  // Prevent automatic display of the dropdown
             }, 'google_translate_element');
           }
           // Function to manually trigger translation to Chinese
@@ -52,6 +52,9 @@
               console.error('Translation widget not loaded properly.');
             }
           }
+          window.onload = function() {
+                showTranslateOptions();
+            };
           </script>          
         <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         <p></p>

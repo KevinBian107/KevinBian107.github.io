@@ -13,9 +13,9 @@ function showTranslateOptions() {
 
     if (translateElement.style.display === 'block') {
         translateElement.style.display = 'none';
-        navList.style.top = '0'; // Resets to original top position when toolbar is hidden
+        // navList.style.top = '0'; // Resets to original top position when toolbar is hidden
     } else {
         translateElement.style.display = 'block';
-        navList.style.top = '30px'; // Moves down to make space for the translate bar, adjust as needed
+        // navList.style.top = '30px'; // Moves down to make space for the translate bar, adjust as needed
     }
 }

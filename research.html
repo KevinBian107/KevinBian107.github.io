@@ -20,10 +20,12 @@
           <a href="index.html" target="_blank">Home Page</a>
           <a href="repo.html" class="nav-link">View Active GitHub Repo</a>
           <a href="projects.html" class="nav-link">Data Science Projects</a>
-          <button onclick="showTranslateOptions()" class="custom-translate-button">Translate</button>
+          <!-- <button onclick="showTranslateOptions()" class="custom-translate-button">Translate</button> -->
         </div>
         <blockquote>
-          <p>"Searching for Needles in Haystacks"</p>
+          <p>"Intelligence is just happening to do the right thing for the right task and engineering/creating something that 
+            works for an interestingly scaled level problem is the same as parsing through the fog in this vast space of 
+            interactions that give so many seemingly correct functions and finding the truth."</p>
         </blockquote>
       </header>
       <section>
@@ -36,7 +38,7 @@
               pageLanguage: 'en',
               includedLanguages: 'en,zh-CN,es,fr,de,ja,ru', // Restrict to English and Chinese Simplified
               layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-              autoDisplay: false  // Prevent automatic display of the dropdown
+              autoDisplay: true  // Prevent automatic display of the dropdown
             }, 'google_translate_element');
           }
           // Function to manually trigger translation to Chinese
@@ -49,6 +51,9 @@
               console.error('Translation widget not loaded properly.');
             }
           }
+          window.onload = function() {
+                showTranslateOptions();
+            };
           </script>          
         <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         <p></p>
