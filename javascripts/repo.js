@@ -20,8 +20,16 @@
 // });
 
 document.addEventListener("DOMContentLoaded", function() {
-    const pinnedRepos = ['laplacian_eigenmap_vis', 'mllm_embodied_simulation', 'ensemble_imbalance_data', 'Simple_CL_Env'];
+    const pinnedRepos = ['laplacian_eigenmap_vis', 'mllm_embodied_simulation'];
+    const labRepos = ['VNL-Brax-Imitation']
     const container = document.getElementById('repositories');
+
+    labRepos.forEach(repoName => {
+        fetch(`https://api.github.com/repos/talmolab/${repoName}`)
+        .then(response => response.json())
+        .then(repo => createCard(repo, container))
+        .catch(error => console.error('Error loading GitHub data for repo: ', error));
+    });
 
     pinnedRepos.forEach(repoName => {
         fetch(`https://api.github.com/repos/KevinBian107/${repoName}`)

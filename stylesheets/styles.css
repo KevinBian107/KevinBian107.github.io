@@ -14,10 +14,10 @@ body {
 }
 
 .card {
-  background: #000000;
+  background: #373737;
   border-radius: 8px;
   padding: 8px;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 8px rgba(208, 208, 208, 0.325);
 }
 
 .card h3 {
@@ -25,10 +25,12 @@ body {
 }
 
 .repo_word{
+  font-size: 1.1em;
   color:#ffffff;
 }
 
 .repo_p{
+  font-size: 1.0em;
   color:#afacac;
 }
 
