@@ -457,3 +457,9 @@ body {
 #triggerTranslate:hover {
   background-color: #0056b3;
 }
+
+/* Icon style */
+.link-icon {
+  margin-right: 8px;
+  font-size: 18px; /* Adjust icon size */
+}

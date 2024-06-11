@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Kaiwen Bian</title>
+
+    <link rel="stylesheet" href="../stylesheets/styles.css">
+    <link rel="stylesheet" href="../stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/KevinBian107/KevinBian107.github.io/main/assets/logo_3.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Fullscreen image container */
+        #fullscreen-image {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        /* Image styles */
+        #fullscreen-image img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1><a href="../index.html" target="_blank">Inspiring Brain🧠</a></h1>
+            <div class="nav-list">
+                <a href="../index.html" target="_blank">Home Page</a>
+                <a href="brain.html" class="nav-link">Inspiring Brain🧠</a>
+            </div>
+            <blockquote>
+                <p>"all the area, all the functions, all the state, all at once"</p>
+            </blockquote>
+        </header>
+        <section>
+            <!-- Your main content -->
+            <h1>Some Small Ciruit...</h1>
+
+            <p>Click to zoom into the picture</p>
+            <div>
+                <img src="../assets/brain_0.png" alt="Brain" id="main-image" style="max-width: 100%; cursor: pointer;">
+            </div>
+        </section>
+        <footer>
+            <p>© 2024 Kaiwen Bian. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Fullscreen image container -->
+    <div id="fullscreen-image">
+        <img src="../assets/brain_0.png" alt="Brain">
+    </div>
+
+    <script src="../javascripts/scale.fix.js"></script>
+    <script src="../javascripts/translate.js"></script>
+    <script>
+        document.getElementById('main-image').addEventListener('click', function() {
+            document.getElementById('fullscreen-image').style.display = 'flex';
+        });
+
+        document.getElementById('fullscreen-image').addEventListener('click', function() {
+            document.getElementById('fullscreen-image').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
