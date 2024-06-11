@@ -466,7 +466,7 @@ body {
 
 .nav-box {
   display: block;
-  width: 380px;
+  width: auto;
   padding: 10px;
   margin: 10px;
   background-color: #ffffff;
