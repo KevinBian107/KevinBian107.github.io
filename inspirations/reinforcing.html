@@ -104,7 +104,7 @@
 
         <p>
           Dopamine signals is what biases sensorimotor inputs, but how should it balance between the exploration adn exploitation? In algorithm research, that is always a question that puzzles researchers, but seems like the brain have its own answer. The blue (CDh-rvmSNr) circuit is inherently recieving projection that makes 
-          <strong>quick learning + short memory retention</strong> while the red (CDt-cdlSNr) circuit is <strong>slow learning + long memory retention</strong>. In another words, the blue circuit is very sensitive to immediate reward (boost learning) while the red circuit is more proned to using stable-value-objects (to me this resembles some what like AlphaGo).
+          <strong>quick learning + short memory retention</strong> while the red (CDt-cdlSNr) circuit is <strong>slow learning + long memory retention</strong>. In another words, the blue circuit is very sensitive to immediate reward (boost learning) while the red circuit is more proned to using stable-value-objects.
         </p>
 
         <p>
@@ -141,15 +141,7 @@
         <p>
           That was describing one object, but in the real environment it is always multiple objects happening at thes ame time, some flexiable-object and some stable-value-objects, parralel processing comes in and the circuit is all processing in the same time  ith very different input, recieving projection and 
           projecting to many other functional areas + circuits. Techiqually speaking, it is many autonomic mechnisms and one voluntary mechanism operating in parralel to aim to achieve higher level common goals that requires multiple motor and mental processes, between mental processing and taking actions 
-          (maybe this solves search and optimization problem?). Key points for the perspective of continual learning:
-          <ul>
-            <li>
-              <p>There is one stream of higher level guidance (voluntary voice): learned stable-value-objects or previously learned weights.</p>
-            </li>
-            <li>
-              <p>Such stream of guidance processes simultaneously in parralel with the otehr sensory input: flexiable-objects or new data induced weightes.</p>
-            </li>
-          </ul>
+          (maybe this solves search and optimization problem?).
         </p>
 
         <p>Learning is very expensive, long term learning is needed to learn a stable representation of coordination of such mental and motor functions (i.e. learning a sequential movement, from thinking of the movement to doing the movement). Initially, the motor action may be <strong>concious</strong> with many 
@@ -163,14 +155,18 @@
             <p>Parallel Processing (Kim, Hyoung F., and Okihide Hikosaka (2015))</p>
         </blockquote>
 
-        <h2>Ideas to Continual Learning</h2>
+        <h2>Continual Learning & Algorithms?</h2>
+
+        <h3>Balancing Search</h3>
 
         <p>
-          To me the previously descrribed system seems to be very much like AlphaGo, but I am not sure if either the discovery of them draws inspiration from each other, which is the exact reason of why this is so facinating: maybe some truth, some correct representation/structure of stemming intelligence is being captured.
+          To me the previously descrribed system that balances the search problem seems to be very much like AlphaGo, but I am not sure if either the discovery of them draws inspiration from each other, which is the exact reason of why this is so facinating: maybe some truth, some correct representation/structure of stemming intelligence is being captured.
         </p>
 
+        <h3>Different Perspective on Learning</h3>
+
         <p>
-          When the system is initially learning, the representation of the weight should not be "locked" fully, but when learning continually, some key representation should be learned and then these stable-value objects should be locked for later needed task as a cognitive processes. The question of CL should be deem as a sequential learning that is not 
+          Drawing inspirations on how we learn, When the system is initially learning, the representation of the weight should not be "locked" fully, but when learning continually, some key representation should be learned and then these stable-value objects should be locked for later needed task as a cognitive processes. The question of CL should be deem as a sequential learning that is not 
           epsisode over an episode tasks trying to preserve the previously learned information, but as a whole thing of continuously learning trying to find/search for the actual correct/useful representation over a sequential unit of time and training (learning some representation, then some more).
         </p>
 
@@ -181,6 +177,9 @@
         </blockquote>
 
         <p>With in mind, we should let the system itself to search for the right representation to lock, we should let them serach for needles in the haystacks.</p>
+
+        <h3>Parralel Processing</h3>
+        <p>There is one stream of higher level guidance (voluntary voice): learned stable-value-objects or previously learned weights. Moreover, such stream of guidance processes simultaneously in parralel with the otehr sensory input: flexiable-objects or new data induced weightes.</p>
 
       </section>
       <footer>
