@@ -20,7 +20,7 @@
 // });
 
 document.addEventListener("DOMContentLoaded", function() {
-    const pinnedRepos = ['laplacian_eigenmap_vis', 'mllm_embodied_simulation', 'ensemble_imbalance_data', 'Simple_CL_Env'];
+    const pinnedRepos = ['laplacian_eigenmap_vis', 'mllm_embodied_simulation', 'ensemble_imbalance_data', 'Simple_CL_Env','UCSD-Study-Hours'];
     const labRepos = ['VNL-Brax-Imitation']
     const container = document.getElementById('repositories');
 
