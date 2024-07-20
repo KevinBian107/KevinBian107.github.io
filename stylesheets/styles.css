@@ -1,3 +1,4 @@
+
 html, body {
   height: 100%;
   margin: 0;
@@ -7,42 +8,9 @@ html, body {
 body {
   background-color: #fff;
   padding:50px;
-  font: 13.5px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color:#595959;
-  font-weight:300;
-}
-
-.quote {
-  font-size: 0.8em;
-  font-family: cursive;
-}
-
-.repository-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-
-.card {
-  background: #373737;
-  border-radius: 8px;
-  padding: 8px;
-  box-shadow: 0 4px 8px rgba(208, 208, 208, 0.325);
-}
-
-.card h3 {
-  margin-top: 0;
-}
-
-.repo_word{
-  font-size: 1.0em;
-  color:#ffffff;
-}
-
-.repo_p{
-  font-size: 0.9em;
-  color:#afacac;
+  font-weight:400;
 }
 
 .stat {
@@ -97,7 +65,6 @@ p, ul, ol, table, pre, dl {
 
 p {
   text-align: left;
-  font: 12px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 h1, h2, h3 {
@@ -380,7 +347,7 @@ footer {
 }
 
 .nav-link {
-  margin: 25px 20px;
+  margin: 0 20px;
   padding: 5px 10px;
   color: #666; /* Light gray for a subtle look */
   font-size: 16px;
@@ -402,132 +369,4 @@ footer {
 
 .theme-toggle:hover {
   color: #000; /* Dark color on hover for consistency */
-}
-
-/* .goog-te-banner-frame.skiptranslate {
-    display: none !important;
-} */
-
-body {
-    top: 0px !important;
-}
-
-#google_translate_element {
-    display: none;
-}
-
-/* #google_translate_element {
-  position: fixed;
-  top: 50px;
-  right: 0;
-  z-index: 1000; */
-
-
-/* Override Google Translate Toolbar default styles */
-.goog-te-banner-frame {
-  top: auto !important; /* Remove the default top positioning */
-  bottom: 0 !important; /* Position it at the bottom of the page */
-  width: 100% !important; /* Ensure it spans the full width */
-  border: none !important; /* Optional: Remove any border */
-}
-
-body {
-  position: relative !important; /* Ensure the body respects the toolbar positioning */
-  top: 10px !important; /* Reset any top padding/margin added by Google Translate */
-  margin-bottom: 40px !important; /* Add margin to the bottom to prevent overlap with the toolbar */
-}
-
-.custom-translate-button {
-    cursor: pointer;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-}
-
-.custom-translate-button:hover {
-    background-color: #45a049;
-}
-
-#triggerTranslate {
-  padding: 8px 16px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-#triggerTranslate:hover {
-  background-color: #0056b3;
-}
-
-/* Icon style */
-.box-icon {
-  margin-right: 8px;
-  font-size: 20px; /* Adjust icon size */
-}
-
-.nav-box {
-  display: block;
-  width: auto;
-  padding: 10px;
-  margin: 10px;
-  background-color: #ffffff;
-  border: 1px solid #d8d8d8;
-  border-radius: 5px;
-  text-decoration: none;
-  color: black;
-}
-
-.nav-box:hover {
-  background-color: #e1e1e1;
-}
-
-.box-icon {
-  margin-right: 5px;
-}
-
-.description {
-  font-size: 12px;
-  color: #666;
-  padding-top: 5px;
-}
-
-.profile {
-  display: flex;
-  align-items: center;
-  font-family: Arial, sans-serif;
-}
-.profile img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-.profile-details {
-  display: flex;
-  flex-direction: column;
-}
-.profile-details .name {
-  font-size: 15px;
-  font-weight: bold;
-}
-.profile-details .metadata {
-  font-size: 12px;
-  color: #666;
-}
-
-textarea {
-  width: 90%;
-  margin: 10px;
-}
-
-iframe {
-  border: 1px solid #ccc;
-  width: 90%;
-  height: 500px;
-  margin: 10px;
 }

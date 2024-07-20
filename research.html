@@ -3,12 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Kaiwen Bian</title>
+    <title>Yuer Tang</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <meta name="viewport" content="width=device-width">
-    <link rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/KevinBian107/KevinBian107.github.io/main/assets/logo_3.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   </head>
@@ -18,212 +17,18 @@
         <h1><a href="index.html" target="_blank">Research</a></h1>
         <div class="nav-list">
           <a href="index.html" class="nav-link">Home Page</a>
-          <a href="repo.html" class="nav-link">GitHub Repo</a>
-          <a href="projects.html" class="nav-link">Data Science Projects</a>
-          <a href="inspirations/menu.html" class="nav-link">Wiki</a>
-          <!-- <button onclick="showTranslateOptions()" class="custom-translate-button">Translate</button> -->
         </div>
-        <blockquote>
-          <p>"Intelligence is just happening to do the right thing for the right task and engineering/creating something that 
-            works for an interestingly scaled level problem is the same as parsing through the fog in this vast space of 
-            interactions that give so many seemingly correct functions and finding the truth."</p>
-        </blockquote>
       </header>
       <section>
         <h1>Interships & Research</h1>
-        <div id="google_translate_element"></div>
-        <script type="text/javascript">
-          // Initializes the Google Translate Element
-          function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-              pageLanguage: 'en',
-              includedLanguages: 'en,zh-CN,es,fr,de,ja,ru', // Restrict to English and Chinese Simplified
-              layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-              autoDisplay: true  // Prevent automatic display of the dropdown
-            }, 'google_translate_element');
-          }
-          // Function to manually trigger translation to Chinese
-          function showTranslateOptions() {
-            var selectField = document.querySelector(".goog-te-combo");
-            if (selectField) {
-              selectField.value = 'en,zh-CN,es,fr,de,ja,ru'; // Set the translation to Chinese
-              selectField.dispatchEvent(new Event('change')); // Trigger the change event
-            } else {
-              console.error('Translation widget not loaded properly.');
-            }
-          }
-          window.onload = function() {
-                showTranslateOptions();
-            };
-          </script>          
-        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-        <p></p>
-
-        <p>
-          <a href="cv/resume.html" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Resume" style="height: 30px;"> Resume</a>
-          <a href="cv/cv.html" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3135/3135764.png" alt="CV" style="height: 30px;"> CV</a>
-        </p>
-
-        <h2>Salk Institute Research Intern</h2>
-
-        <blockquote>
-          <p>Maybe using a smart way of update may capture some innate characteristics of nature. 
-            The brain captures such nature of information processing, capturing some ways that 
-            just happen to work. We are not trying to mimic the brain, but try to capture such 
-            natural way of processing by using inspirations from brain.</p>
-        </blockquote>
-
-        <p>
-            I am currently working as an undergraduate research intern at 
-            <a href="https://talmolab.org/" target="_blank">Talmo's Lab</a> in the Salk Institute. We are working on the VNL project, 
-            a collaboration between Salk Institute and Harvard University aiming to use advanced 
-            <strong>Deep Reinforcement Learning</strong> methods such as <strong>Imitation Learning</strong> to create imitation pipelines 
-            for computational models of the brain using GPU accelerated JAX & Brax.
-        </p>
-
-        <div style="text-align: center;">
-            <img src="assets/vnl_1.png" alt="Imitation pipeline" style="width:100%; height:auto;">
-        </div>
-
-        <blockquote>
-            Abstract Deep Imitation Learning Idea (borrowed from Talmo's Lab VNL slides)
-        </blockquote>
-
-        <p></p>
-
-        <p>
-            For an organism to exist today, it must be able to survive to pass on its genes. We believe that Ethology is what the brain evolves to produce 
-            and that it is guided by survival becasue one major function of neural mechanism is to produce actiuon, to interact with teh world, and to output. 
-            It is about what we do. We think that the capability to describe behavior is really powerful. Motion is an integration of all computations from sensory to supervisory signals. 
-            Brain does not output logits like neural netowrks, but neurons do get motion, which is muscle activation or torques in simple cases.
-        </p>
-
-        <p>
-            We believe that imitation injects the basis layer alignment with biology to support more abstratc expolration of representations of the brain in artificial agents. Thus, we aim to 
-            create pipelines with architectures and learning algorithms that are capable of generalizing and continual learning of low-level skills that are transferable for multiple higher-level 
-            task-driven goals, trying to get closer to what the "real brain" is capable of doing.
-        </p>
-
-        <div style="text-align: center;">
-            <img src="assets/Intentional_network.png" alt="Imitation pipeline" style="width:100%; height:auto;">
-        </div>
-
-        <blockquote>
-            Deep imitation learning illustration using encoder/decoder structure (borrowed from VNL Research Strategy)
-        </blockquote>
-
-        <p></p>
-
-        <p>
-          For demo purposes, here is an easy version of what we do in our lab. Particularly we are interested in the motion of detailed 
-          rodent model as we can use them (along with many motion captured CV data) to perhaps form an neural represenattion of how control is been done in the brain. 
-          For illustration purpose, the below is an vanilla PPO trained goal-oriented reinforcement learning rodent.
-        </p>
-
-        <div style="display: flex; justify-content: center; align-items: center; max-width: 100%; height: auto;">
-          <div style="width: 67%; padding: 5px;">
-            <video controls autoplay style="width: 100%; height: 100%;" muted>
-              <source src="assets/cross_gap_vision_0.1.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <div style="width: 50%; padding: 5px;">
-            <video controls autoplay style="width: 100%; height: 100%;" muted>
-              <source src="assets/rodent_run_1.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </div>        
-
-        <blockquote>
-          <p>Custom dm_control Env + PPO Trained Ant Running (left) & PPO Trained Rodent Running (right)</p>
-        </blockquote>
-
-
-        <a href="https://talmolab.org/" class="button" >Visit Our Lab Website</a>
-
-        <p></p>
-
-        <h2>UCSD CSE & Salk Institute Student Researcher</h2>
-        
-        <blockquote>
-          <p>The modern paradigm of machine learning puts the emphasis on the end result, 
-            rather than the learning process, and overlooks a critical characteristic of human 
-            learning: that it is robust to changing tasks and sequential experience.</p>
-        </blockquote>
-
-        <p>
-          I am currently researching into the theoretical aspects of <strong>Continual Learning</strong> with advising from professor 
-          <a href="https://scungao.github.io/" target="_blank">Sichun Gao</a> from UCSD Computer Science & Engineering Department 
-          and professor <a href="https://talmopereira.com/" target="_blank">Talmo Pereira</a> from Salk Institute. I try to frame the general problem of 
-          Continual Learning from the perspective of Reinforcement Learning & Cognitive Neuroscience, hoping to develop algorithms 
-          that utilize the same strategies of "how we learn" onto an artificial agent.
-        </p>
-
-        <div style="text-align: center;">
-          <img src="assets/cl_1.png" alt="Continual Learning Schematic" style="width:100%; height:auto;">
-        </div>
-
-        <blockquote>
-          <p>Schematic of Continual Learning (Zhang et al. (2024))</p>
-        </blockquote>
-
-        <p></p>
-
-        <p>
-          I am interesting in developing a conceptual framework for continual learning that may be used for any families of algorithms (i.e. DQN, SAC, PPO, ...) and 
-          I am currently using an classic control problem in reinforcement learning as a testing environment for the algorithms: continuous pendulum control. For demo purposes, 
-          this is how the pendulum looks like and the goal is to swing the pendulum to the top right position by applying torques to it.
-        </p>
-
-        <div style="display: flex; justify-content: center; align-items: center; max-width: 100%; height: auto;">
-          <div style="width: 50%; padding: 5px;">
-            <video controls autoplay style="width: 100%; height: 100%;" muted>
-              <source src="assets/cl_demo_1.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <div style="width: 50%; padding: 5px;">
-            <video controls autoplay style="width: 100%; height: 100%;" muted>
-              <source src="assets/cl_demo_2.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </div>        
-
-        <blockquote>
-          <p>Random torques (left) & DQN policy torques (right)</p>
-        </blockquote>
-
-        <p></p>
-
-        <a href="https://github.com/KevinBian107/Simple_CL_Env" class="button">Preliminary Simple Testing Environment</a>
-
-        <p></p>
-
-        <h2>UCSD FMP Research Scholar</h2>
-
-        <p>
-            I researched on Affordance Embodied Simulation’s presences in <strong>Multimodal Models</strong> through the UCSD Faculty Mentorship Program (Sep 2023 - Jun 2024) under the supervision of 
-            <a href="https://seantrott.github.io/">Sean Trott</a>. We try to improve the reliability of machine learning models through examining the degree of models’ “understanding” of the subtle 
-            keys in human languages and how it is used to map the world we know.
-        </p>
-
-        <a href="https://github.com/KevinBian107/mllm_embodied_simulation" class="button" >Visit Project GitHub!</a>
-
-        <p></p>
+        <p>...</p>
 
       </section>
       <footer>
         <p></p>
-        <p>© 2024 Kaiwen Bian. All rights reserved.</p>
-        <p class="quote">
-          With every try, you have explored the space a little bit more, grown the subtree a little bit deeper, and expanded the "table" a little bit wider. Success never comes from one good state but 
-          rather the path you have explored and the large subtree you have built. The tree has been explored and nothing is lost.
-        </p>
+        <p>© 2024 Yuer Tang. All rights reserved.</p>
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
-    <script src="javascripts/translate.js"></script>
   </body>
 </html>
