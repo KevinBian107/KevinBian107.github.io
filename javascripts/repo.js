@@ -23,8 +23,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const pinnedRepos = [
         'laplacian_eigenmap_vis',
         'mllm_embodied_simulation',
-        'ensemble_imbalance_data',
+        // 'ensemble_imbalance_data',
         'Simple_CL_Env',
+        'Multi-addicted-Q-agent',
         // 'UCSD-Study-Hours'
     ];
     const labRepos = ['VNL-Brax-Imitation']
