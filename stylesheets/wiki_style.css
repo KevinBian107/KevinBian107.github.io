@@ -1,0 +1,273 @@
+/* Base styles for the wiki section */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f8f9fa;
+  padding: 20px;
+  font: 13.5px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #202122;
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #202122;
+  margin: 0 0 20px;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #000;
+  border-bottom: 1px solid #a2a9b1;
+  padding-bottom: 0.3em;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  border-bottom: 1px solid #a2a9b1;
+  padding-bottom: 0.3em;
+}
+
+h3, h4, h5, h6 {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+p, ul, ol, table, pre, dl {
+  margin: 0 0 20px;
+}
+
+p {
+  font: 13.5px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+a {
+  color: #0645ad;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0b0080;
+  text-decoration: underline;
+}
+
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+blockquote {
+  border-left: 4px solid #dfe2e5;
+  margin: 0;
+  padding: 0 0 0 15px;
+  font-style: italic;
+  color: #6a737d;
+}
+
+code, pre {
+  font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
+  color: #333;
+}
+
+pre {
+  padding: 8px 15px;
+  background: #f6f8fa;
+  border-radius: 5px;
+  border: 1px solid #dfe2e5;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  border: 1px solid #dfe2e5;
+}
+
+th {
+  background: #f8f9fa;
+  font-weight: bold;
+}
+
+img {
+  max-width: 100%;
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+header ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  background: #f8f9fa;
+  border-radius: 5px;
+  border: 1px solid #a2a9b1;
+}
+
+header li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+header ul a {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #0645ad;
+}
+
+header ul a:hover {
+  color: #0b0080;
+}
+
+strong {
+  color: #202122;
+  font-weight: 500;
+}
+
+small {
+  font-size: 11px;
+  color: #777;
+}
+
+hr {
+  border: 0;
+  background: #dfe2e5;
+  height: 1px;
+  margin: 0 0 20px;
+}
+
+footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.nav-list {
+  text-align: center;
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #a2a9b1;
+}
+
+.nav-link {
+  margin: 0 20px;
+  padding: 5px 10px;
+  color: #0645ad;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+
+.nav-link:hover, .nav-link:focus {
+  color: #0b0080;
+}
+
+.custom-translate-button {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.custom-translate-button:hover {
+  background-color: #45a049;
+}
+
+#triggerTranslate {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#triggerTranslate:hover {
+  background-color: #0056b3;
+}
+
+.box-icon {
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+.nav-box {
+  display: block;
+  width: auto;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #ffffff;
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  text-decoration: none;
+  color: black;
+}
+
+.nav-box:hover {
+  background-color: #e1e1e1;
+}
+
+.description {
+  font-size: 12px;
+  color: #666;
+  padding-top: 5px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-details .name {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.profile-details .metadata {
+  font-size: 12px;
+  color: #666;
+}
+
+textarea {
+  width: 90%;
+  margin: 10px;
+}
+
+iframe {
+  border: 1px solid #ccc;
+  width: 90%;
+  height: 500px;
+  margin: 10px;
+}
