@@ -534,9 +534,9 @@ iframe {
 
 /* Google Translate module styling */
 #google_translate_element {
-  position: fixed;
-  top: 10px;
-  right: 10px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
   z-index: 1000;
   background: #f8f9fa;
   padding: 5px;
@@ -548,7 +548,6 @@ iframe {
 .goog-te-gadget-simple {
   border: none !important;
   background: none !important;
-  padding: 0 !important;
 }
 
 .goog-te-gadget-icon {
