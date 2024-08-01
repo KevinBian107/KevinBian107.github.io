@@ -9,22 +9,23 @@ html, body {
 }
 
 .wrapper {
-  max-width: 1200px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 20px;
   background: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 header {
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .nav-list {
   list-style: none;
   padding: 0;
   margin: 0;
-  text-align: center;
   background: #f8f9fa;
   border-radius: 5px;
   border: 1px solid #a2a9b1;
@@ -180,6 +181,19 @@ footer {
   font-size: 0.9em;
   color: #666;
   padding-top: 5px;
+}
+
+/* Google Translate module styling */
+#google_translate_element {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  border: 1px solid #a2a9b1;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .profile {
