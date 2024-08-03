@@ -569,6 +569,7 @@ iframe {
   font-size: 12px; /* Smaller font size to match */
 }
 
+@media screen and (max-width: 720px) {
   #google_translate_element {
       margin-top: 10px; /* Add margin to separate from other items */
   }
