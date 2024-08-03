@@ -538,33 +538,44 @@ iframe {
 }
 
 #google_translate_element {
-    margin-left: auto; /* Pushes the translate element to the right */
-    background: #f8f9fa;
-    padding: 5px;
-    border: 1px solid #a2a9b1;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin-left: auto; /* Pushes the translate element to the right */
+  background: #f8f9fa;
+  padding: 3px; /* Reduced padding for a narrower look */
+  border: 1px solid #a2a9b1;
+  border-radius: 3px; /* Slightly rounded corners for a modern look */
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1); /* Reduced shadow for subtlety */
+  display: flex;
+  align-items: center;
 }
 
 .goog-te-gadget-simple {
-    border: none !important;
-    background: none !important;
+  border: none !important;
+  background: none !important;
+  font-family: sans-serif;
+  color: #202122;
+  white-space: nowrap;
+  font-size: 12px; /* Smaller font size for a more compact appearance */
 }
 
 .goog-te-gadget-icon {
-    display: none;
+  display: none;
 }
 
 .goog-te-combo {
-    margin: 0;
-    padding: 5px;
-    border: 1px solid #a2a9b1;
-    border-radius: 5px;
-    font-size: 13px;
+  margin: 0;
+  padding: 3px; /* Reduced padding for compactness */
+  border: 1px solid #a2a9b1;
+  border-radius: 3px;
+  font-size: 12px; /* Smaller font size to match */
 }
 
-.goog-te-gadget-simple {
-    font-family: sans-serif;
-    color: #202122;
-    white-space: nowrap;
+@media screen and (max-width: 720px) {
+  .nav-list {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+      align-items: center; /* Center align items */
+  }
+
+  #google_translate_element {
+      margin-top: 10px; /* Add margin to separate from other items */
+  }
 }
