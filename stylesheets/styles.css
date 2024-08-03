@@ -569,12 +569,6 @@ iframe {
   font-size: 12px; /* Smaller font size to match */
 }
 
-@media screen and (max-width: 720px) {
-  .nav-list {
-      flex-direction: column; /* Stack items vertically on smaller screens */
-      align-items: center; /* Center align items */
-  }
-
   #google_translate_element {
       margin-top: 10px; /* Add margin to separate from other items */
   }
