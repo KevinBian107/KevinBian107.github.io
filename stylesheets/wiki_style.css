@@ -164,6 +164,7 @@ footer {
 .nav-box {
   display: block;
   width: auto;
+  height: auto;
   padding: 10px;
   margin: 10px 0;
   background-color: #ffffff;
