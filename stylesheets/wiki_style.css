@@ -272,3 +272,134 @@ footer a:hover {
   color: #b3b3b3; /* Slightly darker color on hover */
   text-decoration: underline; /* Underline on hover */
 }
+
+/* Your existing styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font: 13.5px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background-color: #f8f9fa;
+  color: #202122;
+}
+
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #202122;
+  color: #f8f9fa;
+}
+
+body.dark-mode .wrapper {
+  background: #333;
+}
+
+body.dark-mode .nav-list {
+  background: #444;
+  border: 1px solid #666;
+}
+
+body.dark-mode .nav-list a {
+  color: #ddd;
+}
+
+body.dark-mode .nav-list a:hover {
+  color: #fff;
+}
+
+body.dark-mode footer {
+  background-color: #1a1a1a;
+  color: #f8f9fa;
+}
+
+body.dark-mode footer a {
+  color: #f8f9fa;
+}
+
+body.dark-mode footer a:hover {
+  color: #b3b3b3;
+}
+
+body.dark-mode .nav-box {
+  background-color: #444;
+  color: #f8f9fa;
+  border: 1px solid #666;
+}
+
+body.dark-mode .nav-box:hover {
+  background-color: #555;
+}
+
+body.dark-mode .description {
+  font-size: 0.9em;
+  color: #ffffff;
+  padding-top: 5px;
+}
+
+body.dark-mode .infobox {
+  background-color: #444;
+  border: 1px solid #666;
+  color: #f8f9fa;
+}
+
+body.dark-mode .infobox th {
+  background-color: #555;
+}
+
+body.dark-mode .infobox td {
+  color: #ddd;
+}
+
+/* Title sizes */
+h1 {
+  font-size: 2.2em;
+  font-weight: bold;
+  color: #000;
+  border-bottom: 1px solid #a2a9b1;
+  padding-bottom: 0.3em;
+}
+
+h2 {
+  font-size: 1.8em;
+  font-weight: bold;
+  border-bottom: 1px solid #a2a9b1;
+  padding-bottom: 0.3em;
+}
+
+h3 {
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+h6 {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+/* Dark mode title colors */
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode h4, 
+body.dark-mode h5, 
+body.dark-mode h6 {
+  color: #f8f9fa;
+}
