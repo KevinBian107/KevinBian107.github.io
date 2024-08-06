@@ -1,7 +1,7 @@
 // Array of image sources
 const images = [
     'assets/profile_kaiwen_picture_3.jpg',
-    'assets/profile_kaiwen_picture_2.jpg'
+    'assets/profile_kaiwen_picture_2.JPG'
     // Add more image sources here
 ];
 
