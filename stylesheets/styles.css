@@ -400,7 +400,7 @@ footer {
 
 .theme-toggle {
   cursor: pointer; /* Suggests the icon is clickable */
-  font-size: 24px; /* Larger size for the icon */
+  font-size: 12.5px; /* Larger size for the icon */
   color: #666; /* Matches the link color */
   transition: color 0.3s;
 }
@@ -573,4 +573,188 @@ iframe {
   #google_translate_element {
       margin-top: 10px; /* Add margin to separate from other items */
   }
+}
+
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #c0c0c0;
+}
+
+body.dark-mode a {
+  color: #ffffff;
+}
+
+body.dark-mode a:hover {
+  color: #ffffff;
+}
+
+body.dark-mode .quote {
+  color: #e0e0e0;
+}
+
+body.dark-mode .repository-container {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .card {
+  background: #2c2c2c;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .repo_word {
+  color: #ffffff;
+}
+
+body.dark-mode .repo_p {
+  color: #c0c0c0;
+}
+
+body.dark-mode .stat img {
+  filter: invert(1);
+}
+
+body.dark-mode .button {
+  background-color: #ccc;
+  color: rgb(0, 0, 0);
+}
+
+body.dark-mode .button:hover {
+  background-color: #ff7809;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+  color: #e0e0e0;
+}
+
+body.dark-mode p {
+  color: #e0e0e0;
+}
+
+body.dark-mode pre {
+  background: #2e2e2e;
+  border: 1px solid #3e3e3e;
+}
+
+body.dark-mode table th,
+body.dark-mode table td {
+  border-bottom: 1px solid #3e3e3e;
+}
+
+body.dark-mode dt {
+  color: #e0e0e0;
+}
+
+body.dark-mode th {
+  color: #e0e0e0;
+}
+
+body.dark-mode header ul {
+  background: #2c2c2c;
+  border: 1px solid #3e3e3e;
+}
+
+body.dark-mode header ul a {
+  color: #999;
+}
+
+body.dark-mode header ul a:hover {
+  color: #ccc;
+}
+
+body.dark-mode blockquote {
+  border-left: 1px solid #3e3e3e;
+  color: #c0c0c0;
+}
+
+body.dark-mode code,
+body.dark-mode pre {
+  color: #e0e0e0;
+}
+
+body.dark-mode .nav-list {
+  background-color: #1f1f1f;
+  border-bottom: 1px solid #3e3e3e;
+}
+
+body.dark-mode .nav-link {
+  color: #999;
+}
+
+body.dark-mode .nav-link:hover,
+body.dark-mode .nav-link:focus {
+  color: #ccc;
+}
+
+body.dark-mode .theme-toggle {
+  color: #636363;
+}
+
+body.dark-mode .theme-toggle:hover {
+  color: #ccc;
+}
+
+body.dark-mode .nav-box {
+  background-color: #1e1e1e;
+  border: 1px solid #3e3e3e;
+  color: #c0c0c0;
+}
+
+body.dark-mode .nav-box:hover {
+  background-color: #2e2e2e;
+}
+
+body.dark-mode .description {
+  color: #999;
+}
+
+body.dark-mode .profile-details .name {
+  color: #ffffff;
+}
+
+body.dark-mode .profile-details .metadata {
+  color: #c0c0c0;
+}
+
+body.dark-mode #google_translate_element {
+  background: #333;
+  border: 1px solid #555;
+}
+
+body.dark-mode .goog-te-combo {
+  background: #444;
+  color: #ccc;
+}
+
+body.dark-mode .goog-te-banner-frame {
+  background-color: #333 !important;
+}
+
+body.dark-mode .custom-translate-button {
+  background-color: #555;
+}
+
+body.dark-mode .custom-translate-button:hover {
+  background-color: #777;
+}
+
+body.dark-mode textarea {
+  background-color: #333;
+  color: #ccc;
+  border: 1px solid #555;
+}
+
+body.dark-mode iframe {
+  border: 1px solid #555;
+}
+
+/* Dark mode styles for bold text */
+body.dark-mode strong {
+  color: #ffffff;
 }

@@ -1,25 +1,25 @@
-// script.js
-
-document.addEventListener("DOMContentLoaded", function () {
-    const darkModeToggle = document.getElementById('darkModeToggle');
+document.addEventListener('DOMContentLoaded', function() {
+    const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
-
-    // Check if dark mode preference is saved in localStorage
-    if (localStorage.getItem('darkMode') === 'enabled') {
-        body.classList.add('dark-mode');
-    } else {
-        body.classList.add('light-mode');
+  
+    function updateTheme() {
+      if (body.classList.contains('dark-mode')) {
+        themeToggle.textContent = '🌅 Light Mode'; // Text for light mode
+      } else {
+        themeToggle.textContent = '🌙 Dark Mode'; // Text for dark mode
+      }
     }
-
-    darkModeToggle.addEventListener('click', function () {
-        body.classList.toggle('dark-mode');
-        body.classList.toggle('light-mode');
-
-        // Save preference to localStorage
-        if (body.classList.contains('dark-mode')) {
-            localStorage.setItem('darkMode', 'enabled');
-        } else {
-            localStorage.setItem('darkMode', 'disabled');
-        }
+  
+    themeToggle.addEventListener('click', function() {
+      body.classList.toggle('dark-mode');
+      updateTheme();
+      localStorage.setItem('dark-mode', body.classList.contains('dark-mode'));
     });
-});
+  
+    // Check if dark mode preference is stored in local storage
+    if (localStorage.getItem('dark-mode') === 'true') {
+      body.classList.add('dark-mode');
+    }
+    updateTheme(); // Set the initial text based on the theme
+  });
+  
