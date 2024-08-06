@@ -11,14 +11,10 @@ function getRandomImage() {
 }
 
 function setRandomImages() {
-    let img1, img2;
-    do {
-        img1 = getRandomImage();
-        img2 = getRandomImage();
-    } while (img1 === img2); // Ensure the two images are different
+    let img1;
+    img1 = getRandomImage();
 
     document.getElementById('image1').src = img1;
-    document.getElementById('image2').src = img2;
 }
 
 // Set random images on page load
