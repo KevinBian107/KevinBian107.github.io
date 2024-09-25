@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Kaiwen Bian</title>
+
+    <link rel="stylesheet" href="../stylesheets/styles.css">
+    <link rel="stylesheet" href="../stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/KevinBian107/KevinBian107.github.io/main/assets/logo_3.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="../index.html" target="_blank">Research</a></h1>
+        <div class="nav-list">
+          <a href="../index.html" class="nav-link">Home Page</a>
+          <a href="../research.html" class="nav-link">Research</a>
+          <a href="../idea.html" class="nav-link">Ideology</a>
+          <a href="../projects.html" class="nav-link">Projects</a>
+          <!-- <button onclick="showTranslateOptions()" class="custom-translate-button">Translate</button> -->
+        </div>
+
+        <img id="image1" src="../assets/profile_kaiwen_picture_3.PNG" alt="profile picture" style="width:100%; height:auto;">
+        
+        <!-- <div class="contact-info">
+          <p>Email: 
+              <a href="mailto:kaiwenbian107@gmail.com">kaiwenbian107@gmail.com</a> -- 
+              <a href="mailto:kbian@ucsd.edu">kbian@ucsd.edu</a>
+          </p>          
+        </div> -->
+        <a href="https://github.com/KevinBian107" target="_blank"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" style="height: 25px;"> GitHub</a> 
+        <p></p>
+        <a href="https://www.linkedin.com/in/kbian107/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="height: 20px;"> LinkedIn</a>
+        <p></p>
+        <a href="cv/resume.pdf" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Resume" style="height: 20px;"> Resume</a>  
+        <p></p>
+        <a href="cv/cv.pdf" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3135/3135764.png" alt="CV" style="height: 20px;"> CV</a>
+        <p></p>
+        <button id="theme-toggle" class="theme-toggle">🌙 Dark Mode</button>
+      </header>
+      <section>
+        <h1>Making Artificial Brain</h1>
+        <div id="google_translate_element"></div>
+        <script type="text/javascript">
+          // Initializes the Google Translate Element
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+              pageLanguage: 'en',
+              includedLanguages: 'en,zh-CN,es,fr,de,ja,ru', // Restrict to English and Chinese Simplified
+              layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+              autoDisplay: true  // Prevent automatic display of the dropdown
+            }, 'google_translate_element');
+          }
+          // Function to manually trigger translation to Chinese
+          function showTranslateOptions() {
+            var selectField = document.querySelector(".goog-te-combo");
+            if (selectField) {
+              selectField.value = 'en,zh-CN,es,fr,de,ja,ru'; // Set the translation to Chinese
+              selectField.dispatchEvent(new Event('change')); // Trigger the change event
+            } else {
+              console.error('Translation widget not loaded properly.');
+            }
+          }
+          window.onload = function() {
+                showTranslateOptions();
+            };
+          </script>          
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <p></p>
+
+        <h2>Salk Institute Research Intern</h2>
+
+        <p>
+          I am currently working as an undergraduate research intern at 
+          <a href="https://talmolab.org/" target="_blank">Talmo's Lab</a> in the Salk Institute. We are working on the VNL project, 
+          a collaboration between Salk Institute and Harvard University aiming to use advanced 
+          <strong>Goal-directed Deep Reinforcement Learning</strong> methods such as <strong>Inverse Kinetmatics Imitation Learning</strong> to create imitation pipelines 
+          for computational models of the brain using GPU accelerated Brax & JAX and multi-node distributed CPU training with Acme & Ray.
+      </p>
+
+        <blockquote>
+          <p>Maybe using a smart way of update may capture some innate characteristics of nature. 
+            The brain captures such nature of information processing, capturing some ways that 
+            just happen to work. We are not trying to mimic the brain, but try to capture such 
+            natural way of processing by using inspirations from brain.</p>
+        </blockquote>
+
+        <div style="text-align: center;">
+            <img src="../assets/vnl_1.png" alt="Imitation pipeline" style="width:70%; height:auto;">
+        </div>
+
+        <blockquote>
+            Abstract Deep Imitation Learning Idea (borrowed from Talmo's Lab VNL slides)
+        </blockquote>
+
+        <p></p>
+
+        <p>
+            For an organism to exist today, it must be able to survive to pass on its genes. We believe that Ethology is what the brain evolves to produce 
+            and that it is guided by survival becasue one major function of neural mechanism is to produce actiuon, to interact with teh world, and to output. 
+            It is about what we do. We think that the capability to describe behavior is really powerful. Motion is an integration of all computations from sensory to supervisory signals. 
+            Brain does not output logits like neural netowrks, but neurons do get motion, which is muscle activation or torques in simple cases.
+        </p>
+
+        <p>
+            We believe that inverse kinematics imitation injects the basis layer alignment with biology to support more abstratc expolration of representations of the brain in artificial agents. Thus, we aim to 
+            create pipelines with architectures and learning algorithms that are capable of generalizing and continual learning of low-level skills that are transferable for multiple higher-level 
+            task-driven goals, trying to get closer to what the "real brain" is capable of doing.
+        </p>
+
+        <p></p>
+
+        <div style="text-align: center;">
+            <img src="../assets/Intentional_network.png" alt="Imitation pipeline" style="width:80%; height:auto;">
+        </div>
+
+        <blockquote>
+            Deep imitation learning illustration using encoder/decoder structure (borrowed from VNL Research Strategy)
+        </blockquote>
+
+        <p></p>
+
+        <p>
+          Particularly we are interested in the motion of bio-mechanically realistic rodent model as we can use them (along with many motion captured CV data) to perhaps form an neural represenattion of how control is been done in the brain. 
+          For illustration purpose, we show an PPO trained goal-oriented deep reinforcement learning agent (rodent).
+        </p>
+
+        <div style="width: 100%; padding: 5px; display: flex; justify-content: center;">
+          <video controls autoplay style="width: 30%; height: auto;" muted>
+            <source src="../assets/rodent_run_1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <p>An DMPO trained inverse kinematics imitation learning agent (CMU humanoid) with 3e7 actor steps (white is expert 
+          trajectory and yellow is learned agent's control).
+        </p>
+        
+        <div style="width: 100%; padding: 5px; display: flex; justify-content: center;">
+          <video controls autoplay style="width: 50%; height: auto;" muted>
+            <source src="../assets/track_with_expert_1_3e7.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <p>
+          And an DMPO trained inverse kinematics imitation learning agent (bio-mechanically realistic rodent) with reused 
+          representation retarined on the jump gap task.
+        </p>
+
+        <div style="width: 100%; padding: 5px; display: flex; justify-content: center;">
+          <video controls autoplay style="width: 50%; height: auto;" muted>
+            <source src="../assets/rodent_run_2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <p>
+          For the speed and computability, we use gpu based data-parrallelism training using Jax/Brax or cpu-based multi-node task-parralelism distributed training using Ray/Acme.
+        </p>
+
+        <a href="https://talmolab.org/" class="button" >Visit Our Lab Website</a>
+
+      </section>
+      <footer>
+        <p></p>
+        <p>© 2024 Kaiwen Bian. All rights reserved.</p>
+      </footer>
+    </div>
+    <script src="../javascripts/scale.fix.js"></script>
+    <script src="../javascripts/translate.js"></script>
+    <script src="../javascripts/mode.js"></script>
+  </body>
+</html>
