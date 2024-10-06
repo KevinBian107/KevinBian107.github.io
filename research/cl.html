@@ -43,7 +43,7 @@
         <button id="theme-toggle" class="theme-toggle">🌙 Dark Mode</button>
       </header>
       <section>
-        <h1>Continual Learning</h1>
+        <h1>Biologically Inspired Continual Learning</h1>
         <div id="google_translate_element"></div>
         <script type="text/javascript">
           // Initializes the Google Translate Element
@@ -84,8 +84,8 @@
           I am currently researching into the theoretical aspects of <strong>Continual Learning</strong> and <strong>Transfer Learning</strong> with advising from professor 
           <a href="https://scungao.github.io/" target="_blank">Sichun Gao</a> from UCSD Computer Science & Engineering Department 
           and professor <a href="https://talmopereira.com/" target="_blank">Talmo Pereira</a> from Salk Institute. I try to frame the general problem of 
-          Continual Learning from the perspective of Reinforcement Learning & Cognitive Neuroscience, hoping to develop algorithms 
-          that utilize the same strategies of "how we learn" onto an artificial agent.
+          Continual Learning from the perspective of Reinforcement Learning & Cognitive Neuroscience, hoping to develop algorithms that utilize the same strategies of "how we learn" onto an artificial agent.
+          Moreover, I hope that such development can serve more than an engineering improvmenet, but rather contributing back to the neuroscience community to understand more about ourselves.
         </p>
 
         <div style="text-align: center;">
@@ -99,11 +99,32 @@
         <p></p>
         
         <p>
-          I am interesting in developing a conceptual framework for continual learning that may be used for any families of algorithms and I'm currently studying it through the scope of 
-          control problems in reinforcement learning and trying to build internal representations of physics for artificial agents so their learned skills in one task can be modularized and transferable to other control tasks.
+          I am developing a conceptual framework that may be used for families of algorithms and I am trying to build internal representations for artificial agents through designing a <strong>Forward Model</strong>, one similar to
+          what we think the Cerabellum is doing in human brain, so their learned skills in one task can be modularized and transferable to other control tasks. The belows are some training results on classical control problems using 
+          our <strong>Fm-PPO</strong> algorithm (an adaptation between Forward Model and Proximal Policy Optimization).
         </p>
 
-        <!-- <a href="https://github.com/KevinBian107/Simple_CL_Env" class="button">Preliminary Result</a> -->
+        
+        <div style="width: 100%; padding: 5px; display: flex; justify-content: center; gap: 20px;">
+          <div style="width: 50%; display: flex; flex-direction: column; align-items: center;">
+            <video controls autoplay style="width: 100%; height: auto;" muted>
+              <source src="../assets/fmppo_demo1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <blockquote>Deep-RL Inverted Pendulum agent trained using Fm-PPO</blockquote>
+          </div>
+          <div style="width: 50%; display: flex; flex-direction: column; align-items: center;">
+            <video controls autoplay style="width: 100%; height: auto;" muted>
+              <source src="../assets/fmppo_demo2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <blockquote>Deep-RL Half Cheetah agent trained using Fm-PPO</blockquote>
+          </div>
+        </div>
+        
+        <p></p>
+
+        <a href="https://github.com/KevinBian107/VNL-MVP/tree/main" class="button">Preliminary Result</a>
 
         <p></p>
 
