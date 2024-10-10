@@ -780,7 +780,7 @@ body.dark-mode strong {
 .project-card {
   background-color: #eeeeee;
   width: 250px;
-  height: 430px;
+  /* height: 430px; */
   border-radius: 10px;
   overflow: hidden;
   text-align: left;
