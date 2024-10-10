@@ -777,15 +777,25 @@ body.dark-mode strong {
   color: inherit;
 }
 
+/* Default styling for larger screens */
 .project-card {
   background-color: #eeeeee;
   width: 250px;
-  /* height: 430px; */
+  height: 430px;
   border-radius: 10px;
   overflow: hidden;
   text-align: left;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
+}
+
+/* Adjust for smaller screens (mobile) */
+@media only screen and (max-width: 600px) {
+  .project-card {
+    width: 100%;  /* Make it full width */
+    margin: 10px 0; /* Add some margin for spacing */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reduce the shadow for a cleaner look on small screens */
+  }
 }
 
 body.dark-mode .project-card {
