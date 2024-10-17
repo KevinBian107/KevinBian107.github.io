@@ -72,7 +72,7 @@
         <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         <p></p>
 
-        <h2>UCSD CSE & Salk Institute Student Researcher</h2>
+        <h2>Salk Institute Student Researcher</h2>
         
         <blockquote>
           <p>The modern paradigm of machine learning puts the emphasis on the end result, 
@@ -81,9 +81,9 @@
         </blockquote>
 
         <p>
-          I am currently researching into the theoretical aspects of <strong>Continual Learning</strong> and <strong>Transfer Learning</strong> with advising from professor 
-          <a href="https://scungao.github.io/" target="_blank">Sichun Gao</a> from UCSD Computer Science & Engineering Department 
-          and professor <a href="https://talmopereira.com/" target="_blank">Talmo Pereira</a> from Salk Institute. I try to frame the general problem of 
+          I am currently researching into the theoretical aspects of <strong>Continual Learning</strong> and <strong>Transfer Learning</strong> with advising from 
+          <!-- professor <a href="https://scungao.github.io/" target="_blank">Sichun Gao</a> from UCSD Computer Science & Engineering Department and  -->
+          professor <a href="https://talmopereira.com/" target="_blank">Talmo Pereira</a> in the Salk Institute. I try to frame the general problem of 
           Continual Learning from the perspective of Reinforcement Learning & Cognitive Neuroscience, hoping to develop algorithms that utilize the same strategies of "how we learn" onto an artificial agent.
           Moreover, I hope that such development can serve more than an engineering improvmenet, but rather contributing back to the neuroscience community to understand more about ourselves.
         </p>
@@ -101,24 +101,24 @@
         <p>
           I am developing a conceptual framework that may be used for families of algorithms and I am trying to build internal representations for artificial agents through designing a <strong>Forward Model</strong>, one similar to
           what we think the Cerabellum is doing in human brain, so their learned skills in one task can be modularized and transferable to other control tasks. The belows are some training results on classical control problems using 
-          our <strong>Fm-PPO</strong> algorithm (an adaptation between Forward Model and Proximal Policy Optimization).
+          our <strong>SFm-PPO</strong> algorithm (an adaptation using Supervised Forward Model and Proximal Policy Optimization).
         </p>
 
         
         <div style="width: 100%; padding: 5px; display: flex; justify-content: center; gap: 20px;">
           <div style="width: 50%; display: flex; flex-direction: column; align-items: center;">
             <video controls autoplay style="width: 100%; height: auto;" muted>
-              <source src="../assets/fmppo_demo1.mp4" type="video/mp4">
+              <source src="../assets/cl_ppo_converge.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
-            <blockquote>Deep-RL Inverted Pendulum agent trained using Fm-PPO</blockquote>
+            <blockquote>Deep-RL Half Cheetah agent trained using PPO converge on 5e6</blockquote>
           </div>
           <div style="width: 50%; display: flex; flex-direction: column; align-items: center;">
             <video controls autoplay style="width: 100%; height: auto;" muted>
-              <source src="../assets/fmppo_demo2.mp4" type="video/mp4">
+              <source src="../assets/cl_sfmppo_converge.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
-            <blockquote>Deep-RL Half Cheetah agent trained using Fm-PPO</blockquote>
+            <blockquote>Deep-RL Half Cheetah agent trained using SFm-PPO on 1e6 (not converged yet)</blockquote>
           </div>
         </div>
         
