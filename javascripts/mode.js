@@ -1,12 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
-  
+
+    const themeToggleIcon = document.getElementById('theme-toggle');
+
     function updateTheme() {
       if (body.classList.contains('dark-mode')) {
-        themeToggle.textContent = '🌅 Light Mode'; // Text for light mode
+        themeToggle.textContent = '☀️'; // Text for light mode
       } else {
-        themeToggle.textContent = '🌙 Dark Mode'; // Text for dark mode
+        themeToggle.textContent = '🌙'; // Text for dark mode
       }
     }
   

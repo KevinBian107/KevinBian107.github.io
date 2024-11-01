@@ -461,35 +461,55 @@ footer {
   color: #093eff; /* Dark color for visibility on hover */
 }
 
-.theme-toggle {
-  cursor: pointer; /* Suggests the icon is clickable */
-  font-size: 12.5px; /* Larger size for the icon */
-  color: #666; /* Matches the link color */
-  transition: color 0.3s;
-}
-
-.theme-toggle:hover {
-  color: #000; /* Dark color on hover for consistency */
-}
-
-/* .goog-te-banner-frame.skiptranslate {
-    display: none !important;
-} */
 
 body {
     top: 0px !important;
 }
 
-#google_translate_element {
-    display: none;
+
+/* Target the Google Translate dropdown container */
+#google_translate_element .goog-te-gadget-simple {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* #google_translate_element {
-  position: fixed;
-  top: 50px;
-  right: 0;
-  z-index: 1000; */
+/* #google_translate_element img {
+  opacity: 0.6;
+  transition: opacity 0.3s;
+} */
 
+#google_translate_element:hover img {
+  opacity: 1; /* Full opacity on hover */
+}
+
+/* Hide the "Select Language" text */
+#google_translate_element .goog-te-gadget-simple > span {
+  display: none;
+}
+
+/* Style the globe icon to be centered and clickable */
+#google_translate_element .goog-te-gadget-icon {
+  display: inline-block;
+  font-size: 24px; /* Adjust size as needed */
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.goog-te-combo {
+  border: none; /* Remove border if you want a cleaner look */
+  background: transparent; /* Make background transparent */
+  appearance: none; /* Remove default appearance */
+  color: transparent; /* Hide text in dropdown */
+  cursor: pointer;
+}
+
+.goog-te-combo option {
+  color: black; /* Keeps options visible when selecting a language */
+}
 
 /* Override Google Translate Toolbar default styles */
 .goog-te-banner-frame {
@@ -638,11 +658,38 @@ iframe {
   }
 }
 
+.theme-toggle {
+  cursor: pointer;
+  font-size: 28px; /* Increase size for visibility */
+  color: #007bff;
+  margin-left: 15px; /* Add space between Google Translate and theme toggle icon */
+  transition: color 0.3s;
+}
+
+.theme-toggle:hover {
+  color: #0056b3;
+}
+
 
 /* Dark mode styles */
 body.dark-mode {
-  background-color: #121212;
+  background-color: #3a3a3a;
   color: #c0c0c0;
+}
+
+/* Dark mode styles */
+body.dark-mode #google_translate_element {
+  background-color: #333;
+  color: #ffffff;
+  border: 1px solid #555;
+}
+
+body.dark-mode .theme-toggle {
+  color: #ffc107;
+}
+
+body.dark-mode .theme-toggle:hover {
+  color: #ffeb3b;
 }
 
 body.dark-mode a {
