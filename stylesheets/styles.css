@@ -332,6 +332,21 @@ footer {
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
+/* Default profile image style */
+#profile-image {
+  width: 100%;
+  height: auto;
+}
+
+/* Adjust the profile image for smaller screens */
+@media only screen and (max-width: 600px) {
+  #profile-image {
+    width: 50%; /* Shrinks the image to half width on mobile */
+    margin: 0 auto;
+    display: block;
+  }
+}
+
 @media print, screen and (max-width: 960px) {
 
   div.wrapper {
