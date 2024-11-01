@@ -26,12 +26,13 @@
 
         <!-- <img id="image1" src="../assets/profile_kaiwen_picture_3.PNG" alt="profile picture" style="width:100%; height:auto;">
          -->
-        <div class="contact-info">
-          <p>Email: 
-              <a href="mailto:kaiwenbian107@gmail.com">kaiwenbian107@gmail.com</a> -- 
-              <a href="mailto:kbian@ucsd.edu">kbian@ucsd.edu</a>
-          </p>          
+         <div class="contact-info">
+          <p>Contact me by email:
+            <a href="mailto:kaiwenbian107@gmail.com">kaiwenbian107@gmail.com</a><br>
+            <a href="mailto:kbian@ucsd.edu">kbian@ucsd.edu</a>
+          </p>
         </div>
+
         <a href="https://github.com/KevinBian107" target="_blank"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" style="height: 25px;"> GitHub</a> 
         <p></p>
         <a href="https://www.linkedin.com/in/kbian107/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="height: 20px;"> LinkedIn</a>
@@ -40,10 +41,10 @@
         <p></p>
         <a href="cv/cv.pdf" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3135/3135764.png" alt="CV" style="height: 20px;"> CV</a>
         <p></p>
-        <button id="theme-toggle" class="theme-toggle">🌙 Dark Mode</button>
+        <!-- <button id="theme-toggle" class="theme-toggle">🌙 Dark Mode</button> -->
       </header>
       <section>
-        <h1>Biologically Inspired Continual Learning</h1>
+        <h1>Supervised & Sub-optimality Forward Models</h1>
         <div id="google_translate_element"></div>
         <script type="text/javascript">
           // Initializes the Google Translate Element
@@ -90,41 +91,49 @@
 
         <div style="text-align: center;">
           <img src="../assets/dynamics_model.png" alt="Fm-PPO" style="width:100%; height:auto;">
+          <blockquote>
+            <p>Forward Model Schematics</p>
+          </blockquote>
         </div>
 
-        <blockquote>
-          <p>Forward Model Proximal Policy Optimization Over View</p>
-        </blockquote>
-
-        <p></p>
-        
         <p>
           I am developing a conceptual framework that may be used for families of algorithms and I am trying to build internal representations for artificial agents through designing a <strong>Forward Model</strong>, one similar to
           what we think the Cerabellum is doing in human brain, so their learned skills in one task can be modularized and transferable to other control tasks. The belows are some training results on classical control problems using 
-          our <strong>SFm-PPO</strong> algorithm (an adaptation using Supervised Forward Model and Proximal Policy Optimization).
+          our <strong>SoFM-PPO</strong> algorithm (an adaptation using Supervised Forward Model and Proximal Policy Optimization).
         </p>
 
-        
-        <div style="width: 100%; padding: 5px; display: flex; justify-content: center; gap: 20px;">
-          <div style="width: 50%; display: flex; flex-direction: column; align-items: center;">
+        <div style="width: 100%; padding: 5px; display: flex; justify-content: center; gap: 10px;">
+          <div style="width: 30%; display: flex; flex-direction: column; align-items: center;">
             <video controls autoplay style="width: 100%; height: auto;" muted>
-              <source src="../assets/cl_ppo_converge.mp4" type="video/mp4">
+              <source src="../assets/cl_ppo_jump_weird.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
-            <blockquote>Deep-RL Half Cheetah agent trained using PPO converge on 5e6</blockquote>
+            <blockquote>Trained using PPO on "Jump Task" and stuck on weird local minimum</blockquote>
           </div>
-          <div style="width: 50%; display: flex; flex-direction: column; align-items: center;">
+          <div style="width: 30%; display: flex; flex-direction: column; align-items: center;">
             <video controls autoplay style="width: 100%; height: auto;" muted>
-              <source src="../assets/cl_sfmppo_converge.mp4" type="video/mp4">
+              <source src="../assets/cl_sfmppo_converge_712.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
-            <blockquote>Deep-RL Half Cheetah agent trained using SFm-PPO on 1e6 (not converged yet)</blockquote>
+            <blockquote>Trained using SFM-PPO on "Normal Running Task"</blockquote>
+          </div>
+          <div style="width: 30%; display: flex; flex-direction: column; align-items: center;">
+            <video controls autoplay style="width: 100%; height: auto;" muted>
+              <source src="../assets/cl_sofppo_demo1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <blockquote>Trained using SFM-PPO on "Normal Running Task" but with world model intention bounding</blockquote>
           </div>
         </div>
         
         <p></p>
 
-        <a href="https://github.com/KevinBian107/VNL-SFM/tree/main" class="button">Preliminary Result</a>
+        <p>
+          I am currently adapting the idea of <strong>Sub-optimality constrain</strong> to my forward model to create <strong>SoFM-PPO</strong> (Sub-optimality Forward Model adapted PPO) with a similar
+          Expecattion Maximization approach that both MPO (Maximum a Posetrior Optimization) and MOMPO (Multi Objective MPO) is using.
+        </p>
+
+        <a href="https://github.com/KevinBian107/VNL-SoFM" class="button">Preliminary Result</a>
 
         <p></p>
 
