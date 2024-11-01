@@ -200,8 +200,9 @@ a:hover small {
 .wrapper_content_page {
   padding-top: 70px;
   width: 100%; /* Full width */
-  max-width: 800px; /* Limit maximum width for readability */
+  max-width: 960px; /* Limit maximum width for readability */
   margin: 0 auto; /* Center the content */
+  position: relative;
 }
 
 blockquote {
