@@ -620,6 +620,8 @@ iframe {
   margin: 10px;
 }
 
+/* Google translation section */
+
 #google_translate_element {
   margin-left: auto; /* Pushes the translate element to the right */
   background: #f8f9fa;
@@ -672,6 +674,7 @@ iframe {
 
 
 /* Dark mode styles */
+
 body.dark-mode {
   background-color: #3a3a3a;
   color: #c0c0c0;
@@ -869,6 +872,9 @@ body.dark-mode strong {
   color: #ffffff;
 }
 
+
+/* Project cards for research section*/
+
 .projects {
   text-align: center;
   padding: 2rem;
@@ -909,7 +915,14 @@ body.dark-mode strong {
 }
 
 /* Adjust for smaller screens (mobile) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
+  .project-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; /* Space between the boxes */
+    justify-items: center; /* Center the cards horizontally */
+  }
+
   .project-card {
     width: 100%;  /* Make it full width */
     margin: 10px 0; /* Add some margin for spacing */
