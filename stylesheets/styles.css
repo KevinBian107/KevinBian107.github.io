@@ -874,11 +874,21 @@ body.dark-mode strong {
   padding: 2rem;
 }
 
+
 .project-container {
   display: flex;
   justify-content: center;
   gap: 20px; /* Space between the boxes */
-  flex-wrap: nowrap; /* Prevent wrapping, so boxes stay horizontal */
+  flex-direction: column; /* Stack boxes vertically */
+  justify-items: center; /* Center the cards horizontally */
+  align-items: center; /* Center align boxes */
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px; /* Space between the boxes */
+  justify-items: center; /* Center the cards horizontally */
 }
 
 .project-link {

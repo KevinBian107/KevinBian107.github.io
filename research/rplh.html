@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Kaiwen Bian</title>
+
+    <link rel="stylesheet" href="../stylesheets/styles.css">
+    <link rel="stylesheet" href="../stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/KevinBian107/KevinBian107.github.io/main/assets/logo_3.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  </head>
+  <body>
+    <div class="wrapper_content_page">
+      <header>
+        <div class="nav-list">
+            <a href="../index.html" class="nav-link">Home Page</a>
+            <a href="../research.html" class="nav-link">Research</a>
+            <a href="../idea.html" class="nav-link">Ideology</a>
+            <a href="../projects.html" class="nav-link">Projects</a>
+            <div id="google_translate_element"></div> <!-- Translator here -->
+        </div>
+
+      </header>
+      <section>
+        <h1>Hellucinating Multi-agent LLM</h1>
+        <script type="text/javascript">
+          // Initializes the Google Translate Element
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+              pageLanguage: 'en',
+              includedLanguages: 'en,zh-CN,es,fr,de,ja,ru', // Restrict to English and Chinese Simplified
+              layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+              autoDisplay: true  // Prevent automatic display of the dropdown
+            }, 'google_translate_element');
+          }
+          // Function to manually trigger translation to Chinese
+          function showTranslateOptions() {
+            var selectField = document.querySelector(".goog-te-combo");
+            if (selectField) {
+              selectField.value = 'en,zh-CN,es,fr,de,ja,ru'; // Set the translation to Chinese
+              selectField.dispatchEvent(new Event('change')); // Trigger the change event
+            } else {
+              console.error('Translation widget not loaded properly.');
+            }
+          }
+          window.onload = function() {
+                showTranslateOptions();
+            };
+          </script>          
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+        <p>
+          We hope to build agent that is caplable of <strong>Social-reasoning and expecting what the other agent should be doing</strong>.
+          We are building a generalize world model for every single agent in this environment and hopefully moving a step closer to <strong>Level-one agent</strong>.
+          Here is a easy schematic over view of our work:
+        </p>
+
+        <div style="text-align: center;">
+          <img src="../assets/rplh_clean.png" alt="Imitation pipeline" style="width:70%; height:auto;">
+          <blockquote>
+            Clean schematic of RPLH-LLM
+          </blockquote>
+        </div>
+
+        <p></p>
+
+        <p>
+          Particularly, we are developing frameworks for multi-agent collaborations using Role-Playing Leader-Hellucinating LLM, or in short, <strong>RPLH-LLM</strong>. 
+          We are currently developing on minimal example and we are planning to adapt to MCTS fine-tuned LLM with VirtualHome later.
+        </p>
+
+        <a href="https://github.com/KevinBian107/HCA-LLM" class="button" >Prelinimary Result</a>
+
+        <p></p>
+
+      </section>
+      <footer>
+        <!-- <p>© 2024 Kaiwen Bian. All rights reserved.</p> -->
+      </footer>
+    </div>
+    <script src="../javascripts/scale.fix.js"></script>
+    <script src="../javascripts/translate.js"></script>
+    <script src="../javascripts/mode.js"></script>
+  </body>
+</html>
