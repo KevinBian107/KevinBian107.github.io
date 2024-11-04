@@ -945,3 +945,28 @@ body.dark-mode .project-card {
   margin: 10px 0 0;
   color: #000000;
 }
+
+.conversation-section {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+  color: #333;
+}
+
+pre {
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+  font-family: Consolas, Monaco, "Courier New", monospace;
+}
+
+ul {
+  margin-left: 20px;
+}

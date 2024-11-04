@@ -69,8 +69,62 @@
 
         <p>
           Particularly, we are developing frameworks for multi-agent collaborations using Role-Playing Leader-Hellucinating LLM, or in short, <strong>RPLH-LLM</strong>. 
-          We are currently developing on minimal example and we are planning to adapt to MCTS fine-tuned LLM with VirtualHome later.
+          We are currently developing on minimal example and we are planning to adapt to MCTS fine-tuned LLM with VirtualHome later. Here is an example of agents 
+          communicating using a box move example followng this <a href=https://yongchao98.github.io/MIT-REALM-Multi-Robot target="_blank">ICRA-2024 Paper</a>:
         </p>
+
+        <div class="conversation-section">
+          <h3>Hellucinating Center Agent (0,0):</h3>
+          <p>Considering these points:</p>
+          <pre>
+      {
+          "Agent[0.5, 0.5]": "",
+          "Agent[0.5, 1.5]": "move(box_blue, square[0.5, 0.5])",
+          "Agent[1.5, 0.5]": "move(box_red, target_red)",
+          "Agent[1.5, 1.5]": ""
+      }
+          </pre>
+      
+          <h3>LOCAL Agent (0,0):</h3>
+          <ul>
+              <li>The given action plan misses out on actions for <strong>Agent[0.5, 0.5]</strong>, which includes myself.</li>
+              <li>It's unclear how moving <code>box_blue</code> from square [0.5, 1.5] aligns with the observable list provided for that square in the context of coordinating all agents towards their respective targets.</li>
+          </ul>
+          <p>Proposing revised suggestion:</p>
+          <pre>
+      {
+          "Agent[0.5, 0.5]": "move(box_orange, target_orange)"
+      }
+          </pre>
+      
+          <h3>JUDGE (0,0):</h3>
+          <p>Consensus:</p>
+          <pre>
+      {
+          "Agent[0.5, 0.5]": "move(box_orange, target_orange)"
+      }
+          </pre>
+      
+          <h3>LOCAL Agent (0,1):</h3>
+          <p>I Agree and final decision:</p>
+          <pre>
+      {
+          "Agent[0.5, 0.5]": "move(box_orange, target_orange)"
+      }
+          </pre>
+      
+          <h3>LOCAL Agent (1,0):</h3>
+          <p>Disagreement: The current action plan only includes <strong>Agent[0.5, 0.5]</strong> moving the <code>box_orange</code> to its target, which was already executed in the previous step.</p>
+          <p>Proposed Updated Action Plan:</p>
+          <pre>
+      {
+          "Agent[1.5, 0.5]": "move(box_red, square[0.5, 0.5])"
+      }
+          </pre>
+      </div>
+      
+
+
 
         <a href="https://github.com/KevinBian107/HCA-LLM" class="button" >Prelinimary Result</a>
 
