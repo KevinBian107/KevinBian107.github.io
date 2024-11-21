@@ -961,6 +961,7 @@ body.dark-mode .project-card {
 
 .conversation-section {
   font-family: Arial, sans-serif;
+  font: 16px/1.5
   margin: 20px;
   padding: 20px;
   background-color: #f9f9f9;
