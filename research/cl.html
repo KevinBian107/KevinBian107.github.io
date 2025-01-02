@@ -69,39 +69,17 @@
         </p>
 
         <p>
-          I am developing a conceptual framework that may be used for families of algorithms and I am trying to build internal representations for artificial agents through designing a <strong>Forward Model</strong>, one similar to
+          I am developing a conceptual framework that may be used for families of algorithms and I am trying to build internal representations for artificial agents through designing a <strong>World Model</strong> (a forward model if we are specifcally looking at control problems), one similar to
           what we think the Cerabellum is doing in human brain, so their learned skills in one task can be modularized and transferable to other control tasks. The belows are some training results on classical control problems using 
-          our <strong>SoFM-PPO</strong> algorithm (an adaptation using Supervised Forward Model and Proximal Policy Optimization). Such a forward model can be interpreted in various ways:
+          our <strong>Sub-Optiamlity Optimization (S.O.O.)</strong> algorithm (an adaptation using Supervised Forward Model and Proximal Policy Optimization). We are building explicit objectives that we want the model to learn (i.e. Forward Dynamics and Inverse Dynamics) 
+          and applying supervised learning on these to achieve numerical representations. Embedding such representations into the model parameters implicitly aids the learning process.
         </p>
-
-        <p>
-        <ul>
-          <li>
-            We can consider such model as a constrained process, forcing the agent to learn while incorporating its previous experiences.
-          </li>
-          <li>
-            Similarly, the forward model's facilitation does not come directly from action facilitation but rather from providing a better representation of the feature space \(\vec \phi(\vec x)\) that the agent has built up.
-            It's about operating in this <strong>imaginary state</strong>. It is never about <strong>explicitly</strong> facilitating actions but rather <strong>implicitly</strong> making the model understand the dynamics and 
-            interactions in this space more comprehensively.
-          </li>
-        </ul>
-        </p>
-
-        <p>We are building explicit objectives that we want the model to learn (e.g., ForwardDynamics and InverseDynamics) and applying supervised learning on these to achieve <strong>numerical representations</strong>. Embedding such representations into the model parameters implicitly aids the learning process.</p>
       
         <div style="text-align: center;">
           <img src="../assets/research/dynamics_model.png" alt="Fm-PPO" style="width:90%; height:auto;">
-          <blockquote>
-            <p>Forward Model Schematics</p>
-          </blockquote>
         </div>
 
-        <p></p>
-          I am currently adapting the idea of <strong>Sub-optimality constrain</strong> to my forward model to create <strong>SoFM-PPO</strong> (Sub-optimality Forward Model adapted PPO) with a similar
-          Expecattion Maximization approach that both MPO (Maximum a Posetrior Optimization) and MOMPO (Multi Objective MPO) is using.
-        </p>
-
-        <a href="https://kbian.org/VNL-SoFM/" class="button">Current Progress Documentation</a>
+        <a href="https://kbian.org/VNL-SoFM/" class="button">S.O.O. Documentation</a>
 
         <p></p>
 
