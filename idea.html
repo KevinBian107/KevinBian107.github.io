@@ -56,89 +56,79 @@
         <h2>Searching for Needles in Haystacks</h2>
 
         <p>
-          To some extent, machine learning is all about feature engineering or feature learning \(\vec \phi(\vec x)\), trying to find a good/correct 
-          mathamatical space (may be very complex, may involve going to the weight world to find correct projection or may involve projecting to infinite dimension to find representation), 
-          a feature space \(\Phi\), to allow \(X\) project onto, which might be a process that is "searching for needles in the haystacks".
+          Inspired By professor Sicun Gao from UCSD computer science and engineering: any form of problems that we are trying to solve can be formed by an optimization scheme with a function \(f\), a domain \(X\), and a possible constraint \(C\).
+          To name a few examples, When \(X\) is the weight space and \(f\) is just some sort of loss function, you may get any type of deep learning. When \(X\) is all possible input space and \(f\) is a function assessing badness, you have advasarial attack algorithms.
+          If \(X\) is all possible veichle trajectories and \(f\) is a reward function, you get Reinforcement Learning or atunomous driving. If \(X\) is all posssible strings and \(f\) is the closeness metric to a prooved theorem, when having the constraint of axioms, you have mathamatical reasoning.
+          You see, any problems can be formed as solving different instances of this problem.
+        </p>
+
+        <p>
+          \[
+          \begin{aligned}
+          & \min_{x \in X} \quad f(x) \\
+          & \text{subject to C}
+          \end{aligned}
+          \]
+        </p>
+
+        <p>
+          More rigrously speaking, any act of engineering is the act of walking and searching in the infinite <strong>design space</strong> (domain of things you can do), trying to find a 
+          good enough solution that can solve interesting problems in the <strong>problem domain</strong> (state space) with the <strong>function metric</strong> you care about with the <strong>constrain</strong> given.
         </p>
 
         <div style="text-align: center;">
           <img src="assets/index/searching.png" alt="Continual Learning Schematic" style="width:60%; height:auto;">
         </div>
 
-        <blockquote>
-          <p>"Intelligence is just happening to do the right thing for the right task and engineering/creating something that 
-            works for an interestingly scaled level problem is the same as parsing through the fog in this vast space of 
-            interactions that give so many seemingly correct functions and finding the truth."</p>
-        </blockquote>
-
         <p>
-          Inspired By professor Gao from UCSD: rigrous engineering is the act of walking in the infinite function space in the intersection between design space and the domain to try to find a good enough solution that can solve interesting problems 
-          when scaling up for the metrics you care about and under the constrain given. In some sense, <strong>search = optimization</strong>.
+          From a pessimistic perspective, these problems are <strong>NP-Hard</strong>. In the limit, they are all not solvable, we are left to face hopeless problems. But in practice, we never face the limit, with combinations of techniques, we 
+          may be able to find a good enough solution for some interesting questions. These techniques come from very different domains but some how all try to solve this same hard problem.
         </p>
-        
         <p>
-          Inspired by professor Eldridge from UCSD: the math itself for learning to occur may not be as complicated, it is rather the underlaying structure of the data that exist in nature promotes the stemming of intelligence, 
-          we just need to find such structure, a correct representation of \(X\).
+          Some try to focus on a subset of the nice problem and intelligence stems from numerically garuantee optimality (<strong>Analytical Perspective</strong>).
+          Some treates \(f\) itself just as a black box and doesn't care about it at all, all we need to do is randomly sample and use different techniques to ensure such sampling works. Intelligence then come from a belief that, with enough sample, we will discover some underlaying hidden struture of the environment (<strong>Statistical Perspective</strong>).
+          And some else treats the whole problem as a puzzle to solve where logic takes us from one step to an other, if one step is wrong, we backtrack and fix. Intelligence is then logical reasoning or a tree expansion with teh constraint of logic (<Strong>Combinatorics & Traditional AI Perspective</Strong>)
         </p>
 
         <p>
+          What we so called Intelligence may just be a system happening to do the right thing for the right task. Sometimes creating something that 
+          works for an interestingly scaled level problem is the same as parsing through the fog in this vast space of interactions that give so many seemingly correct designs and finding the truth.
           With every try, you would explore the space a little bit more, grown the subtree a little bit deeper, and pushed more values into the table. 
-            Success never comes from one good state but rather the path you have explored and the large subtree you have built. Every single dynamic state 
-            (reference to the world or reference to yourself) that you have been through and every single flow of emotion that you have felt is not lost; The tree has been explored and nothing is lost.
+        <strong>Success never comes from one good state but rather the path you have explored and the large subtree you have built</strong>. Every single dynamic state 
+          (reference to the world and to yourself) that you have been through is not lost: <strong>The tree has been explored and nothing is lost</strong>.
         </p>
-
-        <!-- <blockquote>
-          <p>"Hope lies in dreams, in imaginations, and in the courage of those who dare to make imaginations into reality."</p>
-          <p>Jonas Salk</p>
-        </blockquote> -->
         
-        <h2>Expectation Maximization of Science to Engineering</h2>
-    
-        <p>
-          I believe that science and engineering never conflict with each other just as search is optimization. Creating something new that works is the equivalent of finding the true processes in nature. 
-          Question that puzzles neuroscientists and psychologists is the same question that puzzles computer scientists (i.e. continual learning is a question in biology, psychology, and machine learning). 
-          On a deeper level, I believe the remarkable process that operates abstract mathematics on infinite dimensions is the equivalent process that makes us do the normal things in life: we process an infinite 
-          amount of information all the time.
-        </p>
+        <h2>Evolution Did it's Random Search</h2>
 
         <p>
-          I am pashinate in both the engineering and science part of doing research, to use imaginations to create learnings, to create different ways for an artificial agent to capture essence computationally, and to create something that seems to be "intelligent", that 
-          just happens to do the right things that works. Sometimes these approaches are very ideal, naive, but are also new and may have the capability to develop into something captures the truth.
-        </p>
-
-        
-        <h2>Information Processing & Decision Making That Makes "Intelligence"</h2>
-
-        <p>
-          I believe that, no matter for natural or artificial intelligence, there exist, in nature, certain "correct" ways of information processing and decision making mechanism that makes "intellience". It just happens that the random search conducted by evolution 
+          No matter for natural or artificial intelligence, I believe that there exist, certain "correct" ways of information processing and decision making mechanism that makes "intellience". It just happens that the random search conducted by evolution 
           found such mechanism and presented in the form of our brain. As long as natural intelligence remains as the best form of intellignece, it keep inform us about hwo to get closer to true mechnism of intelligence.
         </p>
+
         <p>
-          Inspired by professor Pereira from the Salk Institute: the nature has creative solutions to match objective functions caused by evolution and there exists a strong coupling between such natural behavior and the underlying neural algorithm. The neural 
-          underpinning happens to be the information processing theory that works because it helps survival to pass on the genes. Ethology is an integration of all computations done from sensory to supervisory signals. A great deal of neuronal mechanism is about 
-          our output, our actions, and our interaction with the environment: it is about what we do.
+          To some extent, machine learning is just about feature learning \(\vec \phi(\vec x)\), trying to find a correct mathamatical space (may be very complex, may involve going to the weight world to find correct projection, or may involve projecting to infinite dimension to find representation), 
+          a feature space \(\Phi\), to allow \(X\) project onto and reveal some hidden structure. Inspired by professor Justin Eldridge from UCSD data science: the math itself for learning to occur may not be as complicated, it is rather the underlaying structure of the data that exist in nature promotes the stemming of intelligence, 
+          we just need to find such structure, a correct representation of \(X\). Finding intelligence stemming from biology may also just need to find such correct subspace.
         </p>
 
         <p>
-          However, how we theorize these mechanisms may be limited to our imagination and natural mechanisms are not necessarily bounded within these constraints, they often rely 
-          on more complex features that only imperfectly map onto human-interpretable categories. I think that using the computational model with the right layer of abstractions would go beyond the limits of human-interpretable labels and potentially establish
-          find natures of how information are processed and decisions are made, hence, benifiting both community of machine learning and neurosciecne.
+          Inspired by professor Talmo Pereira from the Salk Institute: nature has creative solutions to match objective functions caused by evolution and there exists a strong coupling between such natural behavior and the underlying neural algorithm. The neural underpinning that we have just happens to be the information processing theory that works 
+          because it helps survival to pass on the genes. A great deal of neuronal mechanism is about our output, our actions, and our interaction with the environment: it is about what we do. 
+          I think that finding the right layer of abstractions and injecting the baisc alignment with biology into artificial agents would go beyond the limits of human-interpretable labels and power searches into the correct representations to inform us about how to build abstract models of the brain and get closer to the hypothesis of “intelligence”.
         </p>
 
-        <!-- <div style="text-align: center;">
-          <img src="assets/vnl_schematics.png" alt="Imitation pipeline" style="width:55%; height:auto;">
-        </div>
-
-        <blockquote>
-            VNL Schematics (borrowed from VNL Research Strategy)
-        </blockquote>
-        <p></p> -->
-
+        <h2>Science to Engineering \(\rightarrow\) Expectation Maximization</h2>
+    
         <p>
-          Because of such fundamental goals of such neural algorithms, it helps to inject the basis layer of alignment with biology into artificial agents to form the base of embodiment in these networks and power searches into the correct representations to inform us 
-          and allow us to build abstract models of the brain, to get closer on the conceptual level truth of information processing & sequential decision making, and to find hypothesis to “intelligence”.
+          I believe that science and engineering goes hands in hands, science asks a question and engineering trys to find a solution towards usch question, just like expectation maximization. 
+          Creating something new that works is the equivalent of finding the true processes in nature. Questions that puzzles neuroscientists and psychologists for decades are the same questions that puzzles computer scientists (i.e. continual learning). 
+          I believe the remarkable process that operates abstract mathematics on infinite dimensions is the equivalent process that makes us do the normal things in life: we process an infinite amount of information all the time. Thus, I believe that there must exist some deep connections between artificial and natural intelligence, we just need to find them.
         </p>
-        
+        <p>
+          I am pashionate in both the engineering and science part of doing research, to use imaginations to create learnings, to create different ways for an artificial agent 
+          to capture essence computationally, and to create something that seems to be "intelligent", that just happens to do the right things that works. Sometimes these approaches are very ideal, naive, but are also new and may have the capability to develop into something captures the truth.
+        </p>
+
       </section>
       <footer>
         <!-- <p>© 2024 Kaiwen Bian. All rights reserved.</p> -->
