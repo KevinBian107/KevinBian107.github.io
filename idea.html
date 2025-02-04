@@ -65,15 +65,16 @@
         <p>
           \[
           \begin{aligned}
-          & \min_{x \in X} \quad f(x) \\
+          & \min_{x \in X} \quad F(x) \\
           & \text{subject to C}
           \end{aligned}
           \]
         </p>
 
         <p>
-          More rigrously speaking, any act of engineering is the act of walking and searching in the infinite <strong>design space</strong> (domain of things you can do), trying to find a 
-          good enough solution that can solve interesting problems in the <strong>problem domain</strong> (state space) with the <strong>function metric</strong> you care about with the <strong>constrain</strong> given.
+          More rigrously speaking, any act of engineering is the act of walking and searching in the infinite <strong>design space</strong> (\(\Phi(x)\), domain of things you can do, this is either deemed as action or policy parameters in RL), trying to find a 
+          good enough solution that can solve interesting problems in the <strong>problem domain</strong> (\(X\), state space) with the <strong>function metric</strong> (\(F(x)\), in metric or objective space, this is the reward model in RL or MSE objective surface in supervised learning) while 
+          caring about with the <strong>constrain</strong> (dotted line) given. You search in the parameter space that changes where you are in state space and reflecting the goodness of it in the metric space.
         </p>
 
         <div style="text-align: center;">
