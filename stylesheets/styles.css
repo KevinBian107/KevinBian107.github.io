@@ -905,8 +905,8 @@ body.dark-mode strong {
 /* Default styling for larger screens */
 .project-card {
   background-color: #eeeeee;
-  width: 250px;
-  height: 430px;
+  width: 260px;
+  height: 360px;
   border-radius: 10px;
   overflow: hidden;
   text-align: left;
@@ -915,7 +915,7 @@ body.dark-mode strong {
 }
 
 /* Adjust for smaller screens (mobile) */
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 2500px) {
   .project-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

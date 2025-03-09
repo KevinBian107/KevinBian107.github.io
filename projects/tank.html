@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Kaiwen Bian</title>
+
+    <link rel="stylesheet" href="../stylesheets/styles.css">
+    <link rel="stylesheet" href="../stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/KevinBian107/KevinBian107.github.io/main/assets/index/logo_3.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </head>
+  <body>
+    <div class="wrapper_content_page">
+      <header>
+        <div class="nav-list">
+          <a href="../index.html" class="nav-link">Home Page</a>
+          <a href="../research.html" class="nav-link">Research</a>
+          <a href="../idea.html" class="nav-link">Ideology</a>
+          <a href="../projects.html" class="nav-link">Projects</a>
+          <div id="google_translate_element"></div> <!-- Translator here -->
+        </div>
+
+      </header>
+      <section>
+        <h1>AlphaTank: A Competitive MARL Framework</h1>
+        <script type="text/javascript">
+          // Initializes the Google Translate Element
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+              pageLanguage: 'en',
+              includedLanguages: 'en,zh-CN,es,fr,de,ja,ru', // Restrict to English and Chinese Simplified
+              layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+              autoDisplay: true  // Prevent automatic display of the dropdown
+            }, 'google_translate_element');
+          }
+          // Function to manually trigger translation to Chinese
+          function showTranslateOptions() {
+            var selectField = document.querySelector(".goog-te-combo");
+            if (selectField) {
+              selectField.value = 'en,zh-CN,es,fr,de,ja,ru'; // Set the translation to Chinese
+              selectField.dispatchEvent(new Event('change')); // Trigger the change event
+            } else {
+              console.error('Translation widget not loaded properly.');
+            }
+          }
+          window.onload = function() {
+                showTranslateOptions();
+            };
+          </script>          
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <p></p>
+        
+        <p>
+          Alpha Tank is a multi-agent tank battle game built with Pygame and designed for Reinforcement Learning (RL) training and supports multiple agentplaying in the same environment.
+        </p>
+
+        <div style="text-align: center;">
+          <img src="../assets/projects/tank_1.png" alt="figure from study" style="width:50%; height:auto;">
+        </div>
+
+        <a href="https://github.com/georgong/alphaTank" class="button">On-going Repository</a>
+
+      </section>
+      <footer>
+        <!-- <p>© 2024 Kaiwen Bian. All rights reserved.</p> -->
+      </footer>
+    </div>
+    <script src="../javascripts/scale.fix.js"></script>
+    <script src="../javascripts/translate.js"></script>
+    <script src="../javascripts/mode.js"></script>
+  </body>
+</html>
