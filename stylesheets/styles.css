@@ -375,21 +375,16 @@ blockquote {
   margin-right: 5px;
 }
 
-/* Project Cards - Adaptive to different screen sizes */
-@media only screen and (max-width: 430px) {
-  .project-container {
-    grid-template-columns: repeat(1, 1fr); /* Single column for mobile */
-  }
-
-  .project-card {
-    width: 100%; /* Make the cards take full width */
-    max-width: 380px; /* Keep a reasonable max width */
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: yellow !important; /* DEBUGGING */
   }
 }
 
+
 .projects {
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .project-container {
