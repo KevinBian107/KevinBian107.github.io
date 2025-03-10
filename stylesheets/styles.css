@@ -376,8 +376,18 @@ blockquote {
 }
 
 @media only screen and (max-width: 600px) {
-  body {
-    background-color: yellow !important; /* DEBUGGING */
+  .project-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  .project-card {
+    width: 90% !important;  /* Ensures full width */
+    max-width: 400px !important; /* Prevents stretching */
+    height: auto !important;
+    margin: 10px auto !important; /* Centers the card */
   }
 }
 
