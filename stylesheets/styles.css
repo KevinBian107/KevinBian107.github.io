@@ -906,7 +906,7 @@ body.dark-mode strong {
 .project-card {
   background-color: #eeeeee;
   width: 260px;
-  height: 360px;
+  height: 450px;
   border-radius: 10px;
   overflow: hidden;
   text-align: left;
@@ -957,6 +957,24 @@ body.dark-mode .project-card {
   font-size: 1rem;
   margin: 10px 0 0;
   color: #000000;
+}
+
+.project-tags {
+  margin-top: 10px;
+  margin-left: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.tag {
+  background-color: #0073e6; /* Customize color */
+  color: white;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  display: inline-block;
+  font-weight: bold;
 }
 
 .conversation-section {
