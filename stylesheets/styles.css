@@ -233,9 +233,32 @@ footer {
 
 /* Profile Elements */
 #profile-image {
+  width: 200px; /* Default size for larger screens */
+  height: auto;
+  border-radius: 50%; /* Keeps it circular */
+  display: block;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 600px) {
+  #profile-image {
+    width: 50%; /* Adjusts dynamically on smaller screens */
+    max-width: 120px; /* Prevents it from getting too big */
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #profile-image {
+    width: 40%; /* Further scales down on very small screens */
+    max-width: 100px;
+  }
+}
+
+
+/* #profile-image {
   width: 100%;
   height: auto;
-}
+} */
 
 .profile {
   display: flex;
