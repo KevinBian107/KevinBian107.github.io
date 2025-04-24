@@ -57,8 +57,8 @@
           I am currently working as an undergraduate research intern at 
           <a href="https://talmolab.org/" target="_blank">Talmo's Lab</a> in the Salk Institute. We are working on the VNL project, 
           a collaboration between Salk Institute and Harvard University aiming to use advanced 
-          <strong>Goal-directed Deep Reinforcement Learning</strong> methods such as <strong>Inverse Kinetmatics Imitation Learning</strong> to create imitation pipelines 
-          for computational models of the brain using GPU accelerated Brax & JAX and multi-node distributed CPU training with Acme & Ray.
+          <strong>Goal-directed Deep Reinforcement Learning</strong> methods & <strong>Generative Inverse Kinetmatics Imitation Learning</strong> to create imitation pipelines 
+          for <strong>computational models of the brain</strong> using GPU accelerated Brax & JAX and multi-node distributed CPU training with Acme & Ray.
       </p>
 
       <a href="https://talmolab.org/" class="button" >Visit Our Lab Website</a>
@@ -76,7 +76,7 @@
         </div>
 
         <blockquote>
-            Abstract Deep Imitation Learning Idea (borrowed from Talmo's Lab VNL slides)
+            Abstract Deep Imitation Learning Idea (curtesy of Talmo's VNL slides)
         </blockquote>
 
         <p></p>
@@ -97,59 +97,39 @@
         <p></p>
 
         <div style="text-align: center;">
-            <img src="../assets/research/Intentional_network.png" alt="Imitation pipeline" style="width:80%; height:auto;">
+            <img src="../assets/research/Intentional_network.png" alt="Imitation pipeline" style="width:90%; height:auto;">
         </div>
 
         <blockquote>
-            Deep imitation learning illustration using encoder/decoder structure (borrowed from VNL Research Strategy)
+            Deep imitation learning illustration using encoder/decoder structure (curtesy of VNL Research Strategy)
         </blockquote>
 
         <p></p>
 
         <p>
           Particularly we are interested in the motion of bio-mechanically realistic rodent model as we can use them (along with many motion captured CV data) to perhaps form an neural represenattion of how control is been done in the brain. 
-          For illustration purpose, here are some recent results that our team produced.
+          For the speed and computability, we use gpu based data-parrallelism training using Jax/Brax/Flax or cpu-based multi-node task-parralelism distributed training using Ray/Acme. For illustration purpose, here are some recent results that our team produced.
         </p>
 
-        <p>
-          An PPO trained goal-oriented deep reinforcement learning agent (bio-mechanically realistic rodent).
-        </p>
 
-        <div style="width: 100%; padding: 5px; display: flex; justify-content: center;">
-          <video controls autoplay style="width: 50%; height: auto;" muted>
-            <source src="../assets/research/rodent_run_1.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+        <div style="display: flex; justify-content: center; gap: 20px;">
+          <img src="../assets/research/vnl_1.gif" alt="imitating rodent" style="width:45%; height:auto;">
+          <img src="../assets/research/vnl_2.gif" alt="imitating humanoid" style="width:45%; height:auto;">
         </div>
+        <p></p>
 
-        <p>An DMPO trained inverse kinematics imitation learning agent (CMU humanoid) with 3e7 actor steps (white is expert 
-          trajectory and yellow is learned agent's control).
-        </p>
-        
-        <div style="width: 100%; padding: 5px; display: flex; justify-content: center;">
-          <video controls autoplay style="width: 50%; height: auto;" muted>
-            <source src="../assets/research/track_with_expert_1_3e7.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-
+      <blockquote>
         <p>
-          And an DMPO trained inverse kinematics imitation learning agent (bio-mechanically realistic rodent) with reused 
-          representation retarined on the jump gap task.
+          Left: An GPU/MJX trained PPO inverse kinematics imitation learning agent.
         </p>
-
-        <div style="width: 100%; padding: 5px; display: flex; justify-content: center;">
-          <video controls autoplay style="width: 50%; height: auto;" muted>
-            <source src="../assets/research/rodent_run_2.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-
         <p>
-          For the speed and computability, we use gpu based data-parrallelism training using Jax/Brax or cpu-based multi-node task-parralelism distributed training using Ray/Acme.
+          Right: An Distributed-CPU/RAY trained DMPO inverse kinematics imitation learning agent.
         </p>
+      </blockquote>
 
-        <a href="https://github.com/talmolab/vnl-ray" class="button" >Distributed Training Implementation of VNL</a>
+      <p></p>
+
+      <a href="https://github.com/talmolab/vnl-ray" class="button" >VNL-Ray: an distributed-cpu training implementation of VNL</a>
 
       </section>
       <footer>
