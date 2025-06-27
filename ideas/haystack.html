@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Kaiwen Bian</title>
+
+    <link rel="stylesheet" href="../stylesheets/styles.css">
+    <link rel="stylesheet" href="../stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/KevinBian107/KevinBian107.github.io/main/assets/index/logo_3.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </head>
+  <body>
+    <div class="wrapper_content_page">
+      <header>
+        <div class="nav-list">
+            <a href="../index.html" class="nav-link">Home Page</a>
+            <a href="../research.html" class="nav-link">Research</a>
+            <a href="../projects.html" class="nav-link">Projects</a>
+            <a href="../https://kbian.org/Kaiwen-Wiki/" class="nav-link">Wiki</a>
+            <div id="google_translate_element"></div> <!-- Translator here -->
+        </div>
+
+      </header>
+      <section>
+        <h1>Searching for Needles in Haystacks</h1>
+        <script type="text/javascript">
+          // Initializes the Google Translate Element
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+              pageLanguage: 'en',
+              includedLanguages: 'en,zh-CN,es,fr,de,ja,ru', // Restrict to English and Chinese Simplified
+              layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+              autoDisplay: true  // Prevent automatic display of the dropdown
+            }, 'google_translate_element');
+          }
+          // Function to manually trigger translation to Chinese
+          function showTranslateOptions() {
+            var selectField = document.querySelector(".goog-te-combo");
+            if (selectField) {
+              selectField.value = 'en,zh-CN,es,fr,de,ja,ru'; // Set the translation to Chinese
+              selectField.dispatchEvent(new Event('change')); // Trigger the change event
+            } else {
+              console.error('Translation widget not loaded properly.');
+            }
+          }
+          window.onload = function() {
+                showTranslateOptions();
+            };
+          </script>          
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+        <p>
+          Inspired By professor Sicun Gao from UCSD computer science and engineering: any form of problems that we are trying to solve can be formed by an optimization scheme with a function \(f\), a domain \(X\), and a possible constraint \(C\).
+          To name a few examples, When \(X\) is the weight space and \(f\) is just some sort of loss function, you may get any type of deep learning. When \(X\) is all possible input space and \(f\) is a function assessing badness, you have advasarial attack algorithms.
+          If \(X\) is all possible veichle trajectories and \(f\) is a reward function, you get Reinforcement Learning or atunomous driving. If \(X\) is all posssible strings and \(f\) is the closeness metric to a prooved theorem, when having the constraint of axioms, you have mathamatical reasoning.
+          You see, any problems can be formed as solving different instances of this problem.
+        </p>
+
+        <p>
+          \[
+          \begin{aligned}
+          & \min_{x \in X} \quad F(x) \\
+          & \text{subject to C}
+          \end{aligned}
+          \]
+        </p>
+
+        <p>
+          More rigrously speaking, any act of engineering is the act of walking and searching in the infinite <strong>design space</strong> (\(\Phi(x)\), domain of things you can do, this is either deemed as action or policy parameters in RL), trying to find a 
+          good enough solution that can solve interesting problems in the <strong>problem domain</strong> (\(X\), state space) with the <strong>function metric</strong> (\(F(x)\), in metric or objective space, this is the reward model in RL or MSE objective surface in supervised learning) while 
+          caring about with the <strong>constrain</strong> (dotted line) given. You search in the parameter space that changes where you are in state space and reflecting the goodness of it in the metric space.
+        </p>
+
+        <div style="text-align: center;">
+          <img src="../assets/index/searching.png" alt="Continual Learning Schematic" style="width:60%; height:auto;">
+        </div>
+
+        <p>
+          From a pessimistic perspective, these problems are <strong>NP-Hard</strong>. In the limit, they are all not solvable, we are left to face hopeless problems. But in practice, we never face the limit, with combinations of techniques, we 
+          may be able to find a good enough solution for some interesting questions. These techniques come from very different domains but some how all try to solve this same hard problem.
+        </p>
+        <p>
+          Some try to focus on a subset of the nice problem and intelligence stems from numerically garuantee optimality (<strong>Analytical Perspective</strong>).
+          Some treates \(f\) itself just as a black box and doesn't care about it at all, all we need to do is randomly sample and use different techniques to ensure such sampling works. Intelligence then come from a belief that, with enough sample, we will discover some underlaying hidden struture of the environment (<strong>Statistical Perspective</strong>).
+          And some else treats the whole problem as a puzzle to solve where logic takes us from one step to an other, if one step is wrong, we backtrack and fix. Intelligence is then logical reasoning or a tree expansion with teh constraint of logic (<Strong>Combinatorics & Traditional AI Perspective</Strong>)
+        </p>
+
+        <p>
+          What we so called Intelligence may just be a system happening to do the right thing for the right task. Sometimes creating something that 
+          works for an interestingly scaled level problem is the same as parsing through the fog in this vast space of interactions that give so many seemingly correct designs and finding the truth.
+          With every try, you would explore the space a little bit more, grown the subtree a little bit deeper, and pushed more values into the table. 
+        <strong>Success never comes from one good state but rather the path you have explored and the large subtree you have built</strong>. Every single dynamic state 
+          (reference to the world and to yourself) that you have been through is not lost: <strong>The tree has been explored and nothing is lost</strong>.
+        </p>
+        
+      </section>
+      <footer>
+        <!-- <p>© 2024 Kaiwen Bian. All rights reserved.</p> -->
+      </footer>
+    </div>
+    <script src="../javascripts/scale.fix.js"></script>
+    <script src="../javascripts/translate.js"></script>
+    <script src="../javascripts/mode.js"></script>
+  </body>
+</html>
