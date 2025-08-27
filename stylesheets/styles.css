@@ -22,14 +22,14 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 2.0em;
-  color: #0056b3;
+  color: #393939;
   margin-bottom: 20px;
   border-bottom: 2px solid #ddd;
   padding-bottom: 10px;
 }
 
 h2 {
-  color: #0056b3;
+  color: #1036a9;
   font-weight: 500;
 }
 
@@ -68,7 +68,7 @@ small {
 
 /* Links */
 a {
-  color: #39c;
+  color: rgb(171, 171, 171);
   text-decoration: none;
 }
 
@@ -487,7 +487,7 @@ blockquote {
 }
 
 .tag {
-  background-color: #0073e6;
+  background-color: #cacaca;
   color: white;
   font-size: 12px;
   padding: 4px 8px;
@@ -498,8 +498,8 @@ blockquote {
 
 /* Button Styles */
 .button {
-  background-color: #808080;
-  color: white;
+  background-color: #f2f2f2;
+  color: rgb(0, 0, 0);
   padding: 10px 15px;
   text-decoration: none;
   border-radius: 5px;
