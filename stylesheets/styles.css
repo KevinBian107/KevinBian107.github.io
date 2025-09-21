@@ -403,6 +403,18 @@ blockquote {
   margin-right: 5px;
 }
 
+.time-glass {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: 500;
+  margin: 10px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
 @media only screen and (max-width: 600px) {
   .project-container {
     display: flex !important;
@@ -419,26 +431,16 @@ blockquote {
   }
 }
 
-.time-glass {
-  display: inline-block;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 0.9em;
-  font-weight: 500;
-  margin: 10px 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
 .projects {
   text-align: center;
   padding: 1rem;
 }
 
 .project-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  /* display: grid; */
+  column-count: 3;
+  column-gap: 16px;
+  /* grid-template-columns: repeat(3, 1fr); */
   gap: 10px;
   justify-items: center;
 }
@@ -463,7 +465,8 @@ blockquote {
 }
 
 .project-card:hover {
-  transform: scale(1.05);
+  transform: none;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
 }
 
 .project-card img {
