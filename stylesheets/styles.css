@@ -229,8 +229,9 @@ header ul a strong {
 }
 
 footer {
-  width: 270px;
-  float: left;
+  font-size: 13px;
+  width: 250px;
+  float: right;
   position: fixed;
   bottom: 50px;
   -webkit-font-smoothing: subpixel-antialiased;
