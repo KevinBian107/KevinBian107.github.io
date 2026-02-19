@@ -620,6 +620,87 @@
    }
    
    /* =========================================================
+      16. Journey Timeline
+      ========================================================= */
+
+   .journey-timeline {
+     position: relative;
+     padding-left: 28px;
+     margin-top: 8px;
+   }
+
+   .journey-timeline::before {
+     content: '';
+     position: absolute;
+     left: 6px;
+     top: 8px;
+     bottom: 8px;
+     width: 2px;
+     background: #e2e8f0;
+   }
+
+   .journey-entry {
+     position: relative;
+     margin-bottom: 32px;
+   }
+
+   .journey-entry:last-child {
+     margin-bottom: 0;
+   }
+
+   .journey-entry::before {
+     content: '';
+     position: absolute;
+     left: -24px;
+     top: 8px;
+     width: 10px;
+     height: 10px;
+     border-radius: 50%;
+     background: #4a6fa5;
+     border: 2px solid #ffffff;
+     box-shadow: 0 0 0 2px #e2e8f0;
+   }
+
+   .journey-date {
+     font-size: 13px;
+     font-weight: 500;
+     color: #6b7280;
+     margin-bottom: 4px;
+     letter-spacing: 0.02em;
+   }
+
+   .journey-body h3 {
+     margin: 0 0 4px;
+     font-size: 1.15rem;
+   }
+
+   .journey-org {
+     font-size: 15px;
+     font-weight: 500;
+     color: #1f2933;
+     margin-bottom: 2px;
+   }
+
+   .journey-detail {
+     font-size: 13px;
+     color: #6b7280;
+     margin-bottom: 8px;
+   }
+
+   .journey-body p {
+     font-size: 15px;
+     line-height: 1.55;
+     color: #4a4a4a;
+     margin: 0 0 6px;
+   }
+
+   .journey-advisor {
+     font-size: 14px;
+     color: #6b7280;
+     font-style: italic;
+   }
+
+   /* =========================================================
       14. Responsive Rules
       ========================================================= */
    
@@ -693,6 +774,8 @@
        margin: 0 auto;
        display: block;
      }
+
+     .journey-timeline { padding-left: 22px; }
    }
    
    @media only screen and (max-width: 480px) {
