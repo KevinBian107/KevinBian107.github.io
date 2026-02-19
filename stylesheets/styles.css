@@ -11,7 +11,7 @@
    
    body {
      background-color: #ffffff;
-     padding: 50px 24px 40px;
+     padding: 64px 24px 40px;
      font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
        Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
        Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
@@ -36,15 +36,16 @@
    h1 {
      font-size: 2.1rem;
      color: #1f2933;
+     font-weight: 600;
      margin-bottom: 24px;
      border-bottom: 2px solid #e2e8f0;
      padding-bottom: 8px;
    }
-   
+
    h2 {
      font-size: 1.6rem;
      color: #1036a9;
-     font-weight: 500;
+     font-weight: 600;
    }
    
    h3 {
@@ -96,13 +97,14 @@
    /* Links */
    
    a {
-     color: #7b7b7b;
+     color: #4a6fa5;
      text-decoration: none;
      transition: color 0.2s ease;
    }
-   
+
    a:hover {
-     color: #0069c2;
+     color: #0056b3;
+     text-decoration: underline;
    }
    
    a small {
@@ -158,14 +160,14 @@
      z-index: 1000;
      display: flex;
      align-items: center;
-     gap: 8px;
-     padding: 8px 20px;
+     gap: 12px;
+     padding: 12px 24px;
      background-color: #ffffff;
      border-bottom: 1px solid #e2e8f0;
    }
-   
+
    .nav-link {
-     padding: 6px 12px;
+     padding: 8px 16px;
      border-radius: 999px;
      color: #4b5563;
      font-size: 16px;
@@ -399,6 +401,7 @@
    .project-link {
      text-decoration: none;
      color: inherit;
+     cursor: pointer;
    }
    
    .project-card {
@@ -420,6 +423,7 @@
      width: 100%;
      height: 210px;
      object-fit: cover;
+     display: block;
    }
    
    .project-content {
@@ -441,18 +445,20 @@
    .project-tags {
      margin-top: 12px;
      margin-bottom: 14px;
+     padding: 0 22px 8px;
      display: flex;
      flex-wrap: wrap;
-     gap: 6px;
+     gap: 8px;
    }
-   
+
    .tag {
      background-color: #e5e7eb;
-     color: #111827;
+     color: #374151;
      font-size: 12px;
-     padding: 4px 10px;
+     padding: 5px 12px;
      border-radius: 999px;
      font-weight: 500;
+     letter-spacing: 0.01em;
    }
    
    /* =========================================================
@@ -464,19 +470,19 @@
      color: #111827;
      padding: 10px 15px;
      text-decoration: none;
-     border-radius: 8px;
+     border-radius: 999px;
      font-size: 12px;
      display: inline-block;
      margin: 10px 0;
      transition: background-color 0.2s ease, color 0.2s ease,
        box-shadow 0.2s ease;
    }
-   
+
    .button:hover {
-     background-color: #c269e8;
+     background-color: #093eff;
      color: #ffffff;
      text-decoration: none;
-     box-shadow: 0 4px 10px rgba(148, 27, 179, 0.35);
+     box-shadow: 0 4px 10px rgba(9, 62, 255, 0.25);
    }
    
    /* =========================================================
@@ -619,7 +625,7 @@
    
    @media only screen and (max-width: 960px) {
      body {
-       padding: 70px 16px 30px;
+       padding: 60px 16px 30px;
      }
    
      .wrapper {
@@ -661,18 +667,27 @@
    
    @media only screen and (max-width: 600px) {
      body {
-       padding: 70px 12px 24px;
+       padding: 56px 12px 24px;
      }
-   
+
      .nav-list {
        padding: 6px 10px;
        overflow-x: auto;
      }
-   
+
      .project-container {
        grid-template-columns: 1fr;
      }
-   
+
+     .project-tags {
+       padding: 0 16px 6px;
+     }
+
+     .tag {
+       padding: 4px 10px;
+       font-size: 11px;
+     }
+
      #profile-image {
        width: 110px;
        margin: 0 auto;
