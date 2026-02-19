@@ -180,34 +180,6 @@
      color: #093eff;
    }
    
-   /* Optional nav “box” buttons */
-   
-   .nav-box {
-     display: block;
-     width: auto;
-     padding: 10px;
-     margin: 10px 0;
-     background-color: #ffffff;
-     border: 1px solid #e5e7eb;
-     border-radius: 8px;
-     text-decoration: none;
-     color: #111827;
-     box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
-     transition: background-color 0.2s ease, box-shadow 0.2s ease,
-       transform 0.1s ease;
-   }
-   
-   .nav-box:hover {
-     background-color: #f9fafb;
-     box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
-     transform: translateY(-1px);
-   }
-   
-   .box-icon {
-     margin-right: 8px;
-     font-size: 20px;
-   }
-   
    .description {
      font-size: 12px;
      color: #6b7280;
@@ -383,12 +355,6 @@
      color: #333;
    }
    
-   .quote {
-     font-size: 13.5px;
-     line-height: 1.5;
-     font-family: "Georgia", "Times New Roman", serif;
-   }
-   
    blockquote {
      border-left: 3px solid #e5e5e5;
      margin: 0;
@@ -398,57 +364,9 @@
    }
    
    /* =========================================================
-      8. Repository Cards
+      8. Timeline Badge
       ========================================================= */
-   
-   .repository-container {
-     display: grid;
-     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-     gap: 20px;
-     padding: 20px 0;
-   }
-   
-   .card {
-     background: #111827;
-     border-radius: 12px;
-     padding: 12px 14px;
-     box-shadow: 0 4px 10px rgba(15, 23, 42, 0.25);
-   }
-   
-   .card h3 {
-     margin-top: 0;
-   }
-   
-   .repo_word {
-     font-size: 1rem;
-     color: #ffffff;
-   }
-   
-   .repo_p {
-     font-size: 0.9rem;
-     color: #d1d5db;
-   }
-   
-   .stat {
-     display: flex;
-     align-items: center;
-     margin: 10px 0;
-     color: #e5e7eb;
-   }
-   
-   .stat img {
-     width: 20px;
-     margin-right: 10px;
-   }
-   
-   .language_dot {
-     height: 10px;
-     width: 10px;
-     border-radius: 50%;
-     display: inline-block;
-     margin-right: 5px;
-   }
-   
+
    .time-glass {
      display: inline-block;
      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -559,10 +477,6 @@
      color: #ffffff;
      text-decoration: none;
      box-shadow: 0 4px 10px rgba(148, 27, 179, 0.35);
-   }
-   
-   .contact-info {
-     text-align: center;
    }
    
    /* =========================================================
@@ -683,33 +597,6 @@
      bottom: 0 !important;
      width: 100% !important;
      border: none !important;
-   }
-   
-   .custom-translate-button {
-     cursor: pointer;
-     padding: 8px 10px;
-     background-color: #4caf50;
-     color: white;
-     border: none;
-     border-radius: 4px;
-   }
-   
-   .custom-translate-button:hover {
-     background-color: #45a049;
-   }
-   
-   #triggerTranslate {
-     padding: 8px 16px;
-     background-color: #007bff;
-     color: white;
-     border: none;
-     border-radius: 4px;
-     cursor: pointer;
-     font-size: 14px;
-   }
-   
-   #triggerTranslate:hover {
-     background-color: #0056b3;
    }
    
    /* =========================================================
