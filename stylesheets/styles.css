@@ -711,9 +711,159 @@
        font-size: 12pt;
        color: #444;
      }
-   
+
      .nav-list {
        position: static;
        border-bottom: none;
      }
-   }   
+   }
+
+   /* =========================================================
+      15. Category Filter Bar
+      ========================================================= */
+
+   .filter-bar {
+     margin-bottom: 24px;
+   }
+
+   .filter-controls {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     flex-wrap: wrap;
+   }
+
+   .clear-filters-btn {
+     background: none;
+     border: 1px solid #d1d5db;
+     border-radius: 999px;
+     padding: 6px 14px;
+     font-size: 13px;
+     color: #6b7280;
+     cursor: pointer;
+     transition: background-color 0.2s ease, color 0.2s ease;
+     display: none;
+   }
+
+   .filter-bar.has-filters .clear-filters-btn {
+     display: inline-block;
+   }
+
+   .clear-filters-btn:hover {
+     background-color: #f3f4f6;
+     color: #111827;
+   }
+
+   .filter-chips-container {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 8px;
+   }
+
+   .filter-chip {
+     --chip-color: #6b7280;
+     --chip-bg: #f3f4f6;
+     --chip-active-bg: var(--chip-color);
+     --chip-active-color: #ffffff;
+     background-color: var(--chip-bg);
+     color: var(--chip-color);
+     border: 1px solid var(--chip-color);
+     border-radius: 999px;
+     padding: 6px 16px;
+     font-size: 13px;
+     font-weight: 500;
+     cursor: pointer;
+     transition: background-color 0.2s ease, color 0.2s ease;
+     user-select: none;
+   }
+
+   .filter-chip:hover {
+     background-color: color-mix(in srgb, var(--chip-color) 12%, white);
+   }
+
+   .filter-chip.active {
+     background-color: var(--chip-active-bg);
+     color: var(--chip-active-color);
+   }
+
+   .filter-chip[data-category="embodied"] {
+     --chip-color: #7c3aed;
+     --chip-bg: #f5f3ff;
+   }
+   .filter-chip[data-category="topology"] {
+     --chip-color: #0891b2;
+     --chip-bg: #ecfeff;
+   }
+   .filter-chip[data-category="generative"] {
+     --chip-color: #059669;
+     --chip-bg: #ecfdf5;
+   }
+   .filter-chip[data-category="language"] {
+     --chip-color: #d97706;
+     --chip-bg: #fffbeb;
+   }
+   .filter-chip[data-category="datascience"] {
+     --chip-color: #dc2626;
+     --chip-bg: #fef2f2;
+   }
+   .filter-chip[data-category="neuroscience"] {
+     --chip-color: #e05297;
+     --chip-bg: #fdf2f8;
+   }
+
+   /* =========================================================
+      15b. Category Tags on Cards
+      ========================================================= */
+
+   .category-tag {
+     font-size: 11px;
+     padding: 3px 10px;
+     border-radius: 999px;
+     font-weight: 600;
+     letter-spacing: 0.02em;
+   }
+
+   .category-embodied {
+     background-color: #ede9fe;
+     color: #6d28d9;
+   }
+   .category-topology {
+     background-color: #cffafe;
+     color: #0e7490;
+   }
+   .category-generative {
+     background-color: #d1fae5;
+     color: #047857;
+   }
+   .category-language {
+     background-color: #fef3c7;
+     color: #b45309;
+   }
+   .category-datascience {
+     background-color: #fee2e2;
+     color: #b91c1c;
+   }
+   .category-neuroscience {
+     background-color: #fce7f3;
+     color: #be185d;
+   }
+
+   /* =========================================================
+      15c. Filter Animation
+      ========================================================= */
+
+   .project-link.hidden {
+     display: none;
+   }
+
+   @media only screen and (max-width: 600px) {
+     .filter-chip {
+       padding: 5px 12px;
+       font-size: 12px;
+     }
+
+     .category-tag {
+       font-size: 10px;
+       padding: 2px 8px;
+     }
+   }
