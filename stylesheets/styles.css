@@ -11,7 +11,7 @@
    
    body {
      background-color: #ffffff;
-     padding: 50px 24px 40px;
+     padding: 64px 24px 40px;
      font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
        Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
        Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
@@ -36,15 +36,16 @@
    h1 {
      font-size: 2.1rem;
      color: #1f2933;
+     font-weight: 600;
      margin-bottom: 24px;
      border-bottom: 2px solid #e2e8f0;
      padding-bottom: 8px;
    }
-   
+
    h2 {
      font-size: 1.6rem;
      color: #1036a9;
-     font-weight: 500;
+     font-weight: 600;
    }
    
    h3 {
@@ -96,13 +97,14 @@
    /* Links */
    
    a {
-     color: #7b7b7b;
+     color: #4a6fa5;
      text-decoration: none;
      transition: color 0.2s ease;
    }
-   
+
    a:hover {
-     color: #0069c2;
+     color: #0056b3;
+     text-decoration: underline;
    }
    
    a small {
@@ -158,14 +160,14 @@
      z-index: 1000;
      display: flex;
      align-items: center;
-     gap: 8px;
-     padding: 8px 20px;
+     gap: 12px;
+     padding: 12px 24px;
      background-color: #ffffff;
      border-bottom: 1px solid #e2e8f0;
    }
-   
+
    .nav-link {
-     padding: 6px 12px;
+     padding: 8px 16px;
      border-radius: 999px;
      color: #4b5563;
      font-size: 16px;
@@ -178,34 +180,6 @@
    .nav-link:focus {
      background-color: #e5edff;
      color: #093eff;
-   }
-   
-   /* Optional nav “box” buttons */
-   
-   .nav-box {
-     display: block;
-     width: auto;
-     padding: 10px;
-     margin: 10px 0;
-     background-color: #ffffff;
-     border: 1px solid #e5e7eb;
-     border-radius: 8px;
-     text-decoration: none;
-     color: #111827;
-     box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
-     transition: background-color 0.2s ease, box-shadow 0.2s ease,
-       transform 0.1s ease;
-   }
-   
-   .nav-box:hover {
-     background-color: #f9fafb;
-     box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
-     transform: translateY(-1px);
-   }
-   
-   .box-icon {
-     margin-right: 8px;
-     font-size: 20px;
    }
    
    .description {
@@ -383,12 +357,6 @@
      color: #333;
    }
    
-   .quote {
-     font-size: 13.5px;
-     line-height: 1.5;
-     font-family: "Georgia", "Times New Roman", serif;
-   }
-   
    blockquote {
      border-left: 3px solid #e5e5e5;
      margin: 0;
@@ -398,57 +366,9 @@
    }
    
    /* =========================================================
-      8. Repository Cards
+      8. Timeline Badge
       ========================================================= */
-   
-   .repository-container {
-     display: grid;
-     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-     gap: 20px;
-     padding: 20px 0;
-   }
-   
-   .card {
-     background: #111827;
-     border-radius: 12px;
-     padding: 12px 14px;
-     box-shadow: 0 4px 10px rgba(15, 23, 42, 0.25);
-   }
-   
-   .card h3 {
-     margin-top: 0;
-   }
-   
-   .repo_word {
-     font-size: 1rem;
-     color: #ffffff;
-   }
-   
-   .repo_p {
-     font-size: 0.9rem;
-     color: #d1d5db;
-   }
-   
-   .stat {
-     display: flex;
-     align-items: center;
-     margin: 10px 0;
-     color: #e5e7eb;
-   }
-   
-   .stat img {
-     width: 20px;
-     margin-right: 10px;
-   }
-   
-   .language_dot {
-     height: 10px;
-     width: 10px;
-     border-radius: 50%;
-     display: inline-block;
-     margin-right: 5px;
-   }
-   
+
    .time-glass {
      display: inline-block;
      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -481,6 +401,7 @@
    .project-link {
      text-decoration: none;
      color: inherit;
+     cursor: pointer;
    }
    
    .project-card {
@@ -502,6 +423,7 @@
      width: 100%;
      height: 210px;
      object-fit: cover;
+     display: block;
    }
    
    .project-content {
@@ -523,18 +445,20 @@
    .project-tags {
      margin-top: 12px;
      margin-bottom: 14px;
+     padding: 0 22px 8px;
      display: flex;
      flex-wrap: wrap;
-     gap: 6px;
+     gap: 8px;
    }
-   
+
    .tag {
      background-color: #e5e7eb;
-     color: #111827;
+     color: #374151;
      font-size: 12px;
-     padding: 4px 10px;
+     padding: 5px 12px;
      border-radius: 999px;
      font-weight: 500;
+     letter-spacing: 0.01em;
    }
    
    /* =========================================================
@@ -546,23 +470,19 @@
      color: #111827;
      padding: 10px 15px;
      text-decoration: none;
-     border-radius: 8px;
+     border-radius: 999px;
      font-size: 12px;
      display: inline-block;
      margin: 10px 0;
      transition: background-color 0.2s ease, color 0.2s ease,
        box-shadow 0.2s ease;
    }
-   
+
    .button:hover {
-     background-color: #c269e8;
+     background-color: #093eff;
      color: #ffffff;
      text-decoration: none;
-     box-shadow: 0 4px 10px rgba(148, 27, 179, 0.35);
-   }
-   
-   .contact-info {
-     text-align: center;
+     box-shadow: 0 4px 10px rgba(9, 62, 255, 0.25);
    }
    
    /* =========================================================
@@ -685,33 +605,6 @@
      border: none !important;
    }
    
-   .custom-translate-button {
-     cursor: pointer;
-     padding: 8px 10px;
-     background-color: #4caf50;
-     color: white;
-     border: none;
-     border-radius: 4px;
-   }
-   
-   .custom-translate-button:hover {
-     background-color: #45a049;
-   }
-   
-   #triggerTranslate {
-     padding: 8px 16px;
-     background-color: #007bff;
-     color: white;
-     border: none;
-     border-radius: 4px;
-     cursor: pointer;
-     font-size: 14px;
-   }
-   
-   #triggerTranslate:hover {
-     background-color: #0056b3;
-   }
-   
    /* =========================================================
       13. Conversation Block
       ========================================================= */
@@ -732,7 +625,7 @@
    
    @media only screen and (max-width: 960px) {
      body {
-       padding: 70px 16px 30px;
+       padding: 60px 16px 30px;
      }
    
      .wrapper {
@@ -774,18 +667,27 @@
    
    @media only screen and (max-width: 600px) {
      body {
-       padding: 70px 12px 24px;
+       padding: 56px 12px 24px;
      }
-   
+
      .nav-list {
        padding: 6px 10px;
        overflow-x: auto;
      }
-   
+
      .project-container {
        grid-template-columns: 1fr;
      }
-   
+
+     .project-tags {
+       padding: 0 16px 6px;
+     }
+
+     .tag {
+       padding: 4px 10px;
+       font-size: 11px;
+     }
+
      #profile-image {
        width: 110px;
        margin: 0 auto;
@@ -809,9 +711,159 @@
        font-size: 12pt;
        color: #444;
      }
-   
+
      .nav-list {
        position: static;
        border-bottom: none;
      }
-   }   
+   }
+
+   /* =========================================================
+      15. Category Filter Bar
+      ========================================================= */
+
+   .filter-bar {
+     margin-bottom: 24px;
+   }
+
+   .filter-controls {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     flex-wrap: wrap;
+   }
+
+   .clear-filters-btn {
+     background: none;
+     border: 1px solid #d1d5db;
+     border-radius: 999px;
+     padding: 6px 14px;
+     font-size: 13px;
+     color: #6b7280;
+     cursor: pointer;
+     transition: background-color 0.2s ease, color 0.2s ease;
+     display: none;
+   }
+
+   .filter-bar.has-filters .clear-filters-btn {
+     display: inline-block;
+   }
+
+   .clear-filters-btn:hover {
+     background-color: #f3f4f6;
+     color: #111827;
+   }
+
+   .filter-chips-container {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 8px;
+   }
+
+   .filter-chip {
+     --chip-color: #6b7280;
+     --chip-bg: #f3f4f6;
+     --chip-active-bg: var(--chip-color);
+     --chip-active-color: #ffffff;
+     background-color: var(--chip-bg);
+     color: var(--chip-color);
+     border: 1px solid var(--chip-color);
+     border-radius: 999px;
+     padding: 6px 16px;
+     font-size: 13px;
+     font-weight: 500;
+     cursor: pointer;
+     transition: background-color 0.2s ease, color 0.2s ease;
+     user-select: none;
+   }
+
+   .filter-chip:hover {
+     background-color: color-mix(in srgb, var(--chip-color) 12%, white);
+   }
+
+   .filter-chip.active {
+     background-color: var(--chip-active-bg);
+     color: var(--chip-active-color);
+   }
+
+   .filter-chip[data-category="embodied"] {
+     --chip-color: #7c3aed;
+     --chip-bg: #f5f3ff;
+   }
+   .filter-chip[data-category="topology"] {
+     --chip-color: #0891b2;
+     --chip-bg: #ecfeff;
+   }
+   .filter-chip[data-category="generative"] {
+     --chip-color: #059669;
+     --chip-bg: #ecfdf5;
+   }
+   .filter-chip[data-category="language"] {
+     --chip-color: #d97706;
+     --chip-bg: #fffbeb;
+   }
+   .filter-chip[data-category="datascience"] {
+     --chip-color: #dc2626;
+     --chip-bg: #fef2f2;
+   }
+   .filter-chip[data-category="neuroscience"] {
+     --chip-color: #e05297;
+     --chip-bg: #fdf2f8;
+   }
+
+   /* =========================================================
+      15b. Category Tags on Cards
+      ========================================================= */
+
+   .category-tag {
+     font-size: 11px;
+     padding: 3px 10px;
+     border-radius: 999px;
+     font-weight: 600;
+     letter-spacing: 0.02em;
+   }
+
+   .category-embodied {
+     background-color: #ede9fe;
+     color: #6d28d9;
+   }
+   .category-topology {
+     background-color: #cffafe;
+     color: #0e7490;
+   }
+   .category-generative {
+     background-color: #d1fae5;
+     color: #047857;
+   }
+   .category-language {
+     background-color: #fef3c7;
+     color: #b45309;
+   }
+   .category-datascience {
+     background-color: #fee2e2;
+     color: #b91c1c;
+   }
+   .category-neuroscience {
+     background-color: #fce7f3;
+     color: #be185d;
+   }
+
+   /* =========================================================
+      15c. Filter Animation
+      ========================================================= */
+
+   .project-link.hidden {
+     display: none;
+   }
+
+   @media only screen and (max-width: 600px) {
+     .filter-chip {
+       padding: 5px 12px;
+       font-size: 12px;
+     }
+
+     .category-tag {
+       font-size: 10px;
+       padding: 2px 8px;
+     }
+   }

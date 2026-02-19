@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 340" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <linearGradient id="gate0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#6d28d9"/>
+    </linearGradient>
+    <linearGradient id="gate1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0891b2"/>
+      <stop offset="100%" stop-color="#0e7490"/>
+    </linearGradient>
+    <linearGradient id="gate2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <linearGradient id="gate3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+    <linearGradient id="gate4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dc2626"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="116%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-opacity="0.12"/>
+    </filter>
+    <filter id="shadowSm" x="-4%" y="-4%" width="108%" height="116%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="960" height="340" rx="18" fill="#f8fafc"/>
+  <rect x="1" y="1" width="958" height="338" rx="17" fill="none" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="480" y="36" text-anchor="middle" font-size="16" font-weight="600" fill="#1f2933" letter-spacing="0.04em">PROPEL — HUMAN-IN-THE-LOOP RESEARCH WORKFLOW</text>
+
+  <!-- ========== GATE BADGES (top row) ========== -->
+  <!-- Gate 0 -->
+  <rect x="28" y="56" width="152" height="28" rx="14" fill="url(#gate0)" filter="url(#shadowSm)"/>
+  <text x="104" y="75" text-anchor="middle" font-size="12" font-weight="600" fill="#fff">GATE 0 — Intake</text>
+
+  <!-- Gate 1 -->
+  <rect x="214" y="56" width="152" height="28" rx="14" fill="url(#gate1)" filter="url(#shadowSm)"/>
+  <text x="290" y="75" text-anchor="middle" font-size="12" font-weight="600" fill="#fff">GATE 1 — Investigate</text>
+
+  <!-- Gate 2 -->
+  <rect x="400" y="56" width="152" height="28" rx="14" fill="url(#gate2)" filter="url(#shadowSm)"/>
+  <text x="476" y="75" text-anchor="middle" font-size="12" font-weight="600" fill="#fff">GATE 2 — Design</text>
+
+  <!-- Gate 3 -->
+  <rect x="586" y="56" width="152" height="28" rx="14" fill="url(#gate3)" filter="url(#shadowSm)"/>
+  <text x="662" y="75" text-anchor="middle" font-size="12" font-weight="600" fill="#fff">GATE 3 — Implement</text>
+
+  <!-- Gate 4 -->
+  <rect x="772" y="56" width="152" height="28" rx="14" fill="url(#gate4)" filter="url(#shadowSm)"/>
+  <text x="848" y="75" text-anchor="middle" font-size="12" font-weight="600" fill="#fff">GATE 4 — Debug</text>
+
+  <!-- ========== VERTICAL DASHED LINES (gate to box) ========== -->
+  <line x1="104" y1="84" x2="104" y2="130" stroke="#7c3aed" stroke-width="2" stroke-dasharray="4,3" opacity="0.5"/>
+  <line x1="290" y1="84" x2="290" y2="130" stroke="#0891b2" stroke-width="2" stroke-dasharray="4,3" opacity="0.5"/>
+  <line x1="476" y1="84" x2="476" y2="130" stroke="#059669" stroke-width="2" stroke-dasharray="4,3" opacity="0.5"/>
+  <line x1="662" y1="84" x2="662" y2="130" stroke="#d97706" stroke-width="2" stroke-dasharray="4,3" opacity="0.5"/>
+  <line x1="848" y1="84" x2="848" y2="130" stroke="#dc2626" stroke-width="2" stroke-dasharray="4,3" opacity="0.5"/>
+
+  <!-- ========== STAGE BOXES ========== -->
+  <!-- Box 0: User Idea -->
+  <rect x="28" y="130" width="152" height="100" rx="14" fill="#ffffff" stroke="#7c3aed" stroke-width="2" filter="url(#shadow)"/>
+  <text x="104" y="168" text-anchor="middle" font-size="28">💡</text>
+  <text x="104" y="196" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2933">User Idea</text>
+  <text x="104" y="216" text-anchor="middle" font-size="11" fill="#6b7280">Define scope &amp; goals</text>
+
+  <!-- Box 1: Investigation + Research -->
+  <rect x="214" y="130" width="152" height="100" rx="14" fill="#ffffff" stroke="#0891b2" stroke-width="2" filter="url(#shadow)"/>
+  <text x="290" y="168" text-anchor="middle" font-size="28">🔬</text>
+  <text x="290" y="196" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2933">Investigation</text>
+  <text x="290" y="216" text-anchor="middle" font-size="11" fill="#6b7280">Research &amp; analysis</text>
+
+  <!-- Box 2: Design + Plan -->
+  <rect x="400" y="130" width="152" height="100" rx="14" fill="#ffffff" stroke="#059669" stroke-width="2" filter="url(#shadow)"/>
+  <text x="476" y="168" text-anchor="middle" font-size="28">📐</text>
+  <text x="476" y="196" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2933">Design + Plan</text>
+  <text x="476" y="216" text-anchor="middle" font-size="11" fill="#6b7280">Architecture &amp; approach</text>
+
+  <!-- Box 3: Implement -->
+  <rect x="586" y="130" width="152" height="100" rx="14" fill="#ffffff" stroke="#d97706" stroke-width="2" filter="url(#shadow)"/>
+  <text x="662" y="168" text-anchor="middle" font-size="28">⚙️</text>
+  <text x="662" y="196" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2933">Implement</text>
+  <text x="662" y="216" text-anchor="middle" font-size="11" fill="#6b7280">Component by component</text>
+
+  <!-- Box 4: Debug + Diagnose -->
+  <rect x="772" y="130" width="152" height="100" rx="14" fill="#ffffff" stroke="#dc2626" stroke-width="2" filter="url(#shadow)"/>
+  <text x="848" y="168" text-anchor="middle" font-size="28">🐛</text>
+  <text x="848" y="196" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2933">Debug</text>
+  <text x="848" y="216" text-anchor="middle" font-size="11" fill="#6b7280">Diagnose &amp; validate</text>
+
+  <!-- ========== ARROWS BETWEEN BOXES ========== -->
+  <!-- Arrow 0→1 -->
+  <line x1="180" y1="180" x2="206" y2="180" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="214,180 206,175 206,185" fill="#94a3b8"/>
+
+  <!-- Arrow 1→2 -->
+  <line x1="366" y1="180" x2="392" y2="180" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="400,180 392,175 392,185" fill="#94a3b8"/>
+
+  <!-- Arrow 2→3 -->
+  <line x1="552" y1="180" x2="578" y2="180" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="586,180 578,175 578,185" fill="#94a3b8"/>
+
+  <!-- Arrow 3→4 -->
+  <line x1="738" y1="180" x2="764" y2="180" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="772,180 764,175 764,185" fill="#94a3b8"/>
+
+  <!-- ========== BOTTOM LABELS ========== -->
+  <rect x="28" y="256" width="904" height="64" rx="12" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="480" y="280" text-anchor="middle" font-size="12" font-weight="600" fill="#475569" letter-spacing="0.03em">EACH GATE: Human checkpoint — Claude pauses, asks structured questions, reveals assumptions</text>
+  <text x="480" y="302" text-anchor="middle" font-size="12" fill="#64748b">Domain auditors verify paper alignment · trace tensor shapes · detect silent bugs · check regressions</text>
+</svg>

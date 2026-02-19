@@ -8,7 +8,6 @@
     <title>Kaiwen Bian</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/KevinBian107/KevinBian107.github.io/main/assets/index/logo_3.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -19,9 +18,6 @@
       <header>
         <div class="nav-list">
           <a href="index.html" class="nav-link">Home Page</a>
-          <!-- <a href="idea.html" class="nav-link">Ideology</a> -->
-          <!-- <a href="projects.html" class="nav-link">Projects</a> -->
-          <!-- <a href="news.html" class="nav-link">News</a> -->
           <a href="https://kbian.org/Kaiwen-Wiki/" class="nav-link">MISC</a>
           <div id="google_translate_element"></div> <!-- Translator here -->
         </div>
@@ -57,17 +53,33 @@
 
         <p>Past research & project that I have worked and am currently working on.</p>
 
+        <div class="filter-bar">
+          <div class="filter-controls">
+            <div class="filter-chips-container">
+              <span class="filter-chip" data-category="embodied">Embodied Agents &amp; RL</span>
+              <span class="filter-chip" data-category="topology">Representation &amp; Topology</span>
+              <span class="filter-chip" data-category="generative">Generative Models</span>
+              <span class="filter-chip" data-category="language">Language Models &amp; Multi-Agent</span>
+              <span class="filter-chip" data-category="datascience">Applied Data Science</span>
+              <span class="filter-chip" data-category="neuroscience">Computational Neuroscience</span>
+            </div>
+            <button class="clear-filters-btn">Clear All</button>
+          </div>
+        </div>
+
         <div class="projects">
             <div class="project-container">
 
-            <a href="research/vnl.html" class="project-link">
+            <a href="research/vnl.html" class="project-link" data-categories="embodied neuroscience">
               <div class="project-card">
-                  <img src="assets/research/vnl_1.gif" alt="Making Artificial Motor Cortex">
+                  <img src="assets/research/mimic.gif" alt="Making Artificial Motor Cortex">
                   <div class="project-content">
                       <h2 class="project-title">Making Artificial Motor Cortex: Neuromechanical Emulation of Animal Behavior</h2>
                       <p class="project-description">Creating artificial motor cortex by imitating naturalistic agents and performing generative inverse kinematics.</p>
                   </div>
                   <div class="project-tags">
+                    <span class="category-tag category-embodied">Embodied Agents &amp; RL</span>
+                    <span class="category-tag category-neuroscience">Computational Neuroscience</span>
                     <span class="tag">Deep Reinforcement Learning</span>
                     <span class="tag">Imitation Learning</span>
                     <span class="tag">Parallel Training</span>
@@ -75,7 +87,7 @@
               </div>
             </a>
 
-            <a href="research/tda.html" class="project-link">
+            <a href="research/tda.html" class="project-link" data-categories="topology neuroscience">
               <div class="project-card">
                 <img src="assets/research/torus_dm_demo.gif" alt="TDA">
                   <div class="project-content">
@@ -83,6 +95,8 @@
                       <p class="project-description">Studying latent space compression and topological insights of motor control.</p>
                   </div>
                   <div class="project-tags">
+                    <span class="category-tag category-topology">Representation &amp; Topology</span>
+                    <span class="category-tag category-neuroscience">Computational Neuroscience</span>
                     <span class="tag">Computational Topology</span>
                     <span class="tag">Representation Learning</span>
                     <span class="tag">High-dimensional Reasoning</span>
@@ -90,22 +104,56 @@
               </div>
             </a>
 
-            <a href="research/graph_gen.html" class="project-link">
+            <a href="research/graph_gen.html" class="project-link" data-categories="generative">
               <div class="project-card">
                   <img src="https://kbian.org/MOSAIC-website/demo.gif" alt="mosaic generations">
                   <div class="project-content">
                       <h2 class="project-title">Beyond Flat Walks: Compositional Abstraction for Autoregressive Molecular Generation</h2>
-                      <p class="project-description">Designing hiearchical tokenization scheme, allowing sequence 
+                      <p class="project-description">Designing hiearchical tokenization scheme, allowing sequence
                         transformers to model and genearte complex molecules better.</p>
                   </div>
                   <div class="project-tags">
+                    <span class="category-tag category-generative">Generative Models</span>
                     <span class="tag">Graph Learning</span>
                     <span class="tag">Graph Generation</span>
                 </div>
               </div>
             </a>
 
-            <a href="research/mimicdyn.html" class="project-link">
+            <a href="research/motor_decisions.html" class="project-link" data-categories="embodied neuroscience">
+              <div class="project-card">
+                  <img src="assets/research/vnl_1.gif" alt="Motor Decisions Virtual Rodent">
+                  <div class="project-content">
+                      <h2 class="project-title">Motor Decisions: Discrete Action Selection in a Virtual Rodent Predicts Neural Population Structure</h2>
+                      <p class="project-description">Investigating how discrete action selection in virtual rodent models predicts neural population structure.</p>
+                  </div>
+                  <div class="project-tags">
+                    <span class="category-tag category-embodied">Embodied Agents &amp; RL</span>
+                    <span class="category-tag category-neuroscience">Computational Neuroscience</span>
+                    <span class="tag">Motor Control</span>
+                    <span class="tag">Neural Population</span>
+                    <span class="tag">Coming Soon</span>
+                </div>
+              </div>
+            </a>
+
+            <a href="projects/propel.html" class="project-link" data-categories="language">
+              <div class="project-card">
+                  <img src="assets/projects/propel_cover.svg" alt="Propel powered by Claude">
+                  <div class="project-content">
+                      <h2 class="project-title">Propel: Structured Constraint Framework for Claude Code</h2>
+                      <p class="project-description">A constraint framework enhancing Claude's effectiveness in research workflows with human-in-the-loop gates and domain-specific auditors.</p>
+                  </div>
+                  <div class="project-tags">
+                    <span class="category-tag category-language">Language Models &amp; Multi-Agent</span>
+                    <span class="tag">Claude Code</span>
+                    <span class="tag">Research Workflow</span>
+                    <span class="tag">Human-in-the-Loop</span>
+                </div>
+              </div>
+            </a>
+
+            <a href="research/mimicdyn.html" class="project-link" data-categories="embodied generative neuroscience">
               <div class="project-card">
                   <img src="assets/research/mimicdyn_ssm.png" alt="DynaPlan">
                   <div class="project-content">
@@ -113,13 +161,16 @@
                       <p class="project-description">Building planning & generation models with deep state space models.</p>
                   </div>
                   <div class="project-tags">
+                    <span class="category-tag category-embodied">Embodied Agents &amp; RL</span>
+                    <span class="category-tag category-generative">Generative Models</span>
+                    <span class="category-tag category-neuroscience">Computational Neuroscience</span>
                     <span class="tag">Deep State Space Model</span>
                     <span class="tag">Generative Model</span>
                 </div>
               </div>
             </a>
 
-            <a href="research/mllm.html" class="project-link">
+            <a href="research/mllm.html" class="project-link" data-categories="language">
               <div class="project-card">
                   <img src="assets/research/mllm.png" alt="Multimodal Model Embodied Simulation">
                   <div class="project-content">
@@ -127,13 +178,14 @@
                       <p class="project-description">Reverse engineering from a embodied language model's perspective.</p>
                   </div>
                   <div class="project-tags">
+                    <span class="category-tag category-language">Language Models &amp; Multi-Agent</span>
                     <span class="tag">MLLM Probing</span>
                     <span class="tag">LLM-ology</span>
                 </div>
               </div>
             </a>
 
-            <a href="research/rplh.html" class="project-link">
+            <a href="research/rplh.html" class="project-link" data-categories="language">
               <div class="project-card">
                   <img src="assets/research/rplh_logo.png" alt="RPLH">
                   <div class="project-content">
@@ -141,13 +193,14 @@
                       <p class="project-description">Farmework for tackling language model multi-agents collborations in an adversarial environment.</p>
                   </div>
                   <div class="project-tags">
+                    <span class="category-tag category-language">Language Models &amp; Multi-Agent</span>
                     <span class="tag">Multi-agent Inference System</span>
-                    <span class="tag">Cooperative/Adversarial Learning</span>
+                    <span class="tag">Adversarial Learning</span>
                 </div>
               </div>
             </a>
 
-            <a href="projects/tank.html" class="project-link">
+            <a href="projects/tank.html" class="project-link" data-categories="embodied">
               <div class="project-card">
                   <img src="assets/projects/tank.gif" alt="Blue_dot_project">
                   <div class="project-content">
@@ -155,14 +208,15 @@
                       <p class="project-description">Full end-to-end A-MARL framework for competitive and cooperative AI training.</p>
                   </div>
                   <div class="project-tags">
+                    <span class="category-tag category-embodied">Embodied Agents &amp; RL</span>
                     <span class="tag">Deep Reinforcement Learning</span>
                     <span class="tag">RL Environment</span>
-                    <span class="tag">Adversarial MARL</span>
+                    <span class="tag">Adversarial Learning</span>
                 </div>
               </div>
             </a>
 
-            <a href="projects/latent.html" class="project-link">
+            <a href="projects/latent.html" class="project-link" data-categories="embodied">
               <div class="project-card">
                   <img src="assets/projects/latent_0.png" alt="Latent Search">
                   <div class="project-content">
@@ -170,14 +224,14 @@
                       <p class="project-description">Learning is about how to create structured projection space and plan with it during post-training inference.</p>
                   </div>
                   <div class="project-tags">
+                    <span class="category-tag category-embodied">Embodied Agents &amp; RL</span>
                     <span class="tag">Data Efficient Sampling</span>
-                    <span class="tag">Offline Learning</span>
                     <span class="tag">Long Horizon Planning</span>
                 </div>
               </div>
             </a>
 
-            <a href="projects/lcne.html" class="project-link">
+            <a href="projects/lcne.html" class="project-link" data-categories="topology neuroscience">
               <div class="project-card">
                   <img src="assets/projects/lcne_0.png" alt="Blue_dot_project">
                   <div class="project-content">
@@ -185,13 +239,14 @@
                       <p class="project-description">Leveraging the power of neural network & topological data analysis to study the effect of stress & ruminations.</p>
                   </div>
                   <div class="project-tags">
-                    <span class="tag">Topological Analysis</span>
-                    <span class="tag">Computational Neuroscience</span>
+                    <span class="category-tag category-topology">Representation &amp; Topology</span>
+                    <span class="category-tag category-neuroscience">Computational Neuroscience</span>
+                    <span class="tag">Computational Topology</span>
                 </div>
               </div>
             </a>
 
-            <a href="projects/personal_database.html" class="project-link">
+            <a href="projects/personal_database.html" class="project-link" data-categories="datascience">
               <div class="project-card">
                   <img src="assets/projects/personal_database_2.gif" alt="Personal_database">
                   <div class="project-content">
@@ -199,13 +254,14 @@
                       <p class="project-description">Building a numerical and text database for my personal study data at UCSD to examine different study habits.</p>
                   </div>
                   <div class="project-tags">
+                    <span class="category-tag category-datascience">Applied Data Science</span>
                     <span class="tag">Data Science Workflow</span>
-                    <span class="tag">Vectorized Database & Language Model</span>
+                    <span class="tag">Vectorized Database</span>
                 </div>
               </div>
           </a>
 
-            <a href="projects/rec.html" class="project-link">
+            <a href="projects/rec.html" class="project-link" data-categories="datascience">
                 <div class="project-card">
                     <img src="assets/projects/rec_2.png" alt="Rec">
                     <div class="project-content">
@@ -213,6 +269,7 @@
                         <p class="project-description">Building recommendation systems using sequential data for business owners.</p>
                     </div>
                     <div class="project-tags">
+                      <span class="category-tag category-datascience">Applied Data Science</span>
                       <span class="tag">Recommendation Systems</span>
                       <span class="tag">Data Science Workflow</span>
                       <span class="tag">Deep Learning</span>
@@ -220,7 +277,7 @@
                 </div>
             </a>
 
-            <a href="projects/ensemble.html" class="project-link">
+            <a href="projects/ensemble.html" class="project-link" data-categories="datascience">
                 <div class="project-card">
                     <img src="assets/projects/ensemble.png" alt="Ensemble_learnings">
                     <div class="project-content">
@@ -228,13 +285,14 @@
                         <p class="project-description">Ensemble learning in highly imbalanced real-world datasets.</p>
                     </div>
                     <div class="project-tags">
+                      <span class="category-tag category-datascience">Applied Data Science</span>
                       <span class="tag">Data Science Workflow</span>
                       <span class="tag">Machine Learning</span>
                   </div>
                 </div>
             </a>
 
-          <a href="projects/addicted.html" class="project-link">
+          <a href="projects/addicted.html" class="project-link" data-categories="embodied neuroscience">
               <div class="project-card">
                   <img src="assets/projects/addicted_q_cover.png" alt="Addicted-Q">
                   <div class="project-content">
@@ -242,13 +300,14 @@
                       <p class="project-description">Studying effects of addition computationally via discrete reinforcement learning.</p>
                   </div>
                   <div class="project-tags">
-                    <span class="tag">Discrete Reinforcement Learning</span>
-                    <span class="tag">Computational Neuroscience</span>
+                    <span class="category-tag category-embodied">Embodied Agents &amp; RL</span>
+                    <span class="category-tag category-neuroscience">Computational Neuroscience</span>
+                    <span class="tag">Reinforcement Learning</span>
                 </div>
               </div>
           </a>
 
-          <a href="projects/eigenmap.html" class="project-link">
+          <a href="projects/eigenmap.html" class="project-link" data-categories="topology">
             <div class="project-card">
                 <img src="assets/projects/eigenmap_demo.png" alt="laplacien_eigenmap">
                 <div class="project-content">
@@ -256,8 +315,9 @@
                     <p class="project-description">Intuitive visualization of dimensional reduction algorithm for educational purpose.</p>
                 </div>
                 <div class="project-tags">
-                  <span class="tag">Educational Visualization</span>
-                  <span class="tag">Unsupervised Learning</span>
+                  <span class="category-tag category-topology">Representation &amp; Topology</span>
+                  <span class="tag">Visualization</span>
+                  <span class="tag">Representation Learning</span>
               </div>
             </div>
         </a>
@@ -269,6 +329,6 @@
     </div>
     <script src="javascripts/scale.fix.js"></script>
     <script src="javascripts/translate.js"></script>
-    <script src="javascripts/mode.js"></script>
+    <script src="javascripts/filter.js"></script>
   </body>
 </html>
