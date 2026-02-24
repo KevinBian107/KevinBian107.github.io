@@ -395,15 +395,16 @@
      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
      gap: 24px;
      justify-items: stretch;
-     align-items: start;
+     align-items: stretch;
    }
-   
+
    .project-link {
      text-decoration: none;
      color: inherit;
      cursor: pointer;
+     display: flex;
    }
-   
+
    .project-card {
      background-color: #ffffff;
      border-radius: 18px;
@@ -412,6 +413,8 @@
      width: 100%;
      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
      transition: transform 0.2s ease, box-shadow 0.2s ease;
+     display: flex;
+     flex-direction: column;
    }
    
    .project-card:hover {
@@ -419,7 +422,8 @@
      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.18);
    }
    
-   .project-card img {
+   .project-card img,
+   .project-card video {
      width: 100%;
      height: 210px;
      object-fit: cover;
@@ -428,6 +432,7 @@
    
    .project-content {
      padding: 20px 22px 18px;
+     flex: 1;
    }
    
    .project-title {
@@ -937,6 +942,110 @@
 
    .project-link.hidden {
      display: none;
+   }
+
+   /* =========================================================
+      15d. Grid / Row View Toggle
+      ========================================================= */
+
+   .view-toggle-btn {
+     background: none;
+     border: 1px solid #d1d5db;
+     border-radius: 8px;
+     padding: 6px 10px;
+     font-size: 16px;
+     color: #6b7280;
+     cursor: pointer;
+     transition: background-color 0.2s ease, color 0.2s ease;
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     margin-left: 4px;
+   }
+
+   .view-toggle-btn:hover {
+     background-color: #f3f4f6;
+     color: #111827;
+   }
+
+   /* Row view overrides */
+   .project-container.row-view {
+     grid-template-columns: 1fr;
+     grid-auto-rows: 180px;
+   }
+
+   .project-container.row-view .project-link {
+     height: 100%;
+   }
+
+   .project-container.row-view .project-card {
+     flex-direction: row;
+     height: 100%;
+   }
+
+   .project-container.row-view .project-card img,
+   .project-container.row-view .project-card video {
+     width: 260px;
+     min-width: 260px;
+     height: 100%;
+     object-fit: cover;
+     border-radius: 18px 0 0 18px;
+   }
+
+   .project-container.row-view .project-card .project-content {
+     flex: 1;
+     overflow: hidden;
+     padding: 16px 22px;
+   }
+
+   .project-container.row-view .project-card .project-title {
+     font-size: 1.2rem;
+     margin: 0 0 4px;
+   }
+
+   .project-container.row-view .project-card .project-description {
+     font-size: 0.9rem;
+     display: -webkit-box;
+     -webkit-line-clamp: 2;
+     -webkit-box-orient: vertical;
+     overflow: hidden;
+   }
+
+   .project-container.row-view .project-card .project-tags {
+     flex: 0 0 auto;
+     align-self: center;
+     padding: 0 22px 0 0;
+     margin: 0;
+     max-width: 260px;
+     justify-content: flex-end;
+   }
+
+   @media only screen and (max-width: 720px) {
+     .project-container.row-view {
+       grid-auto-rows: auto;
+     }
+     .project-container.row-view .project-card {
+       flex-direction: column;
+       height: auto;
+     }
+     .project-container.row-view .project-card img,
+     .project-container.row-view .project-card video {
+       width: 100%;
+       min-width: unset;
+       height: 180px;
+       border-radius: 18px 18px 0 0;
+     }
+     .project-container.row-view .project-card .project-title {
+       font-size: 1.5rem;
+     }
+     .project-container.row-view .project-card .project-description {
+       -webkit-line-clamp: unset;
+     }
+     .project-container.row-view .project-card .project-tags {
+       max-width: none;
+       padding: 0 16px 8px;
+       justify-content: flex-start;
+     }
    }
 
    @media only screen and (max-width: 600px) {
