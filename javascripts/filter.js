@@ -75,4 +75,29 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   applyFromURL();
+
+  // View toggle (grid <-> row)
+  var viewBtn = document.querySelector('.view-toggle-btn');
+  var container = document.querySelector('.project-container');
+  if (viewBtn && container) {
+    // Restore saved preference
+    if (localStorage.getItem('projectView') === 'row') {
+      container.classList.add('row-view');
+      viewBtn.innerHTML = '<i class="fas fa-th-large"></i>';
+      viewBtn.setAttribute('title', 'Switch to grid view');
+    }
+
+    viewBtn.addEventListener('click', function () {
+      var isRow = container.classList.toggle('row-view');
+      if (isRow) {
+        viewBtn.innerHTML = '<i class="fas fa-th-large"></i>';
+        viewBtn.setAttribute('title', 'Switch to grid view');
+        localStorage.setItem('projectView', 'row');
+      } else {
+        viewBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        viewBtn.setAttribute('title', 'Switch to row view');
+        localStorage.setItem('projectView', 'grid');
+      }
+    });
+  }
 });
