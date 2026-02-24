@@ -57,10 +57,12 @@
         <p></p>
 
         <p>
-          We like to talk about and quantify things in Euclidean space where our intuition works the best. However, most of the times it might be complicated trying to find the correct "metric" of understanding things here. 
-          Under such a structured space, we sometimes don't know how to talk about complex, yet interesting, data. Computational Topological Data Analysis (TDA) operates on a <strong>combinatorial space</strong>, which may provide us understandings of the shape of data in a more abstract but comprehensive way. 
-          I am currently utilizing TDA to understand the representations of naturalistic behaviors learned by neuromechanical agent in <a href="/research/vnl.html">MIMIC-MJX</a> with advising from professor <a href="http://yusu.belkin-wang.org/" target="_blank">Yusu Wang</a>. 
-          Cover page video in courtesy of <a href="https://vimeo.com/119603608" target="_blank">Donald R. Sheehy's group</a>. TopoVNL was presented at the Annual Society for Neuroscience (SfN) 2025 Conference with <a href="https://drive.google.com/file/d/1tTwwww-OyBqC_tmbU0du2dtpfIY9_OI4/view?usp=drive_link">this poster</a>.
+          Classical manifold learning methods (PCA, UMAP, t-SNE) learn a low-dimensional <strong>embedding</strong> of high-dimensional data. We take a different approach: instead of projecting to a coordinate space, we learn the <strong>topological skeleton</strong> of the data manifold itself.
+          Each behavioral clip from a deep RL policy (<a href="/research/vnl.html">MIMIC-MJX</a>) is a trajectory in a high-dimensional temporal space. We reconstruct the discrete Morse graph of this point cloud to extract two types of structural primitives:
+          <strong>DM Cycles</strong> (loops in the graph skeleton, capturing periodic or recurrent behavioral motifs) and <strong>DM Paths</strong> (edge-disjoint paths between persistent density minima, capturing transition corridors).
+          These sub-trajectories are the learned manifold coordinates &mdash; they represent the intrinsic structure (loops, branches, connectivity) rather than just pairwise proximity.
+          I am working on this with advising from professor <a href="http://yusu.belkin-wang.org/" target="_blank">Yusu Wang</a> and professor <a href="https://talmolab.org/" target="_blank">Talmo Pereira</a>.
+          This work is currently under submission. TopoVNL was presented at the Annual Society for Neuroscience (SfN) 2025 Conference with <a href="https://drive.google.com/file/d/1tTwwww-OyBqC_tmbU0du2dtpfIY9_OI4/view?usp=drive_link">this poster</a>.
         </p>
 
         <p></p>
