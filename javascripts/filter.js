@@ -78,17 +78,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // View toggle (grid <-> row)
   var viewBtn = document.querySelector('.view-toggle-btn');
-  var container = document.querySelector('.project-container');
-  if (viewBtn && container) {
+  var containers = document.querySelectorAll('.project-container');
+  if (viewBtn && containers.length) {
     // Restore saved preference
     if (localStorage.getItem('projectView') === 'row') {
-      container.classList.add('row-view');
+      containers.forEach(function (c) { c.classList.add('row-view'); });
       viewBtn.innerHTML = '<i class="fas fa-th-large"></i>';
       viewBtn.setAttribute('title', 'Switch to grid view');
     }
 
     viewBtn.addEventListener('click', function () {
-      var isRow = container.classList.toggle('row-view');
+      var isRow = !containers[0].classList.contains('row-view');
+      containers.forEach(function (c) { c.classList.toggle('row-view'); });
       if (isRow) {
         viewBtn.innerHTML = '<i class="fas fa-th-large"></i>';
         viewBtn.setAttribute('title', 'Switch to grid view');
