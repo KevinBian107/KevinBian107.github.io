@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
+    <script>
+      (function(){var t=localStorage.getItem('theme')||(window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();
+    </script>
   </head>
   <body>
     <div class="wrapper_content_page">
@@ -19,6 +22,10 @@
           <a href="../index.html" class="nav-link">Home Page</a>
           <a href="../research.html" class="nav-link">Research & Projects</a>
           <div id="google_translate_element"></div> <!-- Translator here -->
+          <button class="theme-toggle" aria-label="Toggle dark mode">
+            <i class="fas fa-moon icon-moon"></i>
+            <i class="fas fa-sun icon-sun"></i>
+          </button>
         </div>
 
       </header>
@@ -73,5 +80,6 @@
     </div>
     <script src="../javascripts/scale.fix.js"></script>
     <script src="../javascripts/translate.js"></script>
+    <script src="../javascripts/mode.js"></script>
   </body>
 </html>
