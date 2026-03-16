@@ -31,7 +31,7 @@
 
       </header>
       <section>
-        <h1>Full Project List</h1>
+        <h1>Research</h1>
         <script type="text/javascript">
           // Initializes the Google Translate Element
           function googleTranslateElementInit() {
@@ -58,7 +58,13 @@
           </script>          
         <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-        <p>Past research & project that I have worked and am currently working on.</p>
+        <p>Past research and projects that I have worked on and am currently working on.</p>
+
+        <div class="macro-tabs">
+          <button class="macro-tab active" data-macro="publications">Publications</button>
+          <button class="macro-tab" data-macro="opensource">Open Source Tools</button>
+          <button class="macro-tab" data-macro="fun">Fun Projects</button>
+        </div>
 
         <div class="filter-bar">
           <div class="filter-controls">
@@ -78,6 +84,8 @@
         </div>
 
         <div class="projects">
+
+            <div class="macro-section" data-macro="publications">
             <div class="project-container">
 
             <a href="research/vnl.html" class="project-link" data-categories="embodied neuroscience">
@@ -150,11 +158,11 @@
               </div>
             </a>
 
-        </div>
+            </div>
+            </div>
 
-        <hr style="border: none; border-top: 2px dashed #ccc; margin: 40px 0;">
-
-        <div class="project-container">
+            <div class="macro-section hidden" data-macro="opensource">
+            <div class="project-container">
 
             <a href="projects/propel.html" class="project-link" data-categories="language datascience">
               <div class="project-card">
@@ -190,6 +198,28 @@
               </div>
             </a>
 
+            <a href="projects/tools.html" class="project-link" data-categories="datascience">
+              <div class="project-card">
+                  <div class="project-card-icon-area">
+                    <i class="fas fa-wrench"></i>
+                  </div>
+                  <div class="project-content">
+                      <h2 class="project-title">Tools for Better Workflow</h2>
+                      <p class="project-description">A collection of small tools for day-to-day research workflow: Remote GPU Cluster Dashboard, Annotation GUI.</p>
+                  </div>
+                  <div class="project-tags">
+                    <span class="category-tag category-datascience">Applied Data Science</span>
+                    <span class="tag">Developer Tools</span>
+                    <span class="tag">Workflow</span>
+                </div>
+              </div>
+            </a>
+
+            </div>
+            </div>
+
+            <div class="macro-section hidden" data-macro="fun">
+            <div class="project-container">
 
             <a href="research/rplh.html" class="project-link" data-categories="language">
               <div class="project-card">
@@ -283,7 +313,6 @@
               </div>
             </a>
 
-
             <a href="projects/rec.html" class="project-link" data-categories="datascience">
                 <div class="project-card">
                     <img src="assets/projects/rec_2.png" alt="Rec">
@@ -345,28 +374,9 @@
             </div>
         </a>
 
-        </div>
+            </div>
+            </div>
 
-        <hr style="border: none; border-top: 2px dashed #ccc; margin: 40px 0;">
-
-        <div class="project-container">
-            <a href="projects/tools.html" class="project-link" data-categories="datascience">
-              <div class="project-card" style="display: flex; flex-direction: row; height: 120px;">
-                  <div class="project-card-icon" style="background: #ffffff; width: 120px; min-width: 120px; height: 100%; border-radius: 18px 0 0 18px;">
-                    <i class="fas fa-wrench" style="color: #333; font-size: 2.5rem;"></i>
-                  </div>
-                  <div class="project-content" style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
-                      <h2 class="project-title">Tools for Better Workflow</h2>
-                      <p class="project-description">A collection of small tools for day-to-day research workflow: Remote GPU Cluster Dashboard, Annotation GUI.</p>
-                  </div>
-                  <div class="project-tags" style="display: flex; align-items: center; padding-right: 20px;">
-                    <span class="category-tag category-datascience">Applied Data Science</span>
-                    <span class="tag">Developer Tools</span>
-                    <span class="tag">Workflow</span>
-                </div>
-              </div>
-            </a>
-        </div>
     </div>
 
     </section>

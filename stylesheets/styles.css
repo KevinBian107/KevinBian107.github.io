@@ -544,6 +544,57 @@
     padding: 1rem 0;
   }
 
+  .macro-tabs {
+    display: flex;
+    gap: 0;
+    margin-bottom: 1.2rem;
+    border-bottom: 2px solid var(--border-primary);
+  }
+
+  .macro-tab {
+    background: none;
+    border: none;
+    padding: 10px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-muted);
+    cursor: pointer;
+    position: relative;
+    transition: color 0.2s ease;
+  }
+
+  .macro-tab:hover {
+    color: var(--text-primary);
+  }
+
+  .macro-tab.active {
+    color: var(--text-h2);
+  }
+
+  .macro-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--text-h2);
+  }
+
+  .macro-section.hidden {
+    display: none;
+  }
+
+  .project-card-icon-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 210px;
+    background: var(--bg-section);
+    font-size: 3rem;
+    color: var(--text-muted);
+  }
+
   .project-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));

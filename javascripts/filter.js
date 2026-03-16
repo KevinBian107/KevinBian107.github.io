@@ -4,6 +4,27 @@ document.addEventListener('DOMContentLoaded', function () {
   var links = document.querySelectorAll('.project-link');
   var filterBar = document.querySelector('.filter-bar');
 
+  // Macro tabs
+  var macroTabs = document.querySelectorAll('.macro-tab');
+  var macroSections = document.querySelectorAll('.macro-section');
+
+  function switchMacroTab(macro) {
+    macroTabs.forEach(function (tab) {
+      tab.classList.toggle('active', tab.getAttribute('data-macro') === macro);
+    });
+    macroSections.forEach(function (section) {
+      section.classList.toggle('hidden', section.getAttribute('data-macro') !== macro);
+    });
+    // Re-apply category filters within the newly visible section
+    filterProjects();
+  }
+
+  macroTabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      switchMacroTab(tab.getAttribute('data-macro'));
+    });
+  });
+
   function getActiveCategories() {
     var active = [];
     chips.forEach(function (chip) {
