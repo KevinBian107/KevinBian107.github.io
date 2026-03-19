@@ -875,46 +875,113 @@
   }
 
   /* =========================================================
-     16. Journey Timeline
+     16. Journey Section (card + logo layout)
      ========================================================= */
 
   .journey-timeline {
-    position: relative;
-    padding-left: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     margin-top: 8px;
   }
 
-  .journey-timeline::before {
-    content: '';
-    position: absolute;
-    left: 6px;
-    top: 8px;
-    bottom: 8px;
-    width: 2px;
-    background: var(--border-primary);
-  }
-
   .journey-entry {
-    position: relative;
-    margin-bottom: 32px;
+    display: flex;
+    gap: 24px;
+    padding: 24px 28px;
+    background: var(--bg-card);
+    border-radius: 16px;
+    border: 1px solid var(--border-primary);
+    transition: box-shadow 0.2s ease, background-color 0.3s ease;
   }
 
-  .journey-entry:last-child {
-    margin-bottom: 0;
+  .journey-entry:hover {
+    box-shadow: 0 6px 20px var(--shadow-card);
   }
 
-  .journey-entry::before {
-    content: '';
-    position: absolute;
-    left: -24px;
-    top: 8px;
-    width: 10px;
-    height: 10px;
+  .journey-logos {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding-top: 4px;
+  }
+
+  .journey-logo {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    border-radius: 10px;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+    opacity: 0.85;
+  }
+
+  .journey-logo:hover {
+    opacity: 1;
+  }
+
+  /* Dark-on-transparent logos: invert in dark mode */
+  .journey-logo.logo-dark-invert {
+    filter: none;
+  }
+  [data-theme="dark"] .journey-logo.logo-dark-invert {
+    filter: invert(0.85) hue-rotate(180deg);
+  }
+
+  /* White-on-transparent logos: invert in light mode */
+  .journey-logo.logo-light-invert {
+    filter: invert(0.85) hue-rotate(180deg);
+  }
+  [data-theme="dark"] .journey-logo.logo-light-invert {
+    filter: none;
+  }
+
+  /* Dual-variant logos: show/hide based on theme */
+  .journey-logo.logo-light-only {
+    display: inline;
+  }
+  .journey-logo.logo-dark-only {
+    display: none;
+  }
+  [data-theme="dark"] .journey-logo.logo-light-only {
+    display: none;
+  }
+  [data-theme="dark"] .journey-logo.logo-dark-only {
+    display: inline;
+  }
+
+  /* Wide logos (wordmarks) get more width */
+  .journey-logo.logo-wide {
+    width: 160px;
+    height: 60px;
+    border-radius: 6px;
+  }
+
+  /* Circular clip for logos with square white backgrounds */
+  .journey-logo.logo-circle {
     border-radius: 50%;
-    background: var(--journey-dot-bg);
-    border: 2px solid var(--journey-dot-border);
-    box-shadow: 0 0 0 2px var(--border-primary);
+    overflow: hidden;
   }
+
+  /* Subtle grey background for logos that need it */
+  .logo-grey-bg-wrap {
+    width: 72px;
+    height: 72px;
+    background: rgba(128, 128, 128, 0.15);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .logo-grey-bg-wrap .journey-logo {
+    width: 52px;
+    height: 52px;
+  }
+
 
   .journey-date {
     font-size: 13px;
@@ -1030,7 +1097,23 @@
       display: block;
     }
 
-    .journey-timeline { padding-left: 22px; }
+    .journey-entry {
+      flex-direction: column;
+      gap: 16px;
+      padding: 20px;
+    }
+    .journey-logos {
+      flex-direction: row;
+      gap: 16px;
+    }
+    .journey-logo {
+      width: 56px;
+      height: 56px;
+    }
+    .journey-logo.logo-wide {
+      width: 110px;
+      height: 44px;
+    }
   }
 
   @media only screen and (max-width: 480px) {
