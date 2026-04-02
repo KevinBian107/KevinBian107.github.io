@@ -64,12 +64,24 @@
         <p></p>
 
         <p>
-          Classical manifold learning methods (PCA, UMAP, t-SNE) learn a low-dimensional <strong>embedding</strong> of high-dimensional data. We take a different approach: instead of projecting to a coordinate space, we learn the <strong>topological skeleton</strong> of the data manifold itself.
-          Each behavioral clip from a deep RL policy (<a href="/research/vnl.html">MIMIC-MJX</a>) is a trajectory in a high-dimensional temporal space. We reconstruct the discrete Morse graph of this point cloud to extract two types of structural primitives:
-          <strong>DM Cycles</strong> (loops in the graph skeleton, capturing periodic or recurrent behavioral motifs) and <strong>DM Paths</strong> (edge-disjoint paths between persistent density minima, capturing transition corridors).
-          These sub-trajectories are the learned manifold coordinates &mdash; they represent the intrinsic structure (loops, branches, connectivity) rather than just pairwise proximity.
+          Understanding how animals transition between behavioral modes is fundamental to neuroscience and motor control. Current approaches either segment behaviors into discrete states or project onto low-dimensional embeddings, but neither explicitly models the geometric structure of transitions themselves. We present a manifold learning method for behavioral transition discovery via topologically invariant simplification. Using discrete Morse theory on density-weighted point clouds, we extract the <strong>topological skeleton</strong> of the behavioral manifold &mdash; a sparse graph that retains only the frames algebraically forced by the data's topology while discarding everything else. The skeleton is shaped by what is absent: low-density ridges between behavioral basins create topological obstructions that the simplification must preserve.
+        </p>
+
+        <p>
+          Our framework operates at two tiers: <strong>DM-paths (H0)</strong> identify transition corridors between persistent density basins, while <strong>DM-cycles (H1)</strong> reveal asymmetric motor programs when additional geometric conditions hold. We show that behavioral transitions force the skeleton to contain saddle-crossing paths, and that drift-invariant representations are necessary for cycle closure. Empirically, behaviorally rich clips retain many skeleton frames at transition points while stationary clips compress to near-zero, validating the weak Morse inequality. The resulting algorithm, <strong>Discrete-Morse Wasserstein K-Means Clustering (DM-WKC)</strong>, uses these topological primitives as manifold coordinates compared via Wasserstein distance to discover transition types without supervision. On rodent and walker datasets across three feature spaces (egocentric keypoints, joint configurations, learned intentions), DM-WKC discovers 2&ndash;3&times; more transition types than state-space baselines with better ground-truth alignment, higher internal consistency, and greater temporal coherence, while the topological primitives act as compressed representations that baseline methods fail to achieve.
+        </p>
+
+        <div style="text-align: center;">
+            <img src="../assets/research/topomimic_clusters.png" alt="TopoMIMIC clustering results" style="width:70%; height:auto;">
+        </div>
+
+        <blockquote>
+            Behavioral transition types discovered by DM-WKC across rodent behaviors (grooming, immobility, orienting, rear, walking, step), with sample counts shown for each transition pair.
+        </blockquote>
+
+        <p>
           I am working on this with advising from professor <a href="http://yusu.belkin-wang.org/" target="_blank">Yusu Wang</a> and professor <a href="https://talmolab.org/" target="_blank">Talmo Pereira</a>.
-          This work is currently under submission. TopoVNL was presented at the Annual Society for Neuroscience (SfN) 2025 Conference with <a href="https://drive.google.com/file/d/1tTwwww-OyBqC_tmbU0du2dtpfIY9_OI4/view?usp=drive_link">this poster</a>.
+          This work is currently under submission. TopoMIMIC was presented at the Annual Society for Neuroscience (SfN) 2025 Conference with <a href="https://drive.google.com/file/d/1tTwwww-OyBqC_tmbU0du2dtpfIY9_OI4/view?usp=drive_link">this poster</a>.
         </p>
 
         <p></p>
