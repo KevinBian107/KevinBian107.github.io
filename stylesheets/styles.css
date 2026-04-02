@@ -428,6 +428,13 @@
     margin: 0 auto 16px;
   }
 
+  .photo-credit-footer {
+    display: none;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
   .profile {
     display: flex;
     align-items: center;
@@ -1085,17 +1092,22 @@
     }
 
     #profile-image {
-      width: 140px;
+      width: 200px;
+      border-radius: 50%;
+    }
+
+    .photo-credit-sidebar {
+      display: none;
+    }
+
+    .photo-credit-footer {
+      display: block;
     }
   }
 
   @media only screen and (max-width: 720px) {
     body {
       word-wrap: break-word;
-    }
-
-    #profile-image {
-      width: 120px;
     }
 
     pre,
@@ -1164,12 +1176,6 @@
     .tag {
       padding: 4px 10px;
       font-size: 11px;
-    }
-
-    #profile-image {
-      width: 110px;
-      margin: 0 auto;
-      display: block;
     }
 
     .journey-entry {
