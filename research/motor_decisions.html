@@ -64,12 +64,26 @@
         <p></p>
 
         <p>
-          This project builds on earlier work on dynamic modeling for biomechanical planning.
-          See <a href="mimicdyn.html">MimicDyn: Dynamic Model for Planning & Generating Biomechanically Realistic Behaviors with Deep State Space Methods</a>
-          for the previous iteration that motivated this direction.
+          Motor neuroscience suggests that motor control is a piece-wise continuous function: premotor and basal ganglia circuits set the "initial condition" for a behavior, while primary motor cortex (M1) acts as a dynamical system that evolves according to its own dynamics. In the current computational landscape, reinforcement learning is widely used for lower-level motor control, and state-space models are used to segment behaviors at the higher level from keypoint data &mdash; but these two levels remain largely disconnected.
         </p>
 
-        <p>Details coming later.</p>
+        <p>
+          This project aims to <strong>close this loop</strong> by linking behavioral syllables directly to lower-level motor controls, bridging continuous naturalistic control with discrete semantic behavior understanding. Where switching linear dynamical systems (SLDS) have been used to model behavioral segmentation, we aim to build a <strong>Switching Non-linear Dynamical System (S-nLDS)</strong> that can capture the inherently non-linear, non-Gaussian dynamics of naturalistic behavior. Using observables from <a href="/research/vnl.html">MIMIC-MJX</a> physics simulation, we develop deep state space models that both understand the dynamics of behaviors and generate long biomechanically realistic sequences.
+        </p>
+
+        <div style="text-align: center;">
+            <img src="../assets/research/c2a_inspirations.png" alt="Motor control hierarchy from prefrontal cortex to muscles" style="width:50%; height:auto;">
+        </div>
+
+        <blockquote>
+            The hierarchical motor control pathway: prefrontal/premotor cortex generates competing plans, basal ganglia selects discrete initial conditions, and motor cortex (M1) evolves continuous trajectories through the brainstem and spinal cord to muscles.
+        </blockquote>
+
+        <p>
+          This project builds on earlier work on dynamic modeling for biomechanical planning.
+          See <a href="mimicdyn.html">MimicDyn</a> for the previous iteration that motivated this direction.
+          This work is advised by professor <a href="https://web.stanford.edu/~swl1/" target="_blank">Scott Linderman</a> at Stanford University.
+        </p>
 
       </section>
       <footer>
