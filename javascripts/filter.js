@@ -15,6 +15,26 @@ document.addEventListener('DOMContentLoaded', function () {
     macroSections.forEach(function (section) {
       section.classList.toggle('hidden', section.getAttribute('data-macro') !== macro);
     });
+
+    // Collect categories present in the visible section
+    var visibleSection = document.querySelector('.macro-section[data-macro="' + macro + '"]');
+    var visibleCats = new Set();
+    if (visibleSection) {
+      visibleSection.querySelectorAll('.project-link').forEach(function (link) {
+        (link.getAttribute('data-categories') || '').split(/\s+/).forEach(function (c) {
+          if (c) visibleCats.add(c);
+        });
+      });
+    }
+
+    // Show/hide filter chips based on whether their category exists in this section
+    chips.forEach(function (chip) {
+      var cat = chip.getAttribute('data-category');
+      chip.style.display = visibleCats.has(cat) ? '' : 'none';
+      // Clear active state for hidden chips
+      if (!visibleCats.has(cat)) chip.classList.remove('active');
+    });
+
     // Re-apply category filters within the newly visible section
     filterProjects();
   }
@@ -94,6 +114,10 @@ document.addEventListener('DOMContentLoaded', function () {
       filterProjects();
     });
   }
+
+  // Initialize chip visibility for the default active tab
+  var activeTab = document.querySelector('.macro-tab.active');
+  if (activeTab) switchMacroTab(activeTab.getAttribute('data-macro'));
 
   applyFromURL();
 
