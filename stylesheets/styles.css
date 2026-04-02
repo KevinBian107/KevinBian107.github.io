@@ -1119,25 +1119,46 @@
     }
 
     .project-card {
-      flex-direction: column;
       gap: 12px;
+      padding: 16px 8px;
     }
 
     .project-card img,
     .project-card video {
-      width: 100%;
-      min-width: unset;
-      height: 160px;
+      width: 80px;
+      min-width: 80px;
+      height: 60px;
+      border-radius: 6px;
     }
 
     .project-card-icon-area {
-      width: 100%;
-      min-width: unset;
+      width: 80px;
+      min-width: 80px;
+      height: 60px;
+      font-size: 1.4rem;
     }
 
     .project-card-icon {
-      width: 100%;
-      min-width: unset;
+      width: 80px;
+      min-width: 80px;
+      height: 60px;
+      border-radius: 6px;
+    }
+
+    .project-card-icon i {
+      font-size: 1.4rem;
+    }
+
+    .project-title {
+      font-size: 0.95rem;
+    }
+
+    .project-authors {
+      font-size: 0.82rem;
+    }
+
+    .project-venue {
+      font-size: 0.78rem;
     }
 
     .tag {
