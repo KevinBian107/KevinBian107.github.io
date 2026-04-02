@@ -617,6 +617,7 @@
     cursor: pointer;
     display: block;
     border-bottom: 1px solid var(--border-primary);
+    position: relative;
   }
 
   .project-link:hover {
@@ -625,6 +626,43 @@
 
   .project-link:last-child {
     border-bottom: none;
+  }
+
+  .card-link {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .card-link::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+
+  .project-authors a {
+    position: relative;
+    z-index: 2;
+    color: var(--text-body);
+    text-decoration: none;
+  }
+
+  .project-authors a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+  }
+
+  .project-authors a.author-highlight {
+    color: var(--text-h2);
+    font-weight: 500;
+  }
+
+  .project-authors a.author-pi {
+    text-decoration: underline;
+  }
+
+  .project-authors a.author-pi:hover {
+    color: var(--link-hover);
   }
 
   .project-card {
