@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <script>
-      (function(){var t=localStorage.getItem('theme')||(window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();
+      (function(){var t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);})();
     </script>
   </head>
   <body>
@@ -77,9 +77,6 @@
               <span class="filter-chip" data-category="datascience">Applied Data Science</span>
             </div>
             <button class="clear-filters-btn">Clear All</button>
-            <button class="view-toggle-btn" aria-label="Toggle row view" title="Switch to row view">
-              <i class="fas fa-bars"></i>
-            </button>
           </div>
         </div>
 
@@ -90,73 +87,62 @@
 
             <a href="research/vnl.html" class="project-link" data-categories="embodied neuroscience">
               <div class="project-card">
-                  <img src="assets/research/mimic.gif" alt="Making Artificial Motor Cortex">
+                  <img src="assets/research/mimic.gif" alt="MIMIC-MJX">
                   <div class="project-content">
-                      <h2 class="project-title">Making Artificial Motor Cortex: Neuromechanical Emulation of Animal Behavior</h2>
-                      <p class="project-description">Creating artificial motor cortex by imitating naturalistic agents and performing generative inverse kinematics.</p>
+                      <h2 class="project-title">MIMIC-MJX: Neuromechanical Emulation of Animal Behavior</h2>
+                      <p class="project-authors">C. Zhang, Y. Yang, A. Sirbu, E.J. Leonardis, E. Abe, E. Warnberg, D.E. Aldarondo, A. Lee, A. Prasad, J. Foat, <span class="author-highlight">Kaiwen Bian</span>, J. Park, R. Bhatt, H. Saunders, A. Nagamori, A.R. Thanawalla, K.W. Huang, F. Plum, H. Beck, S.W. Flavell, D. Labonte, B.A. Richards, B.W. Brunton, E. Azim, B.P. Ölveczky, <span class="author-pi">T.D. Pereira</span></p>
+                      <p class="project-venue">Submitted to Nature Methods (2026)</p>
+                      <div class="project-tags">
+                        <span class="category-tag category-embodied">Embodied Agents &amp; RL</span>
+                        <span class="category-tag category-neuroscience">Computational Neuroscience</span>
+                      </div>
                   </div>
-                  <div class="project-tags">
-                    <span class="category-tag category-embodied">Embodied Agents &amp; RL</span>
-                    <span class="category-tag category-neuroscience">Computational Neuroscience</span>
-                    <span class="tag">Deep Reinforcement Learning</span>
-                    <span class="tag">Imitation Learning</span>
-                    <span class="tag">Parallel Training</span>
-                </div>
               </div>
             </a>
 
             <a href="research/tda.html" class="project-link" data-categories="topology neuroscience">
               <div class="project-card">
-                <div style="overflow: hidden; height: 210px;">
-                  <img src="assets/research/dmpc_demo.gif" alt="TDA" style="object-fit: cover; object-position: 75% center;">
-                </div>
+                  <img src="assets/research/dmpc_demo.gif" alt="TopoMimic">
                   <div class="project-content">
                       <h2 class="project-title">Shaped by What's Missing: Topological Invariance Simplification Discovers Behavioral Transitions</h2>
-                      <p class="project-description">Manifold learning through discrete Morse theory: extracting the topological skeleton of behavioral data instead of flat embeddings.</p>
+                      <p class="project-authors"><span class="author-highlight">Kaiwen Bian</span>, E.J. Leonardis, Y. Yang, C. Zhang, E. Azim, B.P. Ölveczky, <span class="author-pi">Y. Wang</span>, <span class="author-pi">T.D. Pereira</span></p>
+                      <p class="project-venue">In preparation for NeurIPS 2026</p>
+                      <div class="project-tags">
+                        <span class="category-tag category-topology">Representation &amp; Topology</span>
+                        <span class="category-tag category-neuroscience">Computational Neuroscience</span>
+                      </div>
                   </div>
-                  <div class="project-tags">
-                    <span class="category-tag category-topology">Representation &amp; Topology</span>
-                    <span class="category-tag category-neuroscience">Computational Neuroscience</span>
-                    <span class="tag">Computational Topology</span>
-                    <span class="tag">Manifold Learning</span>
-                    <span class="tag">Representation Learning</span>
-                </div>
               </div>
             </a>
 
             <a href="research/motor_decisions.html" class="project-link" data-categories="embodied neuroscience generative">
               <div class="project-card">
-                  <img src="assets/research/motor_program.gif" alt="Emergent Motor Programs">
+                  <img src="assets/research/motor_program.gif" alt="Code to Action">
                   <div class="project-content">
-                      <h2 class="project-title">Code to Action: Emergent Motor Programs from Discrete Bottlenecks in Whole-Body Biomechanical Control</h2>
-                      <p class="project-description">Details coming later.</p>
+                      <h2 class="project-title">Emergent Motor Programs from Discrete Bottlenecks in Whole-Body Biomechanical Control</h2>
+                      <p class="project-authors"><span class="author-highlight">Kaiwen Bian</span>, C. Zhang, Y. Yang, A. Jha, K. Buchanan, E.J. Leonardis, B.P. Ölveczky, <span class="author-pi">T.D. Pereira</span>, <span class="author-pi">S.W. Linderman</span></p>
+                      <p class="project-venue">Accepted at Simulated Bodies (SimBodies) Conference (2026)</p>
+                      <div class="project-tags">
+                        <span class="category-tag category-embodied">Embodied Agents &amp; RL</span>
+                        <span class="category-tag category-neuroscience">Computational Neuroscience</span>
+                        <span class="category-tag category-generative">Generative Models</span>
+                      </div>
                   </div>
-                  <div class="project-tags">
-                    <span class="category-tag category-embodied">Embodied Agents &amp; RL</span>
-                    <span class="category-tag category-neuroscience">Computational Neuroscience</span>
-                    <span class="category-tag category-generative">Generative Models</span>
-                    <span class="tag">Discrete Motor Control</span>
-                    <span class="tag">Vector Quantization</span>
-                </div>
               </div>
             </a>
 
             <a href="research/graph_gen.html" class="project-link" data-categories="generative topology">
               <div class="project-card">
-                  <div style="overflow: hidden; height: 210px;">
-                    <img src="https://kbian.org/MOSAIC-website/demo.gif" alt="mosaic generations" style="object-fit: cover; object-position: right center; transform: scale(1.4); transform-origin: right center;">
-                  </div>
+                  <img src="https://kbian.org/MOSAIC-website/demo.gif" alt="MOSAIC">
                   <div class="project-content">
                       <h2 class="project-title">Beyond Flat Walks: Compositional Abstraction for Autoregressive Molecular Generation</h2>
-                      <p class="project-description">Designing hiearchical tokenization scheme, allowing sequence
-                        transformers to model and genearte complex molecules better.</p>
+                      <p class="project-authors"><span class="author-highlight">Kaiwen Bian</span>, A.H. Yang, Ali Parviz, <span class="author-pi">G. Mishne</span>, <span class="author-pi">Y. Wang</span></p>
+                      <p class="project-venue">In preparation for NeurIPS 2026</p>
+                      <div class="project-tags">
+                        <span class="category-tag category-generative">Generative Models</span>
+                        <span class="category-tag category-topology">Representation &amp; Topology</span>
+                      </div>
                   </div>
-                  <div class="project-tags">
-                    <span class="category-tag category-generative">Generative Models</span>
-                    <span class="category-tag category-topology">Representation &amp; Topology</span>
-                    <span class="tag">Graph Learning</span>
-                    <span class="tag">Graph Generation</span>
-                </div>
               </div>
             </a>
 
@@ -171,15 +157,12 @@
                   <img src="https://raw.githubusercontent.com/KevinBian107/propel/2690cc7eabc1c37485c97dae49e3b327c36f2ea8/assets/propel_pipeline.svg" alt="Propel powered by Claude">
                   <div class="project-content">
                       <h2 class="project-title">Propel: Structured Constraint Framework for Claude Code</h2>
-                      <p class="project-description">A constraint framework enhancing Claude's effectiveness in research workflows with human-in-the-loop gates and domain-specific auditors.</p>
+                      <p class="project-authors"><span class="author-highlight">Kaiwen Bian</span>, Yuer Tang</p>
+                      <div class="project-tags">
+                        <span class="category-tag category-language">Language Models &amp; Multi-Agent</span>
+                        <span class="category-tag category-datascience">Applied Data Science</span>
+                      </div>
                   </div>
-                  <div class="project-tags">
-                    <span class="category-tag category-language">Language Models &amp; Multi-Agent</span>
-                    <span class="category-tag category-datascience">Applied Data Science</span>
-                    <span class="tag">Claude Code</span>
-                    <span class="tag">Research Workflow</span>
-                    <span class="tag">Human-in-the-Loop</span>
-                </div>
               </div>
             </a>
 
@@ -188,15 +171,12 @@
                   <img src="https://raw.githubusercontent.com/KevinBian107/logger/main/frontend/static/logo.svg" alt="log(ger) productivity tracker">
                   <div class="project-content">
                       <h2 class="project-title">log(ger): Personal Productivity Tracking Web App</h2>
-                      <p class="project-description">A full-stack web app for tracking study and work time with real-time timers, analytics dashboards, and AI-powered chat.</p>
+                      <p class="project-authors"><span class="author-highlight">Kaiwen Bian</span>, Yuer Tang, Jiaying Chen</p>
+                      <div class="project-tags">
+                        <span class="category-tag category-datascience">Applied Data Science</span>
+                        <span class="category-tag category-language">Language Models &amp; Multi-Agent</span>
+                      </div>
                   </div>
-                  <div class="project-tags">
-                    <span class="category-tag category-datascience">Applied Data Science</span>
-                    <span class="category-tag category-language">Language Models &amp; Multi-Agent</span>
-                    <span class="tag">Full-Stack</span>
-                    <span class="tag">SvelteKit</span>
-                    <span class="tag">Claude API</span>
-                </div>
               </div>
             </a>
 
@@ -207,13 +187,11 @@
                   </div>
                   <div class="project-content">
                       <h2 class="project-title">Tools for Better Workflow</h2>
-                      <p class="project-description">A collection of small tools for day-to-day research workflow: Remote GPU Cluster Dashboard, Annotation GUI.</p>
+                      <p class="project-authors"><span class="author-highlight">Kaiwen Bian</span>, Eric Leonardis</p>
+                      <div class="project-tags">
+                        <span class="category-tag category-datascience">Applied Data Science</span>
+                      </div>
                   </div>
-                  <div class="project-tags">
-                    <span class="category-tag category-datascience">Applied Data Science</span>
-                    <span class="tag">Developer Tools</span>
-                    <span class="tag">Workflow</span>
-                </div>
               </div>
             </a>
 
@@ -228,13 +206,11 @@
                   <img src="assets/research/rplh_logo.png" alt="RPLH">
                   <div class="project-content">
                       <h2 class="project-title">Agent-based Multi-collaboration Framework</h2>
-                      <p class="project-description">Farmework for tackling language model multi-agents collborations in an adversarial environment.</p>
+                      <p class="project-authors"><span class="author-highlight">Kaiwen Bian</span>, Ziyu Huang, Weijie Zhang</p>
+                      <div class="project-tags">
+                        <span class="category-tag category-language">Language Models &amp; Multi-Agent</span>
+                      </div>
                   </div>
-                  <div class="project-tags">
-                    <span class="category-tag category-language">Language Models &amp; Multi-Agent</span>
-                    <span class="tag">Multi-agent Inference System</span>
-                    <span class="tag">Adversarial Learning</span>
-                </div>
               </div>
             </a>
 
@@ -243,14 +219,11 @@
                   <img src="assets/projects/tank.gif" alt="Blue_dot_project">
                   <div class="project-content">
                       <h2 class="project-title">Learn From Your Enemy</h2>
-                      <p class="project-description">Full end-to-end A-MARL framework for competitive and cooperative AI training.</p>
+                      <p class="project-authors"><span class="author-highlight">Kaiwen Bian</span>, Andrew Hudson Yang, Zhenghao Gong, Weijie Zhang, Ziyu Huang, Qirui Zheng</p>
+                      <div class="project-tags">
+                        <span class="category-tag category-embodied">Embodied Agents &amp; RL</span>
+                      </div>
                   </div>
-                  <div class="project-tags">
-                    <span class="category-tag category-embodied">Embodied Agents &amp; RL</span>
-                    <span class="tag">Deep Reinforcement Learning</span>
-                    <span class="tag">RL Environment</span>
-                    <span class="tag">Adversarial Learning</span>
-                </div>
               </div>
             </a>
 
@@ -259,14 +232,11 @@
                   <video src="https://kbian.org/neural_signal/hero/social_behavior.mp4" alt="Decoding Social Intent from Neural Oscillations" autoplay muted loop playsinline></video>
                   <div class="project-content">
                       <h2 class="project-title">Decoding Social Intent from Neural Oscillations</h2>
-                      <p class="project-description">Spectral analysis of calcium imaging reveals a theta-enriched neuron subpopulation that encodes social behavior in mouse prefrontal cortex.</p>
+                      <p class="project-authors"><span class="author-highlight">Kaiwen Bian</span>, Ketan Mittal, Anirudh Annabathula, Yixuan Xin</p>
+                      <div class="project-tags">
+                        <span class="category-tag category-neuroscience">Computational Neuroscience</span>
+                      </div>
                   </div>
-                  <div class="project-tags">
-                    <span class="category-tag category-neuroscience">Computational Neuroscience</span>
-                    <span class="tag">Signal Processing</span>
-                    <span class="tag">Calcium Imaging</span>
-                    <span class="tag">Spectral Analysis</span>
-                </div>
               </div>
             </a>
 
@@ -274,112 +244,103 @@
               <div class="project-card">
                   <img src="assets/research/mllm.png" alt="Multimodal Model Embodied Simulation">
                   <div class="project-content">
-                      <h2 class="project-title">Multimodal Model Embodied Simulation</h2>
-                      <p class="project-description">Reverse engineering from a embodied language model's perspective.</p>
+                      <h2 class="project-title">Embodied Simulation in Multimodal Models Using Affordance Stimulus</h2>
+                      <p class="project-authors"><span class="author-highlight">Kaiwen Bian</span>, A. Li, C. Jones, <span class="author-pi">S. Trott</span></p>
+                      <p class="project-venue">FMP Symposium, UCSD (2023)</p>
+                      <div class="project-tags">
+                        <span class="category-tag category-language">Language Models &amp; Multi-Agent</span>
+                      </div>
                   </div>
-                  <div class="project-tags">
-                    <span class="category-tag category-language">Language Models &amp; Multi-Agent</span>
-                    <span class="tag">MLLM Probing</span>
-                    <span class="tag">LLM-ology</span>
-                </div>
               </div>
             </a>
 
             <a href="projects/latent.html" class="project-link" data-categories="embodied">
               <div class="project-card">
-                  <img src="assets/projects/latent_0.png" alt="Latent Search" style="height: 160px; object-fit: contain; object-position: top; background: #fff;">
+                  <img src="assets/projects/latent_0.png" alt="Latent Search">
                   <div class="project-content">
                       <h2 class="project-title">Latent Planning as Optimization</h2>
-                      <p class="project-description">Learning is about how to create structured projection space and plan with it during post-training inference.</p>
+                      <p class="project-authors"><span class="author-highlight">Kaiwen Bian</span>, Yuer Tang, Zhenghao Gong, Weijie Zhang, Ziyu Huang, <span class="author-pi">Ying Nian Wu</span></p>
+                      <div class="project-tags">
+                        <span class="category-tag category-embodied">Embodied Agents &amp; RL</span>
+                      </div>
                   </div>
-                  <div class="project-tags">
-                    <span class="category-tag category-embodied">Embodied Agents &amp; RL</span>
-                    <span class="tag">Data Efficient Sampling</span>
-                    <span class="tag">Long Horizon Planning</span>
-                </div>
               </div>
             </a>
 
             <a href="projects/lcne.html" class="project-link" data-categories="topology neuroscience">
               <div class="project-card">
-                  <img src="assets/projects/lcne_0.png" alt="Blue_dot_project">
+                  <img src="assets/projects/lcne_0.png" alt="LCNE project">
                   <div class="project-content">
                       <h2 class="project-title">Topological Driven Perspective Towards Stress</h2>
-                      <p class="project-description">Leveraging the power of neural network & topological data analysis to study the effect of stress & ruminations.</p>
+                      <p class="project-authors"><span class="author-highlight">Kaiwen Bian</span>, Yixuan Xin</p>
+                      <div class="project-tags">
+                        <span class="category-tag category-topology">Representation &amp; Topology</span>
+                        <span class="category-tag category-neuroscience">Computational Neuroscience</span>
+                      </div>
                   </div>
-                  <div class="project-tags">
-                    <span class="category-tag category-topology">Representation &amp; Topology</span>
-                    <span class="category-tag category-neuroscience">Computational Neuroscience</span>
-                    <span class="tag">Computational Topology</span>
-                </div>
               </div>
             </a>
 
             <a href="projects/rec.html" class="project-link" data-categories="datascience">
-                <div class="project-card">
-                    <img src="assets/projects/rec_2.png" alt="Rec">
-                    <div class="project-content">
-                        <h2 class="project-title">Recommendation Systems for Business Owners</h2>
-                        <p class="project-description">Building recommendation systems using sequential data for business owners.</p>
-                    </div>
-                    <div class="project-tags">
-                      <span class="category-tag category-datascience">Applied Data Science</span>
-                      <span class="tag">Recommendation Systems</span>
-                      <span class="tag">Data Science Workflow</span>
-                      <span class="tag">Deep Learning</span>
+              <div class="project-card">
+                  <img src="assets/projects/rec_2.png" alt="Rec">
+                  <div class="project-content">
+                      <h2 class="project-title">Recommendation Systems for Business Owners</h2>
+                      <p class="project-authors"><span class="author-highlight">Kaiwen Bian</span>, Guoxuan Xu, Jiaying Chen, Weijie Zhang</p>
+                      <div class="project-tags">
+                        <span class="category-tag category-datascience">Applied Data Science</span>
+                      </div>
                   </div>
-                </div>
+              </div>
             </a>
 
             <a href="projects/ensemble.html" class="project-link" data-categories="datascience">
-                <div class="project-card">
-                    <img src="assets/projects/ensemble.png" alt="Ensemble_learnings">
-                    <div class="project-content">
-                        <h2 class="project-title">Robust Ensemble Learning</h2>
-                        <p class="project-description">Ensemble learning in highly imbalanced real-world datasets.</p>
-                    </div>
-                    <div class="project-tags">
-                      <span class="category-tag category-datascience">Applied Data Science</span>
-                      <span class="tag">Data Science Workflow</span>
-                      <span class="tag">Machine Learning</span>
+              <div class="project-card">
+                  <img src="assets/projects/ensemble.png" alt="Ensemble_learnings">
+                  <div class="project-content">
+                      <h2 class="project-title">Robust Ensemble Learning</h2>
+                      <p class="project-authors"><span class="author-highlight">Kaiwen Bian</span>, Bella Wang</p>
+                      <div class="project-tags">
+                        <span class="category-tag category-datascience">Applied Data Science</span>
+                      </div>
                   </div>
-                </div>
+              </div>
             </a>
 
-          <a href="projects/addicted.html" class="project-link" data-categories="embodied neuroscience">
+            <a href="projects/addicted.html" class="project-link" data-categories="embodied neuroscience">
               <div class="project-card">
                   <img src="assets/projects/addicted_q_cover.png" alt="Addicted-Q">
                   <div class="project-content">
                       <h2 class="project-title">Multi-addicted State Q-agent Decision Making</h2>
-                      <p class="project-description">Studying effects of addition computationally via discrete reinforcement learning.</p>
-                  </div>
-                  <div class="project-tags">
-                    <span class="category-tag category-embodied">Embodied Agents &amp; RL</span>
-                    <span class="category-tag category-neuroscience">Computational Neuroscience</span>
-                    <span class="tag">Reinforcement Learning</span>
-                </div>
-              </div>
-          </a>
+                      <p class="project-authors"><span class="author-highlight">Kaiwen Bian</span></p>
 
-          <a href="projects/eigenmap.html" class="project-link" data-categories="topology">
-            <div class="project-card">
-                <img src="assets/projects/eigenmap_demo.png" alt="laplacien_eigenmap">
-                <div class="project-content">
-                    <h2 class="project-title">Laplacian Eigenmap Visualization</h2>
-                    <p class="project-description">Intuitive visualization of dimensional reduction algorithm for educational purpose.</p>
-                </div>
-                <div class="project-tags">
-                  <span class="category-tag category-topology">Representation &amp; Topology</span>
-                  <span class="tag">Visualization</span>
-                  <span class="tag">Representation Learning</span>
+                      <div class="project-tags">
+                        <span class="category-tag category-embodied">Embodied Agents &amp; RL</span>
+                        <span class="category-tag category-neuroscience">Computational Neuroscience</span>
+                      </div>
+                  </div>
               </div>
-            </div>
-        </a>
+            </a>
+
+            <a href="projects/eigenmap.html" class="project-link" data-categories="topology">
+              <div class="project-card">
+                  <img src="assets/projects/eigenmap_demo.png" alt="laplacien_eigenmap">
+                  <div class="project-content">
+                      <h2 class="project-title">Laplacian Eigenmap Visualization</h2>
+                      <p class="project-authors">Weijie Zhang, <span class="author-highlight">Kaiwen Bian</span></p>
+                      <div class="project-tags">
+                        <span class="category-tag category-topology">Representation &amp; Topology</span>
+                      </div>
+                  </div>
+              </div>
+            </a>
 
             </div>
             </div>
 
     </div>
+
+    <p class="design-credit">Publication list design inspired by <a href="https://yuertang.dev/" target="_blank">Yuer Tang</a></p>
 
     </section>
     </div>
