@@ -428,6 +428,13 @@
     margin: 0 auto 16px;
   }
 
+  .photo-credit-footer {
+    display: none;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
   .profile {
     display: flex;
     align-items: center;
@@ -1085,17 +1092,22 @@
     }
 
     #profile-image {
-      width: 140px;
+      width: 200px;
+      border-radius: 50%;
+    }
+
+    .photo-credit-sidebar {
+      display: none;
+    }
+
+    .photo-credit-footer {
+      display: block;
     }
   }
 
   @media only screen and (max-width: 720px) {
     body {
       word-wrap: break-word;
-    }
-
-    #profile-image {
-      width: 120px;
     }
 
     pre,
@@ -1119,36 +1131,51 @@
     }
 
     .project-card {
-      flex-direction: column;
       gap: 12px;
+      padding: 16px 8px;
     }
 
     .project-card img,
     .project-card video {
-      width: 100%;
-      min-width: unset;
-      height: 160px;
+      width: 80px;
+      min-width: 80px;
+      height: 60px;
+      border-radius: 6px;
     }
 
     .project-card-icon-area {
-      width: 100%;
-      min-width: unset;
+      width: 80px;
+      min-width: 80px;
+      height: 60px;
+      font-size: 1.4rem;
     }
 
     .project-card-icon {
-      width: 100%;
-      min-width: unset;
+      width: 80px;
+      min-width: 80px;
+      height: 60px;
+      border-radius: 6px;
+    }
+
+    .project-card-icon i {
+      font-size: 1.4rem;
+    }
+
+    .project-title {
+      font-size: 0.95rem;
+    }
+
+    .project-authors {
+      font-size: 0.82rem;
+    }
+
+    .project-venue {
+      font-size: 0.78rem;
     }
 
     .tag {
       padding: 4px 10px;
       font-size: 11px;
-    }
-
-    #profile-image {
-      width: 110px;
-      margin: 0 auto;
-      display: block;
     }
 
     .journey-entry {
