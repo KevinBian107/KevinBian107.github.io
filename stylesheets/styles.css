@@ -794,6 +794,32 @@
     box-shadow: 0 4px 10px rgba(9, 62, 255, 0.25);
   }
 
+  .project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 20px 0 20px 0;
+  }
+
+  .project-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    font-size: 0.85em;
+    border-radius: 6px;
+    background-color: var(--bg-button);
+    color: var(--text-button);
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  .project-links a:hover {
+    background-color: var(--button-hover-bg);
+    color: var(--button-hover-color);
+    text-decoration: none;
+  }
+
   /* =========================================================
      11. Code, Tables, Misc
      ========================================================= */
