@@ -693,6 +693,26 @@
     flex-shrink: 0;
   }
 
+  /* Open-source section: render card thumbnails as rounded "app icon" tiles */
+  .macro-section[data-macro="opensource"] .project-card img,
+  .macro-section[data-macro="opensource"] .project-card video {
+    width: 96px;
+    min-width: 96px;
+    height: 96px;
+    object-fit: contain;
+    background: var(--bg-section);
+    border-radius: 20px;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+
+  .macro-section[data-macro="opensource"] .project-card-icon-area {
+    width: 96px;
+    min-width: 96px;
+    height: 96px;
+    border-radius: 20px;
+  }
+
   .project-card-icon {
     width: 180px;
     min-width: 180px;
@@ -1219,6 +1239,15 @@
       min-width: 80px;
       height: 60px;
       border-radius: 6px;
+    }
+
+    .macro-section[data-macro="opensource"] .project-card img,
+    .macro-section[data-macro="opensource"] .project-card video,
+    .macro-section[data-macro="opensource"] .project-card-icon-area {
+      width: 64px;
+      min-width: 64px;
+      height: 64px;
+      border-radius: 14px;
     }
 
     .project-card-icon i {
