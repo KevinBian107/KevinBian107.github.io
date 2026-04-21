@@ -80,10 +80,10 @@
         <h2>Annotation GUI for Behavioral Analysis</h2>
 
         <p>
-          A PyQt5-based desktop application for annotating animal behavior in video recordings, inspired by ChronoViz.
-          Supports loading multiple videos simultaneously, defining custom behavioral categories with assignable hotkeys, and real-time editing of behavior labels.
-          Annotations appear as color-coded blocks on an interactive timeline, and can be created via press-and-hold hotkeys, start/stop marking, or by dragging segment edges for precise timing.
-          Exports all annotations to CSV with video name, behavior type, timestamps, and frame numbers for downstream analysis.
+          A PyQt5 desktop GUI for frame-accurate annotation of rodent behavior videos, forked and extended from Eric Leonardis's original annotation GUI for the TopoMimic research workflow.
+          The fork adds a two-track annotation model, with five macro behaviors (Immobile, Rear, Turn, Walk, Groom) on one track and an independent Left/Right/Straight direction track above it, each driven by its own hotkeys.
+          Auto-labeling and auto-directionality populate both tracks directly from per-clip qpos CSVs, with calibrated thresholds generated from a reference session so rules can be re-tuned after any rig change.
+          Timeline interactions support drag-to-translate segments, drag-up/down to change behavior, and snapshot-based undo/redo, and on launch the GUI auto-loads every clip under a sample directory and runs the full auto-label pass over the set.
         </p>
 
       </section>
