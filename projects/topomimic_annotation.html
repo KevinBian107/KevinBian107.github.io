@@ -29,7 +29,7 @@
 
       </header>
       <section>
-        <h1>Tools for Better Workflow</h1>
+        <h1>TopoMimic Annotation GUI</h1>
         <script type="text/javascript">
           // Initializes the Google Translate Element
           function googleTranslateElementInit() {
@@ -61,20 +61,20 @@
         </div>
 
         <div class="project-links">
-          <a href="https://github.com/KevinBian107/remote-gpu-gui" target="_blank"><i class="fab fa-github"></i> GPU Dashboard</a>
+          <a href="https://github.com/KevinBian107/TopoMimic-annotation" target="_blank"><i class="fab fa-github"></i> Annotation GUI</a>
+          <a href="https://github.com/ericleonardis/annotation-gui" target="_blank"><i class="fab fa-github"></i> Upstream Fork</a>
         </div>
 
         <p>
-          A collection of small tools I built to improve my day-to-day research and development workflow.
+          A PyQt5 desktop GUI for frame-accurate annotation of rodent behavior videos, forked from Eric Leonardis's original annotation GUI and extended for the TopoMimic research workflow.
+          The fork adds a two-track label schema — five macro behaviors (Immobile, Rear, Turn, Walk, Groom) on a behavior track with an independent Left/Right/Straight direction track above it —
+          and a qpos-driven auto-labeling pass that populates both tracks from per-clip pose CSVs using calibrated rules, so annotators correct a first draft rather than labeling from scratch.
+          Thresholds regenerate from a reference session via a single script, and gesture-based timeline editing with full undo/redo makes fixing the remaining frames fast.
         </p>
 
-        <h2>Remote GPU Cluster Dashboard</h2>
+        <a href="https://github.com/KevinBian107/TopoMimic-annotation" class="button">GitHub Repository</a>
 
-        <p>
-          A browser-based monitoring system for managing remote GPU clusters via SSH. Supports two cluster types: RunAI (password auth) and DSMLP (UCSD, SSH keys + Duo 2FA).
-          The dashboard lets you view GPU/CPU/RAM metrics, monitor running processes, execute terminal commands, and launch Claude Code sessions across connected clusters from a single browser interface.
-          Features include dual-mode login, an interactive tabbed terminal emulator, a file explorer with markdown preview, and dark/light theme support.
-        </p>
+        <p></p>
 
       </section>
       <footer>
