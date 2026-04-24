@@ -29,7 +29,7 @@
 
       </header>
       <section>
-        <h1>Tools for Better Workflow</h1>
+        <h1>Vibes: A Monorepo of Research Workflow Tools</h1>
         <script type="text/javascript">
           // Initializes the Google Translate Element
           function googleTranslateElementInit() {
@@ -61,19 +61,34 @@
         </div>
 
         <div class="project-links">
-          <a href="https://github.com/KevinBian107/remote-gpu-gui" target="_blank"><i class="fab fa-github"></i> GPU Dashboard</a>
+          <a href="https://github.com/KevinBian107/vibes" target="_blank"><i class="fab fa-github"></i> Vibes Monorepo</a>
         </div>
 
         <p>
-          A collection of small tools I built to improve my day-to-day research and development workflow.
+          <a href="https://github.com/KevinBian107/vibes" target="_blank">Vibes</a> is a monorepo for the small tools I build for
+          day-to-day research workflow. Each vibe lives in its own directory and is independent; they just share one conda environment.
+          The idea is borrowed from <a href="https://github.com/LeoMeow123/vibes" target="_blank">@LeoMeow123/vibes</a>.
         </p>
 
-        <h2>Remote GPU Cluster Dashboard</h2>
+        <h2>Current Vibes</h2>
+
+        <h3>gpu-access-board</h3>
+        <p>
+          A browser dashboard for monitoring remote GPU clusters over SSH — RunAI (password auth) and DSMLP (SSH keys + Duo 2FA).
+          Shows GPU/CPU/RAM metrics, running processes, and includes a tabbed terminal emulator and a Claude Code launcher with a file
+          explorer and markdown preview.
+        </p>
+
+        <h3>gpu-dashboard-agent</h3>
+        <p>
+          A server-less GPU monitor — workstation agents push <code>nvidia-smi</code> metrics to a shared GitHub Gist every 30 seconds,
+          and a static HTML page reads it. No SSH, no VPN, no server. A direct reimplementation of
+          <a href="https://github.com/LeoMeow123/vibes/tree/main/gpu-dashboard" target="_blank">@LeoMeow123/vibes/gpu-dashboard</a>
+          with minor UX adjustments.
+        </p>
 
         <p>
-          A browser-based monitoring system for managing remote GPU clusters via SSH. Supports two cluster types: RunAI (password auth) and DSMLP (UCSD, SSH keys + Duo 2FA).
-          The dashboard lets you view GPU/CPU/RAM metrics, monitor running processes, execute terminal commands, and launch Claude Code sessions across connected clusters from a single browser interface.
-          Features include dual-mode login, an interactive tabbed terminal emulator, a file explorer with markdown preview, and dark/light theme support.
+          More vibes to come — the repo is meant to grow as new workflow gaps show up.
         </p>
 
       </section>
