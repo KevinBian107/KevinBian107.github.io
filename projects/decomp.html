@@ -67,17 +67,28 @@
         </div>
 
         <p>
-        We investigated whether neural activity shared across distant cortical regions reflects a single global signal or genuinely region-specific
-        computations. Using simultaneous two-region recordings from mouse visual cortex (V1), motor cortex, and cerebellum across 15 dual-region sessions,
-        we applied canonical correlation analysis with behavioral partialling to ask how much cross-region similarity survives after removing movement-related
-        signals, and used temporal dynamics analysis to distinguish between candidate mechanisms of inter-region coupling.
+        Movement and locomotion variables are decodable from nearly every region of the mouse brain, but this ubiquity leaves a deeper question open:
+        do distant regions share a single low-dimensional global state inherited along the same neural axes, or do they independently develop
+        region-specific geometries whose only commonality is that the same scalar can be read from each? DECOMP reframes this as a question about
+        geometry rather than decodability — same information, different geometry — and asks how much of the cross-region shared subspace between
+        mouse visual cortex (V1), motor cortex (M1), and cerebellum (CB) reflects a common population code versus parallel codes that happen to
+        carry the same behavioral signal.
         </p>
 
         <p>
-        Shared subspaces partly survive rich behavioral partialling, but the underlying mechanism differs across region pairs.
-        V1↔cerebellum exhibits zero-lag coupling without task structure, consistent with an unmeasured global state.
-        V1↔motor cortex shows zero-lag task-locked responses, consistent with a shared cognitive state.
-        Cerebellum↔motor cortex shows a ~40ms cerebellar lead with motor-event locking, consistent with genuine cross-region communication.
+        Across 15 simultaneous dual-region recordings from the IBL Brain-Wide Map, we built a multi-stage pipeline: ridge-regression GLMs with
+        raised-cosine kernels for per-neuron movement variance, shared variance component analysis (SVCA) for split-half-reliable within-region
+        summaries, partial CCA with Frisch–Waugh–Lovell partialling to remove rich behavioral covariates (wheel, pupil, whisker, body motion, lick
+        rate), and lag plus peri-event analyses to characterize the temporal structure of what survives.
+        </p>
+
+        <p>
+        All three region pairs retain 0.69–0.85 of their cross-region shared geometry after behavioral partialling, but the surviving structure
+        means different things in each pair. V1↔CB shows zero-lag coupling with flat task responses, consistent with an unmeasured global brain
+        state; V1↔M1 shows zero-lag but strongly task-locked responses, consistent with a shared cognitive state without directional transmission;
+        CB↔M1 shows a ~40ms cerebellar lead with motor-event locking, consistent with genuine cerebellothalamocortical communication. Scalar
+        survival ratios under partialling are necessary but not sufficient — temporal dynamics expose three distinct biological mechanisms hidden
+        behind nearly identical proportional statistics.
         </p>
 
 
