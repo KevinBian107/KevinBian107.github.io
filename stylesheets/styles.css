@@ -61,59 +61,59 @@
 }
 
 [data-theme="dark"] {
-  --bg-body: #121220;
-  --bg-card: #1e1e30;
-  --bg-code: #1a1a2e;
-  --bg-nav: #16162a;
-  --bg-section: #1a1a2e;
-  --bg-input: #252540;
-  --bg-tag: #2d2d4a;
-  --bg-button: #252540;
-  --bg-translate: #1e1e30;
+  --bg-body: #0f0f0f;
+  --bg-card: #1a1a1a;
+  --bg-code: #161616;
+  --bg-nav: #141414;
+  --bg-section: #161616;
+  --bg-input: #1f1f1f;
+  --bg-tag: #242424;
+  --bg-button: #1f1f1f;
+  --bg-translate: #1a1a1a;
 
-  --text-primary: #e2e8f0;
-  --text-body: #c9cdd5;
-  --text-muted: #9ca3af;
-  --text-nav: #b0b8c4;
-  --text-h1: #e2e8f0;
-  --text-h2: #7b9cf7;
-  --text-h3: #6da6e8;
-  --text-h-sub: #b0b8c4;
-  --text-strong: #e2e8f0;
-  --text-tag: #c9cdd5;
-  --text-button: #e2e8f0;
-  --text-code: #c9cdd5;
-  --text-table-header: #b0b8c4;
-  --text-centered: #c9cdd5;
-  --text-project-title: #e2e8f0;
-  --text-project-desc: #c9cdd5;
+  --text-primary: #f5f5f5;
+  --text-body: #d4d4d4;
+  --text-muted: #888888;
+  --text-nav: #c4c4c4;
+  --text-h1: #f5f5f5;
+  --text-h2: #6e8fbd;
+  --text-h3: #6e8fbd;
+  --text-h-sub: #c4c4c4;
+  --text-strong: #f5f5f5;
+  --text-tag: #d4d4d4;
+  --text-button: #f5f5f5;
+  --text-code: #d4d4d4;
+  --text-table-header: #c4c4c4;
+  --text-centered: #d4d4d4;
+  --text-project-title: #f5f5f5;
+  --text-project-desc: #d4d4d4;
 
-  --link-color: #7b9cf7;
-  --link-hover: #93b4ff;
-  --link-small: #9ca3af;
+  --link-color: #6e8fbd;
+  --link-hover: #8aa7d0;
+  --link-small: #888888;
 
-  --border-primary: #2d2d4a;
-  --border-secondary: #2d2d4a;
-  --border-input: #3a3a5c;
-  --border-iframe: #2d2d4a;
-  --border-translate: #3a3a5c;
-  --border-filter: #3a3a5c;
+  --border-primary: #2a2a2a;
+  --border-secondary: #2a2a2a;
+  --border-input: #333333;
+  --border-iframe: #2a2a2a;
+  --border-translate: #333333;
+  --border-filter: #333333;
 
-  --nav-hover-bg: #252550;
-  --nav-hover-color: #7b9cf7;
+  --nav-hover-bg: #242424;
+  --nav-hover-color: #8aa7d0;
 
-  --button-hover-bg: #4a6ff7;
-  --button-hover-color: #ffffff;
+  --button-hover-bg: #4a6fa5;
+  --button-hover-color: #f5f5f5;
 
-  --shadow-card: rgba(0, 0, 0, 0.3);
-  --shadow-card-hover: rgba(0, 0, 0, 0.45);
+  --shadow-card: rgba(0, 0, 0, 0.5);
+  --shadow-card-hover: rgba(0, 0, 0, 0.65);
 
-  --chip-mix-base: #121220;
+  --chip-mix-base: #0f0f0f;
 
-  --journey-dot-border: #1e1e30;
-  --journey-dot-bg: #7b9cf7;
+  --journey-dot-border: #1a1a1a;
+  --journey-dot-bg: #6e8fbd;
 
-  --news-scroll-bg: #1a1a2e;
+  --news-scroll-bg: #161616;
 
   --icon-invert: 0.85;
 }
