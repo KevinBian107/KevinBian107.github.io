@@ -1,7 +1,7 @@
 (function() {
-  // Light is the default; only honor an explicit saved choice.
+  // Dark is the default; only honor an explicit saved choice.
   function getPreferred() {
-    return localStorage.getItem('theme') || 'light';
+    return localStorage.getItem('theme') || 'dark';
   }
 
   function applyTheme(theme) {
