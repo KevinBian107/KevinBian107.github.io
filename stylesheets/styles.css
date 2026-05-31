@@ -58,6 +58,13 @@
   --news-scroll-bg: transparent;
 
   --icon-invert: 0;
+
+  /* Whiteboard research-notes side banner (see body::before). The image is
+     pre-whitened (paper -> pure white via a levels stretch), so multiply
+     leaves the white paper invisible and only the ink shows on the page. */
+  --bg-whiteboard-opacity: 0.95;
+  --bg-whiteboard-filter: none;
+  --bg-whiteboard-blend: multiply;
 }
 
 [data-theme="dark"] {
@@ -116,6 +123,12 @@
   --news-scroll-bg: #161616;
 
   --icon-invert: 0.85;
+
+  /* Inverted so the white board becomes glowing ink-on-black; screen blend
+     drops the (now dark) paper so only the glowing ink shows on the page. */
+  --bg-whiteboard-opacity: 0.85;
+  --bg-whiteboard-filter: invert(1) hue-rotate(180deg) contrast(1.15);
+  --bg-whiteboard-blend: screen;
 }
 
 /* =========================================================
@@ -139,6 +152,55 @@
     color: var(--text-body);
     font-weight: 300;
     transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Whiteboard research-notes banners: vertical strips hugging the left and
+     right edges, each fading into the page via a gradient mask. They sit
+     behind content, so text always stays on top. url() is relative to this
+     stylesheet, so it resolves for root pages and the research/ + projects/
+     detail pages.  ::before = right edge,  ::after = left edge. */
+  body::before,
+  body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    width: min(50vw, 760px);
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+    background-image: url("../assets/index/whiteboard_bg.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: var(--bg-whiteboard-opacity);
+    filter: var(--bg-whiteboard-filter);
+    mix-blend-mode: var(--bg-whiteboard-blend);
+    transition: opacity 0.3s ease, filter 0.3s ease;
+  }
+
+  /* Right edge: shows the RIGHT slice of the board, fading leftward.
+     Math is confined to the outer edge (solid to 7%, gone by 38%). */
+  body::before {
+    right: 0;
+    background-position: 12% center;
+    -webkit-mask-image: linear-gradient(to left, #000 0%, #000 7%, transparent 38%);
+    mask-image: linear-gradient(to left, #000 0%, #000 7%, transparent 38%);
+  }
+
+  /* Left edge: shows the LEFT slice of the board (a different region, not a
+     mirror), fading rightward. */
+  body::after {
+    left: 0;
+    background-position: left center;
+    -webkit-mask-image: linear-gradient(to right, #000 0%, #000 7%, transparent 38%);
+    mask-image: linear-gradient(to right, #000 0%, #000 7%, transparent 38%);
+  }
+
+  /* No room for the side banners on narrower viewports */
+  @media only screen and (max-width: 960px) {
+    body::before,
+    body::after {
+      display: none;
+    }
   }
 
   /* Headings */
