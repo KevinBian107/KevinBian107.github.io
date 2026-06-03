@@ -59,7 +59,7 @@
 
   --icon-invert: 0;
 
-  /* Whiteboard research-notes side banner (see body::before). The image is
+  /* Whiteboard research-notes hero strip (see body::before). The image is
      pre-whitened (paper -> pure white via a levels stretch), so multiply
      leaves the white paper invisible and only the ink shows on the page. */
   --bg-whiteboard-opacity: 0.95;
@@ -155,16 +155,20 @@
   }
 
   /* Whiteboard research-notes banners: vertical strips hugging the left and
-     right edges, each fading into the page via a gradient mask. They sit
-     behind content, so text always stays on top. url() is relative to this
-     stylesheet, so it resolves for root pages and the research/ + projects/
-     detail pages.  ::before = right edge,  ::after = left edge. */
-  body::before,
-  body::after {
+     right edges of the HOME page only (body.home), each fading into the page
+     via a gradient mask. They sit behind content (z-index:-1), so text always
+     stays on top. ::before = right edge,  ::after = left edge.
+
+     Width uses viewport units only (no fixed px) so the strips adapt to
+     browser zoom: zooming shrinks the CSS viewport and the strips scale with
+     it. 70vmin ≈ the original 760px reach on a 1080p display, but stays
+     zoom-relative instead of pinned in pixels. */
+  body.home::before,
+  body.home::after {
     content: "";
     position: fixed;
     top: 0;
-    width: min(50vw, 760px);
+    width: min(50vw, 70vmin);
     height: 100vh;
     z-index: -1;
     pointer-events: none;
@@ -178,27 +182,27 @@
   }
 
   /* Right edge: shows the RIGHT slice of the board, fading leftward.
-     Math is confined to the outer edge (solid to 7%, gone by 38%). */
-  body::before {
+     Ink is confined to the outer edge (solid to 5%, gone by 30%). */
+  body.home::before {
     right: 0;
     background-position: 12% center;
-    -webkit-mask-image: linear-gradient(to left, #000 0%, #000 7%, transparent 38%);
-    mask-image: linear-gradient(to left, #000 0%, #000 7%, transparent 38%);
+    -webkit-mask-image: linear-gradient(to left, #000 0%, #000 5%, transparent 30%);
+    mask-image: linear-gradient(to left, #000 0%, #000 5%, transparent 30%);
   }
 
   /* Left edge: shows the LEFT slice of the board (a different region, not a
      mirror), fading rightward. */
-  body::after {
+  body.home::after {
     left: 0;
     background-position: left center;
-    -webkit-mask-image: linear-gradient(to right, #000 0%, #000 7%, transparent 38%);
-    mask-image: linear-gradient(to right, #000 0%, #000 7%, transparent 38%);
+    -webkit-mask-image: linear-gradient(to right, #000 0%, #000 5%, transparent 30%);
+    mask-image: linear-gradient(to right, #000 0%, #000 5%, transparent 30%);
   }
 
-  /* No room for the side banners on narrower viewports */
+  /* No room for the side banners on narrower viewports (incl. heavy zoom). */
   @media only screen and (max-width: 960px) {
-    body::before,
-    body::after {
+    body.home::before,
+    body.home::after {
       display: none;
     }
   }
