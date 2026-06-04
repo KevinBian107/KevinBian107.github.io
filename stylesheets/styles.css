@@ -488,7 +488,9 @@
 
   #profile-image {
     width: 200px;
-    height: auto;
+    height: 200px;
+    object-fit: cover;
+    object-position: center 58%;
     border-radius: 50%;
     display: block;
     margin: 0 auto 16px;
@@ -1243,6 +1245,9 @@
 
     #profile-image {
       width: 200px;
+      height: 200px;
+      object-fit: cover;
+      object-position: center 58%;
       border-radius: 50%;
     }
 
