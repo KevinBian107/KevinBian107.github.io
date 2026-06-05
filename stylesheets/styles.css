@@ -181,13 +181,14 @@
     transition: opacity 0.3s ease, filter 0.3s ease;
   }
 
-  /* Right edge: shows the RIGHT slice of the board, fading leftward.
-     Ink is confined to the outer edge (solid to 5%, gone by 30%). */
+  /* Right edge: shows the RIGHT slice of the board, fading leftward. The fade
+     spans the full 0%->30% (no solid plateau) for a gentler blend; it still
+     disappears at 30%, so the banner reach is unchanged. */
   body.home::before {
     right: 0;
     background-position: 12% center;
-    -webkit-mask-image: linear-gradient(to left, #000 0%, #000 5%, transparent 30%);
-    mask-image: linear-gradient(to left, #000 0%, #000 5%, transparent 30%);
+    -webkit-mask-image: linear-gradient(to left, #000 0%, transparent 30%);
+    mask-image: linear-gradient(to left, #000 0%, transparent 30%);
   }
 
   /* Left edge: shows the LEFT slice of the board (a different region, not a
@@ -195,8 +196,8 @@
   body.home::after {
     left: 0;
     background-position: left center;
-    -webkit-mask-image: linear-gradient(to right, #000 0%, #000 5%, transparent 30%);
-    mask-image: linear-gradient(to right, #000 0%, #000 5%, transparent 30%);
+    -webkit-mask-image: linear-gradient(to right, #000 0%, transparent 30%);
+    mask-image: linear-gradient(to right, #000 0%, transparent 30%);
   }
 
   /* No room for the side banners on narrower viewports (incl. heavy zoom). */
@@ -1168,7 +1169,7 @@
   .logo-grey-bg-wrap {
     width: 72px;
     height: 72px;
-    background: #1a1a2e;
+    background: #212121;
     border-radius: 14px;
     display: flex;
     align-items: center;
