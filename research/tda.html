@@ -63,25 +63,18 @@
 
         <div class="project-links">
           <a href="#"><i class="fas fa-file-alt"></i> Paper</a>
+          <a href="https://openreview.net/forum?id=nraMudWkPn&referrer=%5Bthe%20profile%20of%20Kaiwen%20Bian%5D(%2Fprofile%3Fid%3D~Kaiwen_Bian1)" target="_blank"><i class="fas fa-comments"></i> OpenReview</a>
           <a href="https://kbian.org/TopoMimic-website/" target="_blank"><i class="fas fa-globe"></i> Website</a>
           <a href="https://github.com/KevinBian107/TopoMIMIC" target="_blank"><i class="fab fa-github"></i> Code</a>
         </div>
 
         <p>
-          Understanding how animals transition between behavioral modes is fundamental to neuroscience and motor control. Current approaches either segment behaviors into discrete states or project onto low-dimensional embeddings, but neither explicitly models the geometric structure of transitions themselves. We present a manifold learning method for behavioral transition discovery via topologically invariant simplification. Using discrete Morse theory on density-weighted point clouds, we extract the <strong>topological skeleton</strong> of the behavioral manifold &mdash; a sparse graph that retains only the frames algebraically forced by the data's topology while discarding everything else. The skeleton is shaped by what is absent: low-density ridges between behavioral basins create topological obstructions that the simplification must preserve.
+          Understanding how animals transition between behavioral modes has been a central problem in neuroethology. However, naturalistic data makes it hard: transitions vary at different scales and conventionally segmentation algorithms lack a control-relevant grounding. Recent deep reinforcement learning imitation policies emulate animals in a biomechanical simulator, exposing a learned latent intention space and a rolled-out joint-angle (qpos) space that are both egocentric and more biomechanically realistic than the underlying keypoints. This latent space provides a meaningful feature representation for the behavior data, which we aim to analyze behavior movement trajectories in.
         </p>
 
         <p>
-          Our framework operates at two tiers: <strong>DM-paths (H0)</strong> identify transition corridors between persistent density basins, while <strong>DM-cycles (H1)</strong> reveal asymmetric motor programs when additional geometric conditions hold. We show that behavioral transitions force the skeleton to contain saddle-crossing paths, and that drift-invariant representations are necessary for cycle closure. Empirically, behaviorally rich clips retain many skeleton frames at transition points while stationary clips compress to near-zero, validating the weak Morse inequality. The resulting algorithm, <strong>Discrete-Morse Wasserstein K-Means Clustering (DM-WKC)</strong>, uses these topological primitives as manifold coordinates compared via Wasserstein distance to discover transition types without supervision. On rodent and walker datasets across three feature spaces (egocentric keypoints, joint configurations, learned intentions), DM-WKC discovers 2&ndash;3&times; more transition types than state-space baselines with better ground-truth alignment, higher internal consistency, and greater temporal coherence, while the topological primitives act as compressed representations that baseline methods fail to achieve.
+          To this end, we first map frame-by-frame trajectories in this latent space to density-weighted point clouds. We then apply a topological method, called the discrete-Morse based graph construction method (abbrev. <strong>DM-graph</strong>) to extract two meaningful graph skeleton primitives from the density point clouds: <strong>DM-paths</strong>, which intuitively are the low-density corridors the trajectory follows between dense behavioral regions, decomposed by density persistence so that a long corridor stays intact while subtler changes peel off as their own shorter branches, and <strong>DM-cycles</strong>, which intuitively captures behaviors whose entry and exit arms occupy spatially distinct routes. These DM-skeletons provide a better segmentation of behaviors in individual trajectories. We further cluster these behaviors by clustering these DM-skeletons based on the Wasserstein distance. Empirically, on a rat behavior dataset across three feature spaces (egocentric keypoints, joint angles, and a learned latent), Wasserstein clustering of the primitives exposes transition structure that prior state space models, deep autoencoders, and topological clustering (Mapper) baselines do not produce. Several transitions appear consistently across all three feature spaces, indicating the subspace itself is a topological invariant of the trajectory.
         </p>
-
-        <div style="text-align: center;">
-            <img src="../assets/research/topomimic_clusters.png" alt="TopoMIMIC clustering results" style="width:70%; height:auto;">
-        </div>
-
-        <blockquote>
-            Behavioral transition types discovered by DM-WKC across rodent behaviors (grooming, immobility, orienting, rear, walking, step), with sample counts shown for each transition pair.
-        </blockquote>
 
         <p>
           I am working on this with advising from professor <a href="http://yusu.belkin-wang.org/" target="_blank">Yusu Wang</a> and professor <a href="https://talmolab.org/" target="_blank">Talmo Pereira</a>.
