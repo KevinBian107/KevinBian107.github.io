@@ -30,7 +30,7 @@
 
       </header>
       <section>
-        <h1>Code to Action: Motor Programs from Discrete Syllables in Whole-Body Biomechanical Control</h1>
+        <h1>Steering Embodied Behavior from Any Discrete Codes</h1>
         <script type="text/javascript">
           // Initializes the Google Translate Element
           function googleTranslateElementInit() {
@@ -63,21 +63,25 @@
 
         <div class="project-links">
           <a href="#"><i class="fas fa-file-alt"></i> Paper</a>
-          <a href="https://kbian.org/Code2Act-website/#" target="_blank"><i class="fas fa-globe"></i> Website</a>
+          <a href="https://kbian.org/Code2Act-website/#" target="_blank"><i class="fas fa-globe"></i> Old Website</a>
           <a href="https://github.com/talmolab/track-mjx/tree/kevin/kpms-decoder" target="_blank"><i class="fab fa-github"></i> Code</a>
         </div>
 
 
         <p>
-          A growing body of evidence in motor neuroscience suggests that motor control may operate as a piece-wise continuous function: premotor and basal ganglia circuits appear to set the "initial condition" for a behavior, while primary motor cortex (M1) may act as a dynamical system that evolves according to its own dynamics. In the current computational landscape, reinforcement learning is widely used for lower-level motor control, and state-space models are used to segment behaviors at the higher level from keypoint data &mdash; but these two levels remain largely disconnected.
+          A discrete behavioral code &mdash; a syllable from an unsupervised segmenter or a hand-assigned label &mdash; is a symbol one can observe but cannot run on a body. Physics-based reinforcement-learning imitators produce realistic motion, but steering one toward a behavior means hand-designing a reward per behavior; recent controllers instead learn a control vocabulary end-to-end, optimizing its codes for reconstruction rather than to match a vocabulary a user could specify.
         </p>
 
         <p>
-          This project aims to <strong>close this loop</strong> by linking behavioral syllables directly to lower-level motor controls, bridging continuous naturalistic control with discrete semantic behavior understanding. Where switching linear dynamical systems (SLDS) have been used to model behavioral segmentation, we aim to build a <strong>Switching Non-linear Dynamical System (S-nLDS)</strong> that can capture the inherently non-linear, non-Gaussian dynamics of naturalistic behavior. Using observables from <a href="/research/vnl.html">MIMIC-MJX</a> physics simulation, we develop deep state space models that both understand the dynamics of behaviors and generate long biomechanically realistic sequences.
+          We introduce <strong>Code2Act</strong>, which makes an externally specified vocabulary directly executable: a distilled physics controller conditioned on a per-frame code stream compiles each code into a runnable motor program for a 38-actuator biomechanical rodent, so steering is selecting a code rather than engineering rewards. The controller sees only the integer code, so the front end is swappable &mdash; the same controller runs an unsupervised segmenter (<a href="https://www.moseq4all.org/" target="_blank">Keypoint-MoSeq</a>), a learned kinematics-VAE codebook, and a hand-specified label set. Because the distilled latent encodes a state-dependent change signal, each code becomes a one-to-many map reaching the same goal motion from any initial state.
+        </p>
+
+        <p>
+          Code-driven motion is distributionally close to expert behavior, each held code is a behaviorally typed attractor the controller defends after perturbation, and the codes are behaviorally distinct &mdash; including a codebook the controller never co-adapted with. Because execution tests a code, the same controller also validates a vocabulary: codebooks of 9 or 100 codes realize far fewer distinct motor programs than their nominal size. Code2Act turns a descriptive vocabulary into an executable, steerable, self-auditing control interface.
         </p>
 
         <div style="text-align: center;">
-            <img src="../assets/research/c2a_behavior_parade_trail.png" alt="Motor control hierarchy from prefrontal cortex to muscles" style="width:50%; height:auto;">
+            <img src="../assets/research/c2a.gif" alt="Steering Embodied Behavior from Any Discrete Codes" style="width:85%; height:auto;">
         </div>
 
         <blockquote>
