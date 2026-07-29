@@ -57,7 +57,11 @@
 
   --news-scroll-bg: transparent;
 
-  --icon-invert: 0;
+  --icon-muted: #6b7280;
+  --icon-github: #181717;
+  --icon-linkedin: #0a66c2;
+  --icon-email: #d1495b;
+  --icon-cv: #0056b3;
 
   /* Whiteboard research-notes hero strip (see body::before). The image is
      pre-whitened (paper -> pure white via a levels stretch), so multiply
@@ -124,7 +128,11 @@
 
   --news-scroll-bg: #161616;
 
-  --icon-invert: 0.85;
+  --icon-muted: #9ca3af;
+  --icon-github: #e6edf3;
+  --icon-linkedin: #4098d7;
+  --icon-email: #ef7a89;
+  --icon-cv: #6e8fbd;
 
   /* Inverted so the white board becomes glowing ink-on-black; screen blend
      drops the (now dark) paper so only the glowing ink shows on the page. */
@@ -138,6 +146,10 @@
    1. Base & Typography
    ========================================================= */
 
+  html {
+    font-size: 17px;
+  }
+
   html,
   body {
     height: 100%;
@@ -148,7 +160,7 @@
   body {
     background-color: var(--bg-body);
     padding: 64px 24px 40px;
-    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
       Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
       Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
       "Segoe UI Symbol";
@@ -267,13 +279,13 @@
   p,
   ul {
     text-align: left;
-    font-size: 17px;
+    font-size: 18px;
     line-height: 1.6;
   }
 
   .intro {
     text-align: left;
-    font-size: 17px;
+    font-size: 18px;
     line-height: 1.6;
   }
 
@@ -318,7 +330,7 @@
   .wrapper,
   .wrapper_content_page {
     padding-top: 80px;
-    max-width: 1400px;
+    max-width: 1150px;
     width: 100%;
     margin: 0 auto;
   }
@@ -326,7 +338,7 @@
   /* Use flex instead of floats */
   .wrapper {
     display: flex;
-    gap: 40px;
+    gap: 64px;
     align-items: flex-start;
   }
 
@@ -363,7 +375,7 @@
     padding: 8px 16px;
     border-radius: 999px;
     color: var(--text-nav);
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 400;
     text-decoration: none;
     transition: background-color 0.2s ease, color 0.2s ease;
@@ -468,7 +480,7 @@
   }
 
   header ul a strong {
-    font-size: 14px;
+    font-size: 15px;
     display: block;
     color: var(--text-primary);
   }
@@ -482,7 +494,7 @@
   /* Footer pinned near bottom of sidebar */
 
   footer {
-    font-size: 13px;
+    font-size: 14px;
     margin-top: 40px;
     -webkit-font-smoothing: subpixel-antialiased;
   }
@@ -526,12 +538,12 @@
   }
 
   .profile-details .name {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: bold;
   }
 
   .profile-details .metadata {
-    font-size: 12px;
+    font-size: 13px;
     color: var(--text-muted);
   }
 
@@ -568,25 +580,39 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 18px;
     text-decoration: none;
-    color: inherit;
   }
 
-  .transparent-icon img {
-    height: 40px;
-    opacity: 0.6;
-    transition: opacity 0.3s, filter 0.3s;
-    filter: invert(var(--icon-invert));
+  .transparent-icon i {
+    font-size: 26px;
+    color: var(--icon-muted);
+    opacity: 0.75;
+    transition: opacity 0.2s ease, color 0.2s ease;
   }
 
-  .transparent-icon:hover img {
+  .transparent-icon:hover i {
     opacity: 1;
+  }
+
+  .icon-github:hover i {
+    color: var(--icon-github);
+  }
+
+  .icon-linkedin:hover i {
+    color: var(--icon-linkedin);
+  }
+
+  .icon-email:hover i {
+    color: var(--icon-email);
+  }
+
+  .icon-cv:hover i {
+    color: var(--icon-cv);
   }
 
   .centered-text {
     text-align: center;
-    font-size: 18px;
+    font-size: 15px;
     margin-top: 10px;
     color: var(--text-centered);
   }
@@ -635,7 +661,7 @@
     background: none;
     border: none;
     padding: 10px 24px;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
     color: var(--text-muted);
     cursor: pointer;
@@ -856,7 +882,7 @@
   .tag {
     background-color: var(--bg-tag);
     color: var(--text-tag);
-    font-size: 12px;
+    font-size: 13px;
     padding: 5px 12px;
     border-radius: 999px;
     font-weight: 500;
@@ -1074,7 +1100,7 @@
     background-color: var(--bg-section);
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.6;
   }
 
@@ -1188,7 +1214,7 @@
 
 
   .journey-date {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 500;
     color: var(--text-muted);
     margin-bottom: 4px;
@@ -1197,31 +1223,31 @@
 
   .journey-body h3 {
     margin: 0 0 4px;
-    font-size: 1.15rem;
+    font-size: 1.25rem;
   }
 
   .journey-org {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 500;
     color: var(--text-h1);
     margin-bottom: 2px;
   }
 
   .journey-detail {
-    font-size: 13px;
+    font-size: 14px;
     color: var(--text-muted);
     margin-bottom: 8px;
   }
 
   .journey-body p {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.55;
     color: var(--text-body);
     margin: 0 0 6px;
   }
 
   .journey-advisor {
-    font-size: 14px;
+    font-size: 15px;
     color: var(--text-muted);
     font-style: italic;
   }
@@ -1470,19 +1496,19 @@
     --chip-bg: #ecfeff;
   }
   .filter-chip[data-category="generative"] {
-    --chip-color: #059669;
-    --chip-bg: #ecfdf5;
+    --chip-color: #16a34a;
+    --chip-bg: #f0fdf4;
   }
   .filter-chip[data-category="language"] {
-    --chip-color: #d97706;
-    --chip-bg: #fffbeb;
+    --chip-color: #2563eb;
+    --chip-bg: #eff6ff;
   }
   .filter-chip[data-category="datascience"] {
-    --chip-color: #dc2626;
-    --chip-bg: #fef2f2;
+    --chip-color: #b45309;
+    --chip-bg: #fffbeb;
   }
   .filter-chip[data-category="neuroscience"] {
-    --chip-color: #e05297;
+    --chip-color: #db2777;
     --chip-bg: #fdf2f8;
   }
 
@@ -1491,22 +1517,28 @@
     --chip-bg: #252540;
   }
   [data-theme="dark"] .filter-chip[data-category="embodied"] {
-    --chip-bg: rgba(124, 58, 237, 0.15);
+    --chip-bg: rgba(124, 58, 237, 0.1);
+    --chip-color: #9d8bc7;
   }
   [data-theme="dark"] .filter-chip[data-category="topology"] {
-    --chip-bg: rgba(8, 145, 178, 0.15);
+    --chip-bg: rgba(8, 145, 178, 0.1);
+    --chip-color: #7fb8c4;
   }
   [data-theme="dark"] .filter-chip[data-category="generative"] {
-    --chip-bg: rgba(5, 150, 105, 0.15);
+    --chip-bg: rgba(22, 163, 74, 0.1);
+    --chip-color: #86b596;
   }
   [data-theme="dark"] .filter-chip[data-category="language"] {
-    --chip-bg: rgba(217, 119, 6, 0.15);
+    --chip-bg: rgba(37, 99, 235, 0.1);
+    --chip-color: #7f9fd1;
   }
   [data-theme="dark"] .filter-chip[data-category="datascience"] {
-    --chip-bg: rgba(220, 38, 38, 0.15);
+    --chip-bg: rgba(180, 83, 9, 0.1);
+    --chip-color: #c9a06c;
   }
   [data-theme="dark"] .filter-chip[data-category="neuroscience"] {
-    --chip-bg: rgba(224, 82, 151, 0.15);
+    --chip-bg: rgba(219, 39, 119, 0.1);
+    --chip-color: #c98bab;
   }
 
   /* =========================================================
@@ -1530,16 +1562,16 @@
     color: #0e7490;
   }
   .category-generative {
-    background-color: #d1fae5;
-    color: #047857;
+    background-color: #dcfce7;
+    color: #15803d;
   }
   .category-language {
-    background-color: #fef3c7;
-    color: #b45309;
+    background-color: #dbeafe;
+    color: #1d4ed8;
   }
   .category-datascience {
-    background-color: #fee2e2;
-    color: #b91c1c;
+    background-color: #fef3c7;
+    color: #b45309;
   }
   .category-neuroscience {
     background-color: #fce7f3;
@@ -1548,28 +1580,28 @@
 
   /* Dark mode overrides for category tags */
   [data-theme="dark"] .category-embodied {
-    background-color: rgba(124, 58, 237, 0.2);
-    color: #c4b5fd;
+    background-color: rgba(124, 58, 237, 0.14);
+    color: #9d8bc7;
   }
   [data-theme="dark"] .category-topology {
-    background-color: rgba(8, 145, 178, 0.2);
-    color: #67e8f9;
+    background-color: rgba(8, 145, 178, 0.14);
+    color: #7fb8c4;
   }
   [data-theme="dark"] .category-generative {
-    background-color: rgba(5, 150, 105, 0.2);
-    color: #6ee7b7;
+    background-color: rgba(22, 163, 74, 0.14);
+    color: #86b596;
   }
   [data-theme="dark"] .category-language {
-    background-color: rgba(217, 119, 6, 0.2);
-    color: #fcd34d;
+    background-color: rgba(37, 99, 235, 0.14);
+    color: #7f9fd1;
   }
   [data-theme="dark"] .category-datascience {
-    background-color: rgba(220, 38, 38, 0.2);
-    color: #fca5a5;
+    background-color: rgba(180, 83, 9, 0.14);
+    color: #c9a06c;
   }
   [data-theme="dark"] .category-neuroscience {
-    background-color: rgba(224, 82, 151, 0.2);
-    color: #f9a8d4;
+    background-color: rgba(224, 82, 151, 0.14);
+    color: #c98bab;
   }
 
   /* =========================================================
