@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="../stylesheets/styles.css">
     <meta name="viewport" content="width=device-width">
-    <link rel="shortcut icon" type="image/svg+xml" href="https://raw.githubusercontent.com/KevinBian107/KevinBian107.github.io/main/assets/index/favicon_tree.svg" />
+    <link rel="shortcut icon" type="image/png" href="https://raw.githubusercontent.com/KevinBian107/KevinBian107.github.io/main/assets/index/favicon.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
@@ -69,15 +69,15 @@
 
 
         <p>
-          A discrete behavioral code &mdash; a syllable from an unsupervised segmenter or a hand-assigned label &mdash; is a symbol one can observe but cannot run on a body. Physics-based reinforcement-learning imitators produce realistic motion, but steering one toward a behavior means hand-designing a reward per behavior; recent controllers instead learn a control vocabulary end-to-end, optimizing its codes for reconstruction rather than to match a vocabulary a user could specify.
+          A discrete vocabulary compresses continuous motion into a few named actions, which is what makes planning and annotation over behavior tractable. Such vocabularies are plentiful, from unsupervised segmentation to hand annotation &mdash; but they only describe motion. Executing one on a body still requires a hand-engineered controller, or a separately trained policy, per symbol.
         </p>
 
         <p>
-          We introduce <strong>Code2Act</strong>, which makes an externally specified vocabulary directly executable: a distilled physics controller conditioned on a per-frame code stream compiles each code into a runnable motor program for a 38-actuator biomechanical rodent, so steering is selecting a code rather than engineering rewards. The controller sees only the integer code, so the front end is swappable &mdash; the same controller runs an unsupervised segmenter (<a href="https://www.moseq4all.org/" target="_blank">Keypoint-MoSeq</a>), a learned kinematics-VAE codebook, and a hand-specified label set. Because the distilled latent encodes a state-dependent change signal, each code becomes a one-to-many map reaching the same goal motion from any initial state.
+          <strong>Code2Act</strong> turns a discrete vocabulary into motor commands for a 38-actuator biomechanical rodent. One recurrent controller reads only the symbol stream and proprioception, is regressed onto the frozen intention of a pretrained imitation model, and decodes through that model's inverse-dynamics module &mdash; covering an entire vocabulary with no per-symbol reward or training. The vocabulary is fixed externally and never adapted to the controller, so the front end is swappable: the same controller is driven by an unsupervised AR-HMM segmenter (<a href="https://www.moseq4all.org/" target="_blank">Keypoint-MoSeq</a>), a learned kinematics-VAE codebook, and a hand-specified label set.
         </p>
 
         <p>
-          Code-driven motion is distributionally close to expert behavior, each held code is a behaviorally typed attractor the controller defends after perturbation, and the codes are behaviorally distinct &mdash; including a codebook the controller never co-adapted with. Because execution tests a code, the same controller also validates a vocabulary: codebooks of 9 or 100 codes realize far fewer distinct motor programs than their nominal size. Code2Act turns a descriptive vocabulary into an executable, steerable, self-auditing control interface.
+          The symbols then generate rather than merely describe. Their motion is distributionally close to the expert imitation policy and far from a random stream over the same vocabulary; an independent kinematic labeler re-reads the generated behavior as the commanded symbol in 0.71 of cases; and a commanded symbol survives perturbation, reached from 100 distinct initial states and restored after an external velocity impulse. The interface also reports which symbols the body can actually realize, and composes symbols into transitions the corpus never contains while staying within the distribution of rodent motion. A description of behavior can therefore be made to produce it.
         </p>
 
         <div style="text-align: center;">
