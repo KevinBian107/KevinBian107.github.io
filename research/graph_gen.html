@@ -139,15 +139,18 @@
         </script>
         <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+        <div class="time-glass">
+          📅 Project Timeline: Sep 2025 - Now
+        </div>
+
         <div class="project-links">
           <a href="#"><i class="fas fa-file-alt"></i> Paper</a>
-          <a href="https://openreview.net/forum?id=RNdvnXs8x6#discussion" target="_blank"><i class="fas fa-comments"></i> OpenReview</a>
-          <a href="https://kbian.org/MOSAIC-website/#" target="_blank"><i class="fas fa-globe"></i> Website</a>
+          <span class="link-disabled" aria-disabled="true"><i class="fas fa-globe"></i> Website (Under Construction)</span>
           <a href="https://github.com/KevinBian107/MOSAIC" target="_blank"><i class="fab fa-github"></i> Code</a>
         </div>
 
         <p>
-            Autoregressive models for molecular graph generation typically operate on flattened sequences of atoms and bonds, discarding the rich multi-scale structure inherent to molecules. We introduce <strong>MOSAIC (Multi-scale Organization via Structural Abstraction In Composition)</strong>, a framework that lifts autoregressive generation from flat token walks to compositional, hierarchy-aware sequences. MOSAIC provides a unified three-stage pipeline: (1) <strong>hierarchical coarsening</strong> that recursively groups atoms into motif-like clusters using graph-theoretic methods (spectral clustering, hierarchical agglomerative clustering, and motif-aware variants), (2) <strong>structured tokenization</strong> that serializes the resulting multi-level hierarchy into sequences that explicitly encode parent-child relationships, partition boundaries, and edge connectivity at every level, and (3) <strong>autoregressive generation</strong> with a standard Transformer decoder that learns to produce these structured sequences.
+            Autoregressive graph generators typically linearize graphs through flat node-edge walks, which can obscure higher-order structure in large, complex graphs. We introduce a hierarchical graph abstraction and coarse-to-fine generation pipeline that separates coarsening, tokenization, and decoding, exposing three design axes: <strong>community coarsening</strong>, <strong>hierarchical tokenization</strong>, and <strong>order randomization</strong>. With a fixed backbone and matched training time across five molecular and four non-molecular benchmarks, hierarchical serialization yields consistent distributional and structural gains on all molecular datasets and on some non-molecular ones, showing that exposing hierarchy improves autoregressive generation when meaningful community structure is present.
         </p>
 
 

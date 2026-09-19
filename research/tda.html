@@ -141,22 +141,21 @@
 
 
         <div class="time-glass">
-          📅 Project Timeline: Mar 2025 - Now
+          📅 Project Timeline: Mar 2025 - Sept 2026
         </div>
 
         <div class="project-links">
           <a href="#"><i class="fas fa-file-alt"></i> Paper</a>
-          <a href="https://openreview.net/forum?id=nraMudWkPn&referrer=%5Bthe%20profile%20of%20Kaiwen%20Bian%5D(%2Fprofile%3Fid%3D~Kaiwen_Bian1)" target="_blank"><i class="fas fa-comments"></i> OpenReview</a>
-          <a href="https://kbian.org/TopoMimic-website/" target="_blank"><i class="fas fa-globe"></i> Website</a>
+          <span class="link-disabled" aria-disabled="true"><i class="fas fa-globe"></i> Website (Under Construction)</span>
           <a href="https://github.com/KevinBian107/TopoMIMIC" target="_blank"><i class="fab fa-github"></i> Code</a>
         </div>
 
         <p>
-          Understanding how animals transition between behavioral modes has been a central problem in neuroethology. However, naturalistic data makes it hard: transitions vary at different scales and conventionally segmentation algorithms lack a control-relevant grounding. Recent deep reinforcement learning imitation policies emulate animals in a biomechanical simulator, exposing a learned latent intention space and a rolled-out joint-angle (qpos) space that are both egocentric and more biomechanically realistic than the underlying keypoints. This latent space provides a meaningful feature representation for the behavior data, which we aim to analyze behavior movement trajectories in.
+          Understanding how animals move between behaviors is a central question in neuroethology, yet most segmentation methods first partition time into discrete states, leaving transitions as the unmodeled residue between them. We take the opposite view: in a suitable feature space, sustained behaviors are dense regions of the trajectory's density landscape, and transitions are the sparse corridors and loops that connect them. Because this structure is a property of the landscape's shape rather than of any particular coordinates, it can be read off directly with topology and should persist across feature spaces.
         </p>
 
         <p>
-          To this end, we first map frame-by-frame trajectories in this latent space to density-weighted point clouds. We then apply a topological method, called the discrete-Morse based graph construction method (abbrev. <strong>DM-graph</strong>) to extract two meaningful graph skeleton primitives from the density point clouds: <strong>DM-paths</strong>, which intuitively are the low-density corridors the trajectory follows between dense behavioral regions, decomposed by density persistence so that a long corridor stays intact while subtler changes peel off as their own shorter branches, and <strong>DM-cycles</strong>, which intuitively captures behaviors whose entry and exit arms occupy spatially distinct routes. These DM-skeletons provide a better segmentation of behaviors in individual trajectories. We further cluster these behaviors by clustering these DM-skeletons based on the Wasserstein distance. Empirically, on a rat behavior dataset across three feature spaces (egocentric keypoints, joint angles, and a learned latent), Wasserstein clustering of the primitives exposes transition structure that prior state space models, deep autoencoders, and topological clustering (Mapper) baselines do not produce. Several transitions appear consistently across all three feature spaces, indicating the subspace itself is a topological invariant of the trajectory.
+          We build this landscape from frame-by-frame trajectories, extract its discrete-Morse graph, and keep two kinds of structure: <strong>paths</strong>, the corridors a trajectory follows between dense behavioral regions, and <strong>cycles</strong>, closed routes whose entry and exit take different ways. Clustering these structures yields transitions directly, with no upstream state partition. On a rat behavior dataset across three feature spaces, including the latent space of a neural-network controller that imitates the animal in a physics simulator, the approach recovers transitions at coverage comparable to state-space and topological-clustering baselines, while carrying substantially more information about the transition identity, forming tighter clusters, and matching annotated transitions at their own timescale rather than by time-warping. More broadly, the results show that behavioral transitions are a topological feature of a representation: recoverable from the shape of its trajectories, and consistent across distinct feature spaces.
         </p>
 
         <p>

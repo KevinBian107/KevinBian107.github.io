@@ -126,7 +126,7 @@
 
     <div class="wrapper_content_page">
       <section>
-        <h1>Steering Embodied Behavior from Any Discrete Codes</h1>
+        <h1>Discrete Actions for Naturalistic Behavior in Embodied Biomechanical Animal Models</h1>
         <script type="text/javascript">
           // Callback for the Google Translate script below.
           function googleTranslateElementInit() {
@@ -141,30 +141,26 @@
         <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
         <div class="time-glass">
-          📅 Project Timeline: Jun 2025 - Now
+          📅 Project Timeline: Jun 2025 - Sept 2026
         </div>
 
         <div class="project-links">
           <a href="#"><i class="fas fa-file-alt"></i> Paper</a>
-          <a href="https://kbian.org/Code2Act-website/#" target="_blank"><i class="fas fa-globe"></i> Old Website</a>
+          <span class="link-disabled" aria-disabled="true"><i class="fas fa-globe"></i> Website (Under Construction)</span>
           <a href="https://github.com/talmolab/track-mjx/tree/kevin/kpms-decoder" target="_blank"><i class="fab fa-github"></i> Code</a>
         </div>
 
 
         <p>
-          A discrete vocabulary compresses continuous motion into a few named actions, which is what makes planning and annotation over behavior tractable. Such vocabularies are plentiful, from unsupervised segmentation to hand annotation &mdash; but they only describe motion. Executing one on a body still requires a hand-engineered controller, or a separately trained policy, per symbol.
+          Embodied symbolic systems depend on a discrete vocabulary that compresses continuous motion into named actions, which make planning and annotation tractable. Many such vocabularies exist, from unsupervised segmentation to hand annotation, but they only describe motion, and making a body perform one of their symbols requires a hand-engineered controller or a policy trained for that symbol.
         </p>
 
         <p>
-          <strong>Code2Act</strong> turns a discrete vocabulary into motor commands for a 38-actuator biomechanical rodent. One recurrent controller reads only the symbol stream and proprioception, is regressed onto the frozen intention of a pretrained imitation model, and decodes through that model's inverse-dynamics module &mdash; covering an entire vocabulary with no per-symbol reward or training. The vocabulary is fixed externally and never adapted to the controller, so the front end is swappable: the same controller is driven by an unsupervised AR-HMM segmenter (<a href="https://www.moseq4all.org/" target="_blank">Keypoint-MoSeq</a>), a learned kinematics-VAE codebook, and a hand-specified label set.
-        </p>
-
-        <p>
-          The symbols then generate rather than merely describe. Their motion is distributionally close to the expert imitation policy and far from a random stream over the same vocabulary; an independent kinematic labeler re-reads the generated behavior as the commanded symbol in 0.71 of cases; and a commanded symbol survives perturbation, reached from 100 distinct initial states and restored after an external velocity impulse. The interface also reports which symbols the body can actually realize, and composes symbols into transitions the corpus never contains while staying within the distribution of rodent motion. A description of behavior can therefore be made to produce it.
+          We present <strong>Code2Act</strong>, which turns any discrete vocabulary into motor commands for a 38 actuator biomechanical rat. One recurrent controller reads only the symbol stream and proprioception, predicts the motor latent that a frozen pretrained imitation model would supply, and decodes through that model's inverse-dynamics module. A single training run then covers an entire vocabulary with no per-symbol reward and no per-symbol training. We drove one controller from three vocabularies of different provenance and size. An independent labeler can recover each steering symbol from the motion it produced, across arbitrary initial poses and external velocity impulses. Symbols are executed by the body and realized as distinct motion, and novel combinations of symbol pairs can produce within-distribution motion patterns.
         </p>
 
         <div style="text-align: center;">
-            <img src="../assets/research/c2a.gif" alt="Steering Embodied Behavior from Any Discrete Codes" style="width:85%; height:auto;">
+            <img src="../assets/research/c2a.gif" alt="Discrete Actions for Naturalistic Behavior in Embodied Biomechanical Animal Models" style="width:85%; height:auto;">
         </div>
 
         <blockquote>

@@ -64,6 +64,7 @@
   --icon-linkedin: #0a66c2;
   --icon-email: #d1495b;
   --icon-cv: #0056b3;
+  --icon-scholar: #4285f4;
 
   /* Whiteboard research-notes hero strip (see body::before). The image is
      pre-whitened (paper -> pure white via a levels stretch), so multiply
@@ -133,6 +134,7 @@
   --icon-linkedin: #4098d7;
   --icon-email: #ef7a89;
   --icon-cv: #6e8fbd;
+  --icon-scholar: #8ab4f8;
 
   /* Inverted so the white board becomes glowing ink-on-black; screen blend
      drops the (now dark) paper so only the glowing ink shows on the page. */
@@ -724,6 +726,9 @@
   .sidebar-link:nth-child(3) { animation-delay: 0.67s; }
   .sidebar-link:nth-child(4) { animation-delay: 0.78s; }
   .sidebar-link:nth-child(5) { animation-delay: 0.89s; }
+  /* Language sits one level down, inside .translate-wrap, so nth-child
+     can't reach it; it closes the stagger explicitly. */
+  .translate-wrap .sidebar-link { animation-delay: 1s; }
 
   .sidebar-link:hover,
   .sidebar-link:focus-visible {
@@ -825,6 +830,10 @@
     color: var(--icon-cv);
   }
 
+  .sidebar-link.icon-scholar:hover .sidebar-ico {
+    color: var(--icon-scholar);
+  }
+
   blockquote {
     border-left: 3px solid var(--border-secondary);
     margin: 0;
@@ -837,16 +846,24 @@
      8. Timeline Badge
      ========================================================= */
 
+  /* Tinted pill in the site accent, same family as the category tags. */
   .time-glass {
     display: inline-block;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 6px 12px;
-    border-radius: 20px;
+    background-color: #e8eef7;
+    color: #3b5b8c;
+    border: 1px solid rgba(74, 111, 165, 0.25);
+    padding: 5px 12px;
+    border-radius: 999px;
     font-size: 0.85rem;
-    font-weight: 500;
+    font-weight: 600;
+    letter-spacing: 0.01em;
     margin-top: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  }
+
+  [data-theme="dark"] .time-glass {
+    background-color: rgba(110, 143, 189, 0.14);
+    color: #8aa7d0;
+    border-color: rgba(110, 143, 189, 0.28);
   }
 
   /* =========================================================
@@ -1128,7 +1145,8 @@
     margin: 20px 0 20px 0;
   }
 
-  .project-links a {
+  .project-links a,
+  .project-links .link-disabled {
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -1145,6 +1163,14 @@
     background-color: var(--button-hover-bg);
     color: var(--button-hover-color);
     text-decoration: none;
+  }
+
+  /* Placeholder for a link that isn't live yet: same pill, dimmed, no hover. */
+  .project-links .link-disabled {
+    color: var(--text-muted);
+    border: 1px dashed var(--border-filter);
+    padding: 5px 13px; /* offsets the border so it matches the other pills */
+    cursor: not-allowed;
   }
 
   /* =========================================================
