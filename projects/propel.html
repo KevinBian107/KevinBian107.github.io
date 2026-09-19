@@ -125,7 +125,7 @@
 
     <div class="wrapper_content_page">
       <section>
-        <h1>Propel: Structured Constraint Framework for Claude Code in Research Workflows</h1>
+        <h1>Propel: A Research Coding Assistant for Claude Code</h1>
         <script type="text/javascript">
           // Callback for the Google Translate script below.
           function googleTranslateElementInit() {
@@ -145,27 +145,28 @@
 
         <div class="project-links">
           <a href="https://kbian.org/propel-website/" target="_blank"><i class="fas fa-globe"></i> Website</a>
+          <a href="https://kbian.org/propel-website/docs/index.html" target="_blank"><i class="fas fa-book"></i> Docs</a>
           <a href="https://github.com/KevinBian107/propel" target="_blank"><i class="fab fa-github"></i> Code</a>
         </div>
 
         <p>
-          Propel is a structured constraint framework designed to enhance <strong>Claude Code's</strong> effectiveness in research workflows. Unconstrained LLMs tend to produce "the mean of training data" rather than the specific, precise outputs that research demands.
-          Propel addresses this by introducing human-in-the-loop gates, domain-specific auditors, and an investigation-first workflow that ensures Claude's outputs match specific research requirements.
+          Propel is a research coding assistant for <strong>Claude Code</strong> — not an autonomous scientist. Unconstrained LLMs tend to write "the mean of their training data" rather than the specific variant a paper describes.
+          Propel adds structure instead of cleverer prompts: Claude must investigate before it writes code, stop at human-in-the-loop gates to ask design questions, and pass every change through auditors that check it against the paper and hunt for silent bugs. Every research decision stays with the researcher.
         </p>
 
         <div style="text-align: center;">
-          <img src="https://raw.githubusercontent.com/KevinBian107/propel/2690cc7eabc1c37485c97dae49e3b327c36f2ea8/assets/propel_pipeline.svg" alt="Propel framework powered by Claude" style="width:70%; height:auto;">
+          <img src="https://kbian.org/propel-website/assets/propel_pipeline.svg" alt="Propel pipeline: seven stages from intake to retrospective, with human gates G0 to G4 and questioners Q0 and Q1" style="width:80%; height:auto;">
         </div>
 
         <blockquote>
-          Propel framework powered by Claude Code.
+          The Propel pipeline: seven stages, five human gates, and two questioners.
         </blockquote>
 
         <p></p>
 
         <p>
-          Key features include five human-in-the-loop checkpoint gates, domain-specific auditors for verifying code against research papers and tracing tensor shapes through JAX transforms,
-          a session management system for organizing research artifacts, and customizable skills for literature review, design planning, and validation. This website itself was built using Propel with Claude.
+          Key features include four session modes (Researcher, Engineer, Debugger, Trainer), paper-alignment and silent-bug auditors that dispatch after every code change,
+          investigation-first living READMEs, and an experiment registry that carries lessons into future sessions. This website itself was built using Propel with Claude.
         </p>
 
       </section>
