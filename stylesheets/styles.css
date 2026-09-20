@@ -1792,6 +1792,10 @@
     --chip-color: #b45309;
     --chip-bg: #fffbeb;
   }
+  .filter-chip[data-category="llm"] {
+    --chip-color: #4f46e5;
+    --chip-bg: #eef2ff;
+  }
   .filter-chip[data-category="neuroscience"] {
     --chip-color: #db2777;
     --chip-bg: #fdf2f8;
@@ -1820,6 +1824,10 @@
   [data-theme="dark"] .filter-chip[data-category="datascience"] {
     --chip-bg: rgba(180, 83, 9, 0.1);
     --chip-color: #c9a06c;
+  }
+  [data-theme="dark"] .filter-chip[data-category="llm"] {
+    --chip-bg: rgba(67, 56, 202, 0.1);
+    --chip-color: #9a93d8;
   }
   [data-theme="dark"] .filter-chip[data-category="neuroscience"] {
     --chip-bg: rgba(219, 39, 119, 0.1);
@@ -1858,6 +1866,10 @@
     background-color: #fef3c7;
     color: #b45309;
   }
+  .category-llm {
+    background-color: #e0e7ff;
+    color: #4338ca;
+  }
   .category-neuroscience {
     background-color: #fce7f3;
     color: #be185d;
@@ -1883,6 +1895,10 @@
   [data-theme="dark"] .category-datascience {
     background-color: rgba(180, 83, 9, 0.14);
     color: #c9a06c;
+  }
+  [data-theme="dark"] .category-llm {
+    background-color: rgba(67, 56, 202, 0.14);
+    color: #9a93d8;
   }
   [data-theme="dark"] .category-neuroscience {
     background-color: rgba(224, 82, 151, 0.14);
