@@ -1077,7 +1077,7 @@
   .project-venue {
     color: var(--text-project-title);
     font-weight: 600;
-    margin-right: 0.6em;
+    margin-right: 0.3em;
   }
 
   .project-description {
