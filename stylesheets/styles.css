@@ -935,39 +935,25 @@
     gap: 0;
   }
 
+  /* Publication-list rows (format after jiayuanm.com): thumbnail left, then
+     title, authors, and a bold venue followed by its links. */
   .project-link {
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
     display: block;
-    border-bottom: 1px solid var(--border-primary);
-    position: relative;
+    color: inherit;
   }
 
-  .project-link:hover {
-    text-decoration: none;
-  }
-
-  .project-link:last-child {
-    border-bottom: none;
-  }
-
-  .card-link {
+  .project-title-link {
     color: inherit;
     text-decoration: none;
   }
 
-  .card-link::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: 1;
+  .project-title-link:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
   }
 
   .project-authors a {
-    position: relative;
-    z-index: 2;
-    color: var(--text-body);
+    color: var(--text-muted);
     text-decoration: none;
   }
 
@@ -977,16 +963,8 @@
   }
 
   .project-authors a.author-highlight {
-    color: var(--text-h2);
-    font-weight: 500;
-  }
-
-  .project-authors a.author-pi {
-    text-decoration: underline;
-  }
-
-  .project-authors a.author-pi:hover {
-    color: var(--link-hover);
+    color: var(--text-project-title);
+    font-weight: 600;
   }
 
   .project-card {
@@ -997,23 +975,19 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    gap: 20px;
-    padding: 24px 12px;
-    border-radius: 8px;
-  }
-
-  .project-card:hover {
-    background-color: var(--bg-section);
+    gap: 24px;
+    padding: 14px 0;
   }
 
   .project-card img,
   .project-card video {
-    width: 180px;
-    min-width: 180px;
-    height: 120px;
+    width: 30%;
+    max-width: 260px;
+    aspect-ratio: 16 / 10;
+    height: auto;
     object-fit: cover;
     display: block;
-    border-radius: 8px;
+    border-radius: 6px;
     flex-shrink: 0;
   }
 
@@ -1060,34 +1034,50 @@
   }
 
   .project-title {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     font-weight: 600;
-    margin: 0 0 6px;
+    margin: 0 0 4px;
     color: var(--text-project-title);
     line-height: 1.35;
   }
 
   .project-authors {
     font-size: 0.95rem;
-    color: var(--text-body);
+    color: var(--text-muted);
     margin: 0 0 4px;
     line-height: 1.5;
   }
 
-  .project-authors .author-highlight {
-    color: var(--text-h2);
-    font-weight: 500;
+  .project-info {
+    font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.5;
   }
 
-  .project-authors .author-pi {
+  .project-info a {
+    color: var(--link-color);
+    text-decoration: none;
+  }
+
+  .project-info a:hover {
+    color: var(--link-hover);
     text-decoration: underline;
   }
 
-  .project-venue {
-    font-size: 0.88rem;
+  .project-info .link-disabled {
     color: var(--text-muted);
-    font-style: italic;
-    margin: 0 0 8px;
+  }
+
+  /* Publication venues run long, so their links drop to a line of their own. */
+  .macro-section[data-macro="publications"] .project-venue {
+    display: block;
+    margin-right: 0;
+  }
+
+  .project-venue {
+    color: var(--text-project-title);
+    font-weight: 600;
+    margin-right: 0.6em;
   }
 
   .project-description {
@@ -1601,16 +1591,15 @@
     }
 
     .project-card {
-      gap: 12px;
-      padding: 16px 8px;
+      flex-direction: column;
+      gap: 10px;
+      padding: 14px 0;
     }
 
     .project-card img,
     .project-card video {
-      width: 80px;
-      min-width: 80px;
-      height: 60px;
-      border-radius: 6px;
+      width: 100%;
+      max-width: none;
     }
 
     .project-card-icon-area {
@@ -1648,8 +1637,8 @@
       font-size: 0.82rem;
     }
 
-    .project-venue {
-      font-size: 0.78rem;
+    .project-info {
+      font-size: 0.82rem;
     }
 
     .tag {

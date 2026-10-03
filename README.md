@@ -7,7 +7,7 @@ Live at **[kbian.org](https://kbian.org)**
 ## Research Areas
 
 - **Embodied Agents & RL** — neuromechanical emulation, motor control, adversarial multi-agent training
-- **Representation & Topology** — topological data analysis, latent space geometry, dimensionality reduction
+- **Representation Learning** — topological data analysis, latent space geometry, dimensionality reduction
 - **Generative Models** — molecular graph generation, deep state space models for biomechanics
 - **Agentic Systems & Harness** — multi-agent collaboration frameworks, research coding assistants
 - **LLM Powered** — knowledge-base extraction, productivity tooling, multimodal embodied simulation
