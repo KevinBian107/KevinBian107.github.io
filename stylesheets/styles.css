@@ -369,6 +369,10 @@
     width: 100%;
     margin: 0 auto;
     padding-top: 80px;
+    /* The hero slides in from the right; without this its first frames poke
+       past the viewport and phones lock the page wider than the screen.
+       clip (not hidden) so the sticky rail keeps working. */
+    overflow-x: clip;
   }
 
   .main-content {
@@ -1515,7 +1519,15 @@
       padding-top: 10px;
     }
 
-    /* Rail collapses on top of the hero instead of beside it. */
+    .main-content > section[id] {
+      padding-top: 44px;
+    }
+  }
+
+  /* Narrow windows and any portrait screen (phones, tablets, vertical
+     monitors): the rail leaves the side and becomes a centred profile block
+     above the hero. */
+  @media only screen and (max-width: 960px), only screen and (orientation: portrait) {
     .layout-with-sidebar {
       grid-template-columns: 1fr;
       gap: 32px;
@@ -1527,20 +1539,79 @@
     }
 
     .sidebar-author {
-      align-items: flex-start;
+      align-items: center;
+      text-align: center;
     }
 
     .sidebar-links {
       flex-flow: row wrap;
+      justify-content: center;
       gap: 0.25rem 1.4rem;
+    }
+
+    .sidebar-links .translate-wrap {
+      width: auto;
     }
 
     .sidebar-link {
       padding: 0.4rem 0;
     }
 
-    .main-content > section[id] {
-      padding-top: 44px;
+    /* Centred, so the rows drop in from above rather than sliding from the
+       left edge they no longer hug. */
+    .sidebar-avatar,
+    .sidebar-location,
+    .sidebar-link {
+      animation-name: sidebar-drop-in;
+    }
+
+    /* The hero follows the profile onto the centre line; the desktop offset
+       measure for the body copy is dropped. */
+    .home-hero__lead,
+    .home-hero__body {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      animation-name: sidebar-rise-in;
+    }
+
+    .home-hero__body {
+      max-width: 38rem;
+    }
+  }
+
+  @keyframes sidebar-rise-in {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: none; }
+  }
+
+  @keyframes sidebar-drop-in {
+    from { opacity: 0; transform: translateY(-12px); }
+    to   { opacity: 1; transform: none; }
+  }
+
+  /* Portrait monitors: the stacked profile and hero sit on a centred reading
+     column, dropped to the optical centre of the first screen so a tall
+     window isn't all empty space below them, with type scaled to the room. */
+  @media only screen and (orientation: portrait) and (min-width: 900px) and (min-height: 1200px) {
+    .layout-with-sidebar {
+      max-width: 820px;
+      gap: 40px;
+      padding-top: max(40px, calc(50vh - 480px));
+    }
+
+    .sidebar-avatar {
+      width: 148px;
+      height: 148px;
+    }
+
+    .home-hero__lead {
+      font-size: clamp(2.5rem, 3.2vw, 3.4rem);
+    }
+
+    .home-hero__body {
+      max-width: 40rem;
+      font-size: clamp(1rem, 1.05vw, 1.2rem);
     }
   }
 
@@ -1570,6 +1641,40 @@
     }
   }
 
+  /* Small phones: six pills plus the name don't fit at the default padding. */
+  @media only screen and (max-width: 400px) {
+    .navbar-inner {
+      padding: 0 10px;
+      gap: 4px;
+    }
+
+    .navbar-brand {
+      min-width: 0;
+    }
+
+    .navbar-nav {
+      gap: 0;
+      flex: none;
+    }
+
+    .nav-icon-link,
+    .theme-toggle {
+      padding: 9px 6px;
+      margin-left: 0;
+    }
+
+    .nav-icon-link--sectional.is-revealed {
+      padding-left: 6px;
+      padding-right: 6px;
+    }
+
+    .nav-icon-link .nav-ico,
+    .theme-toggle .nav-ico {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
   @media only screen and (max-width: 720px) {
     body {
       word-wrap: break-word;
@@ -1588,6 +1693,81 @@
   @media only screen and (max-width: 600px) {
     body {
       padding: 56px 12px 24px;
+    }
+
+    /* Compact profile so the hero still shows on the first screen. */
+    .layout-with-sidebar {
+      gap: 24px;
+      padding-top: 28px;
+    }
+
+    .sidebar-avatar {
+      width: 96px;
+      height: 96px;
+      margin-bottom: 12px;
+    }
+
+    .sidebar-location {
+      margin: 0 0 10px;
+    }
+
+    .sidebar-links {
+      gap: 0.1rem 1.1rem;
+    }
+
+    .sidebar-link {
+      font-size: 0.84rem;
+      padding: 0.3rem 0;
+    }
+
+    .home-hero__lead {
+      font-size: 1.6rem;
+    }
+
+    /* Tabs stay on one line and scroll sideways rather than wrapping
+       "Open Source Tools" into a three-line stack. */
+    .macro-tabs {
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .macro-tabs::-webkit-scrollbar {
+      display: none;
+    }
+
+    .macro-tab {
+      flex: none;
+      white-space: nowrap;
+      padding: 10px 14px;
+      font-size: 15px;
+    }
+
+    /* The scroller would clip an underline hung below its edge. */
+    .macro-tab.active::after {
+      bottom: 0;
+    }
+
+    h1 {
+      font-size: 1.7rem;
+    }
+
+    p,
+    ul {
+      font-size: 16.5px;
+    }
+
+    /* Figures sized inline at 50-80% for desktop are unreadable on a phone. */
+    section img[style*="width"] {
+      width: 100% !important;
+    }
+
+    iframe:not(.video-wrapper iframe) {
+      width: 100%;
+      height: 420px;
+    }
+
+    .news-scroll {
+      padding: 4px 14px;
     }
 
     .project-card {
