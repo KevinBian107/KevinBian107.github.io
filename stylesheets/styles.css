@@ -74,6 +74,16 @@
   --bg-whiteboard-blend: multiply;
   /* Whiteboard side banners are a dark-mode-only feature (hidden in light). */
   --bg-whiteboard-display: none;
+
+  /* Home splash (javascripts/splash.js reads these): tissue ink, spike glow,
+     and the artificial network's wiring. */
+  --splash-ink: #1f2933;
+  --splash-signal: #2563eb;
+  --splash-ann: #1036a9;
+
+  /* Page gutters; the full-bleed splash pulls back out through them. */
+  --pad-top: 64px;
+  --pad-x: 24px;
 }
 
 [data-theme="dark"] {
@@ -141,7 +151,12 @@
   --bg-whiteboard-opacity: 0.72;
   --bg-whiteboard-filter: invert(1) hue-rotate(180deg) contrast(1.15);
   --bg-whiteboard-blend: screen;
-  --bg-whiteboard-display: block;
+  /* Banners switched off for now; restore this line to bring them back. */
+  /* --bg-whiteboard-display: block; */
+
+  --splash-ink: #d9dee7;
+  --splash-signal: #8fc1ff;
+  --splash-ann: #8aa7d0;
 }
 
 /* =========================================================
@@ -161,7 +176,7 @@
 
   body {
     background-color: var(--bg-body);
-    padding: 64px 24px 40px;
+    padding: var(--pad-top) var(--pad-x) 40px;
     font: 17px/1.6 var(--font-sans);
     color: var(--text-body);
     font-weight: 400;
@@ -369,10 +384,6 @@
     width: 100%;
     margin: 0 auto;
     padding-top: 80px;
-    /* The hero slides in from the right; without this its first frames poke
-       past the viewport and phones lock the page wider than the screen.
-       clip (not hidden) so the sticky rail keeps working. */
-    overflow-x: clip;
   }
 
   .main-content {
@@ -417,10 +428,8 @@
     }
   }
 
-  /* Enough air after the hero that News only just breaks the fold -- a hint
-     to scroll, not a screen of emptiness. */
   .home-hero {
-    padding-bottom: clamp(32px, 10vh, 110px);
+    padding-bottom: 8px;
   }
 
   .home-hero__lead {
@@ -431,7 +440,6 @@
     line-height: 1.2;
     letter-spacing: -0.02em;
     color: var(--text-primary);
-    animation: home-slide-right 0.8s cubic-bezier(0.2, 0.7, 0.3, 1) 0.1s both;
   }
 
   .home-hero__body {
@@ -439,11 +447,6 @@
     font-size: 1rem;
     line-height: 1.7;
     color: var(--text-body);
-    animation: home-slide-right 0.8s cubic-bezier(0.2, 0.7, 0.3, 1) 0.28s both;
-  }
-
-  .home-hero__body + .home-hero__body {
-    animation-delay: 0.42s;
   }
 
   /* Wide viewports get the offset measure: the body copy steps in from the
@@ -464,19 +467,210 @@
     }
   }
 
-  @keyframes home-slide-right {
-    from { opacity: 0; transform: translateX(26px); }
+
+  /* =========================================================
+     2c. Home Splash (neural tissue -> code -> network)
+     ========================================================= */
+
+  /* Full-bleed first screen. The canvases are painted by
+     javascripts/splash.js; the copy sits over them on the page measure. */
+  .splash {
+    position: relative;
+    height: 100vh;
+    height: 100svh;
+    min-height: 460px;
+    margin: calc(-1 * var(--pad-top)) calc(-1 * var(--pad-x)) 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--bg-body);
+  }
+
+  .splash-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  /* Fades under the clear top bar, and into the page at the bottom. */
+  .splash::before,
+  .splash::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .splash::before {
+    top: 0;
+    height: 120px;
+    background: linear-gradient(
+      color-mix(in srgb, var(--bg-body) 88%, transparent),
+      transparent
+    );
+  }
+
+  .splash::after {
+    bottom: 0;
+    height: 72px;
+    background: linear-gradient(transparent, var(--bg-body));
+  }
+
+  .splash-content {
+    position: relative;
+    z-index: 3;
+    box-sizing: border-box;
+    max-width: 1150px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    pointer-events: none;
+  }
+
+  .splash-copy {
+    position: relative;
+    max-width: 44rem;
+    padding-bottom: 6vh;
+  }
+
+  /* A soft pool of page colour behind the copy keeps it legible over the
+     tissue without boxing it in. */
+  .splash-copy::before {
+    content: "";
+    position: absolute;
+    inset: -70px -110px;
+    z-index: -1;
+    background: radial-gradient(
+      closest-side,
+      color-mix(in srgb, var(--bg-body) 86%, transparent),
+      color-mix(in srgb, var(--bg-body) 55%, transparent) 60%,
+      transparent
+    );
+  }
+
+  .splash-title {
+    margin: 0 0 1.1rem;
+    padding: 0;
+    border: none;
+    font-size: clamp(2.6rem, 6.4vw, 5.4rem);
+    font-weight: 700;
+    line-height: 1.02;
+    letter-spacing: -0.035em;
+    color: var(--text-primary);
+    animation: splash-rise 0.9s cubic-bezier(0.2, 0.7, 0.3, 1) 0.15s both;
+  }
+
+  .splash-line {
+    margin: 0.25rem 0 0;
+    font-size: clamp(1.05rem, 1.7vw, 1.45rem);
+    line-height: 1.5;
+    color: var(--text-body);
+    animation: splash-rise 0.9s cubic-bezier(0.2, 0.7, 0.3, 1) 0.4s both;
+  }
+
+  .splash-line + .splash-line {
+    animation-delay: 0.55s;
+  }
+
+  .splash-typed {
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  .splash-typed::after {
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 1.05em;
+    margin-left: 3px;
+    vertical-align: -0.15em;
+    background-color: currentColor;
+    animation: splash-caret 1s steps(1) infinite;
+  }
+
+  .splash-next {
+    position: absolute;
+    z-index: 3;
+    bottom: 22px;
+    left: 50%;
+    width: 44px;
+    height: 44px;
+    margin-left: -22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    animation: splash-bob 2.4s ease-in-out 2s infinite;
+  }
+
+  .splash-next svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .splash-next:hover {
+    color: var(--text-primary);
+  }
+
+  @keyframes splash-rise {
+    from { opacity: 0; transform: translateY(16px); }
     to   { opacity: 1; transform: none; }
   }
 
+  @keyframes splash-caret {
+    50% { opacity: 0; }
+  }
+
+  @keyframes splash-bob {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(7px); }
+  }
+
+  /* Portrait screens: the tissue fills the top and the network the bottom, so
+     the copy is centred in the upper half. */
+  @media only screen and (orientation: portrait) {
+    .splash-content {
+      justify-content: flex-start;
+      padding-top: 21vh;
+      padding-top: 21svh;
+      text-align: center;
+    }
+
+    .splash-copy {
+      margin: 0 auto;
+      padding-bottom: 0;
+    }
+
+    .splash-line {
+      text-align: center;
+    }
+  }
+
   @media (prefers-reduced-motion: reduce) {
-    .sidebar-avatar,
-    .sidebar-location,
-    .sidebar-link,
-    .home-hero__lead,
-    .home-hero__body {
+    .splash-title,
+    .splash-line,
+    .splash-next,
+    .splash-typed::after {
       animation: none;
     }
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
   }
 
   /* =========================================================
@@ -493,7 +687,21 @@
     z-index: 1000;
     background-color: var(--bg-nav);
     border-bottom: 1px solid var(--border-primary);
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+
+  /* Over the home splash the bar drops its fill so the tissue runs to the top
+     edge (nav.js toggles this until the splash has scrolled away). */
+  .navbar.navbar--clear {
+    background-color: transparent;
+    border-bottom-color: transparent;
+  }
+
+  /* The cover already says who this is; the name joins the bar on the way
+     down. */
+  .navbar--clear .navbar-brand {
+    opacity: 0;
+    pointer-events: none;
   }
 
   .navbar-inner {
@@ -514,6 +722,7 @@
     color: var(--text-primary);
     text-decoration: none;
     white-space: nowrap;
+    transition: opacity 0.3s ease;
   }
 
   .navbar-brand:hover {
@@ -679,7 +888,6 @@
     border-radius: 50%;
     display: block;
     margin-bottom: 18px;
-    animation: sidebar-slide-left 0.7s cubic-bezier(0.2, 0.7, 0.3, 1) both;
   }
 
   .sidebar-location {
@@ -689,7 +897,6 @@
     margin: 0 0 18px;
     font-size: 0.8rem;
     color: var(--text-muted);
-    animation: sidebar-slide-left 0.7s cubic-bezier(0.2, 0.7, 0.3, 1) 0.14s both;
   }
 
   .sidebar-location .sidebar-ico {
@@ -706,8 +913,7 @@
     width: 100%;
   }
 
-  /* Text + mark rows. Each fades in from the left a beat after the one above,
-     which is what makes the rail feel composed rather than dumped. */
+  /* Text + mark rows. */
   .sidebar-link {
     display: flex;
     align-items: center;
@@ -722,17 +928,8 @@
     text-decoration: none;
     cursor: pointer;
     transition: color 0.2s ease;
-    animation: sidebar-slide-left 0.6s cubic-bezier(0.2, 0.7, 0.3, 1) both;
   }
 
-  .sidebar-link:nth-child(1) { animation-delay: 0.45s; }
-  .sidebar-link:nth-child(2) { animation-delay: 0.56s; }
-  .sidebar-link:nth-child(3) { animation-delay: 0.67s; }
-  .sidebar-link:nth-child(4) { animation-delay: 0.78s; }
-  .sidebar-link:nth-child(5) { animation-delay: 0.89s; }
-  /* Language sits one level down, inside .translate-wrap, so nth-child
-     can't reach it; it closes the stagger explicitly. */
-  .translate-wrap .sidebar-link { animation-delay: 1s; }
 
   .sidebar-link:hover,
   .sidebar-link:focus-visible {
@@ -755,9 +952,6 @@
       0 0 24px var(--bg-body);
   }
 
-  @keyframes sidebar-slide-left {
-    from { opacity: 0; transform: translateX(-26px); }
-    to   { opacity: 1; transform: none; }
   }
 
   /* Footer pinned near bottom of sidebar */
@@ -1512,7 +1706,9 @@
 
   @media only screen and (max-width: 960px) {
     body {
-      padding: 60px 16px 30px;
+      --pad-top: 60px;
+      --pad-x: 16px;
+      padding-bottom: 30px;
     }
 
     section {
@@ -1557,22 +1753,14 @@
       padding: 0.4rem 0;
     }
 
-    /* Centred, so the rows drop in from above rather than sliding from the
-       left edge they no longer hug. */
-    .sidebar-avatar,
-    .sidebar-location,
-    .sidebar-link {
-      animation-name: sidebar-drop-in;
-    }
-
     /* The hero follows the profile onto the centre line; the desktop offset
        measure for the body copy is dropped. */
+    .home-hero .section-heading,
     .home-hero__lead,
     .home-hero__body {
       margin-left: auto;
       margin-right: auto;
       text-align: center;
-      animation-name: sidebar-rise-in;
     }
 
     .home-hero__body {
@@ -1580,24 +1768,12 @@
     }
   }
 
-  @keyframes sidebar-rise-in {
-    from { opacity: 0; transform: translateY(14px); }
-    to   { opacity: 1; transform: none; }
-  }
-
-  @keyframes sidebar-drop-in {
-    from { opacity: 0; transform: translateY(-12px); }
-    to   { opacity: 1; transform: none; }
-  }
-
-  /* Portrait monitors: the stacked profile and hero sit on a centred reading
-     column, dropped to the optical centre of the first screen so a tall
-     window isn't all empty space below them, with type scaled to the room. */
+  /* Portrait monitors: the stacked profile and About text sit on a centred
+     reading column, with type scaled to the room. */
   @media only screen and (orientation: portrait) and (min-width: 900px) and (min-height: 1200px) {
     .layout-with-sidebar {
       max-width: 820px;
       gap: 40px;
-      padding-top: max(40px, calc(50vh - 480px));
     }
 
     .sidebar-avatar {
@@ -1692,7 +1868,9 @@
 
   @media only screen and (max-width: 600px) {
     body {
-      padding: 56px 12px 24px;
+      --pad-top: 56px;
+      --pad-x: 12px;
+      padding-bottom: 24px;
     }
 
     /* Compact profile so the hero still shows on the first screen. */
@@ -1868,7 +2046,8 @@
     }
 
     .theme-toggle,
-    .translate-wrap {
+    .translate-wrap,
+    .splash {
       display: none;
     }
   }

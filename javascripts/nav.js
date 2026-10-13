@@ -146,9 +146,23 @@
     });
   }
 
+  /* Over the home splash the bar goes clear, so the tissue runs to the top
+     edge; it fills back in once the splash has scrolled out from under it. */
+  function initSplashBar() {
+    var splash = document.querySelector('.splash');
+    var bar = document.querySelector('.navbar');
+    if (!splash || !bar) return;
+
+    frameTasks.push(function () {
+      var under = splash.getBoundingClientRect().bottom > bar.offsetHeight + 1;
+      bar.classList.toggle('navbar--clear', under);
+    });
+  }
+
   function start() {
     initNav();
     initReveal();
+    initSplashBar();
     if (!frameTasks.length) return;
 
     run();

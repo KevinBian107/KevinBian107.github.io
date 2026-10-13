@@ -128,9 +128,24 @@
       </div>
     </header>
 
-    <div class="layout-with-sidebar">
+    <section class="splash" aria-label="Introduction">
+      <canvas class="splash-canvas splash-tissue" aria-hidden="true"></canvas>
+      <canvas class="splash-canvas splash-signal" aria-hidden="true"></canvas>
+      <div class="splash-content">
+        <div class="splash-copy">
+          <h1 class="splash-title">Hi, I&rsquo;m Kaiwen.</h1>
+          <p class="splash-line">Research staff at Stanford University.</p>
+          <p class="splash-line">Working on <span class="splash-typed" aria-hidden="true" data-words="representation learning.|world modeling.|decoding neural code.">representation learning.</span><span class="visually-hidden">representation learning, world modeling, and decoding neural code.</span></p>
+        </div>
+      </div>
+      <a class="splash-next" href="#about" aria-label="Scroll to about">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+      </a>
+    </section>
+
+    <div class="layout-with-sidebar" id="about">
       <aside class="author-sidebar">
-        <div class="sidebar-author">
+        <div class="sidebar-author reveal-item">
           <img class="sidebar-avatar" src="assets/index/profile_salk.jpg" alt="Kaiwen Bian" width="132" height="132">
           <p class="sidebar-location">
             <svg class="sidebar-ico" aria-hidden="true"><use href="#ico-pin"></use></svg>
@@ -171,11 +186,12 @@
 
       <main class="main-content">
         <section class="home-hero">
-          <p class="home-hero__lead">Hi, I&rsquo;m Kaiwen. I seek to understand natural and artificial intelligence, then design systems that harness both.</p>
-          <p class="home-hero__body">
+          <h2 class="section-heading reveal-item">About</h2>
+          <p class="home-hero__lead reveal-item">I seek to understand natural and artificial intelligence, then design systems that harness both.</p>
+          <p class="home-hero__body reveal-item">
             I am a research staff at <a href="https://www.enigmaproject.ai/" target="_blank">Enigma</a>, Stanford University, and I recently graduated from <a href="https://ucsd.edu/" target="_blank">UC San Diego</a>. I am broadly interested in representation learning: how intelligence emerges from the representations it builds of the world, and how autonomous systems can use them to make discoveries on their own.
           </p>
-          <p class="home-hero__body">
+          <p class="home-hero__body reveal-item">
             During my undergrad, I was fortunate to be advised by <a href="https://talmopereira.com/" target="_blank">Talmo D. Pereira</a> at the Salk Institute, <a href="https://lindermanlab.github.io/" target="_blank">Scott W. Linderman</a> at Stanford University, and <a href="https://yusu.belkin-wang.org/" target="_blank">Yusu Wang</a> and <a href="https://datascience.ucsd.edu/people/gal-mishne/" target="_blank">Gal Mishne</a> at the Halıcıoğlu Data Science Institute. <!-- Outside of my academic life, I enjoy skateboarding 🛹, surfing 🏄, and immersing myself in the serenity of the natural world 🌲 -->
           </p>
         </section>
@@ -315,7 +331,8 @@
     <footer class="site-credit">
       <p>
         Landing page design inspired by
-        <a href="https://g7xu.dev/" target="_blank" rel="noopener">Jason (Guoxuan) Xu</a>.
+        <a href="https://g7xu.dev/" target="_blank" rel="noopener">Guoxuan Xu</a>
+        and <a href="https://www.boyuan.space/" target="_blank" rel="noopener">Boyuan Chen</a>.
       </p>
     </footer>
 
@@ -336,5 +353,6 @@
     <script src="javascripts/translate.js"></script>
     <script src="javascripts/mode.js"></script>
     <script src="javascripts/nav.js"></script>
+    <script src="javascripts/splash.js"></script>
   </body>
 </html>
