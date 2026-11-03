@@ -396,7 +396,7 @@
 
   /* Breathing room between the last card and the colophon rule. */
   .main-content > section:last-child {
-    padding-bottom: 56px;
+    padding-bottom: 100px;
   }
 
   /* Anchored sections must clear the fixed bar when jumped to. */
