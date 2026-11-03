@@ -394,6 +394,11 @@
     padding-bottom: 0;
   }
 
+  /* Breathing room between the last card and the colophon rule. */
+  .main-content > section:last-child {
+    padding-bottom: 56px;
+  }
+
   /* Anchored sections must clear the fixed bar when jumped to. */
   .main-content > section[id] {
     scroll-margin-top: 90px;
